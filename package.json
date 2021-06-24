@@ -1,0 +1,28 @@
+{
+  "name": "hayft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"cd backend && npm run dev-server\" \"cd frontend && npm run build-watch\" ",
+    "start": "concurrently \"cd backend && npm run start\" \"cd frontend && npm run build\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amberMorris97/blockchain-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amberMorris97/blockchain-app/issues"
+  },
+  "homepage": "https://github.com/amberMorris97/blockchain-app#readme",
+  "dependencies": {
+    "react-dom": "^17.0.2",
+    "webpack-cli": "^4.7.2"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0"
+  }
+}
