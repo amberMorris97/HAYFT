@@ -1,9 +1,10 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
+const jwt = require('jsonwebtoken');
 const { Post } = require('../database/schemas');
 const register = require('./auth/register');
-const jwt = require('jsonwebtoken');
+const login = require('./auth/login');
 
 const app = express();
 app.use(express.static(path.join(__dirname, '../../frontend/public')));
@@ -35,13 +36,16 @@ app.get('/posts', async(req, res) => {
 });
 
 app.post('/register', (req, res) => {
-  const { name, username, email, password } = req.body;
-  if (!name || !username || !email || !password) {
-    return res.sendStatus(400);
+  const registerStatus = {
+    'username_exists': 'username already exists',
+    'email_exists': 'email already exists',
   };
 
+  const { name, username, email, password } = req.body;
+  if (!name || !username || !email || !password) return res.sendStatus(400);
+
   register(name, username, email, password, (status, user) => {
-    if (status === 400) res.sendStatus(400);
+    if (status === 400) return res.status(400).send(user[registerStatus]);
 
     jwt.sign(
       { id: user._id },
@@ -61,5 +65,37 @@ app.post('/register', (req, res) => {
   });
 
 });
+
+app.post('/login', (req, res) => {
+  const authStatus = {
+    'no_user_found': 'invalid username/email',
+    'bad_password': 'invalid credentials',
+  };
+
+  const { username, password } = req.body;
+  if (!username || !password) return res.sendStatus(400);
+
+  login(username, password, (status, user) => {
+
+    if (status === 400) return res.status(400).send(authStatus[user]);
+
+    jwt.sign(
+      { id: user._id },
+      process.env.JWT_SECRET,
+      { expiresIn: 3600 },
+      (err, token) => {
+        if (err) throw err;
+        const newUser = {
+          token,
+          id: user._id,
+          name: user.name,
+          username: user.username,
+        };
+        res.send(newUser);
+      }
+    );
+  })
+
+})
 
 module.exports = app;

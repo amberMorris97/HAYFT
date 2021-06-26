@@ -3,7 +3,9 @@ const bcrypt = require('bcryptjs');
 
 const register = async(name, username, email, password, cb) => {
   const checkUsername = await User.findOne({ username });
-  if (checkUsername) return cb(400);
+  if (checkUsername) return cb(400, 'username_exists');
+  const user = await User.findOne({ email });
+  if (user) return cb(400, 'email_exists');
 
   const newUser = new User({
     name,
@@ -12,9 +14,6 @@ const register = async(name, username, email, password, cb) => {
     password,
   });
 
-  const user = await User.findOne({ email });
-
-  if (user) return cb(400);
 
   bcrypt.genSalt(10, (err, salt) => {
     bcrypt.hash(newUser.password, salt, (err, hashedPwd) => {
