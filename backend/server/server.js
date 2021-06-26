@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 const { Post } = require('../database/schemas');
 const register = require('./auth/register');
 const login = require('./auth/login');
+const auth = require('./auth/middleware');
 
 const app = express();
 app.use(express.static(path.join(__dirname, '../../frontend/public')));
@@ -34,6 +35,11 @@ app.get('/posts', async(req, res) => {
     console.log(err);
   }
 });
+
+app.get('/user', auth, (req, res) => {
+  const { id } = req.user.id;
+  if (id) console.log(id)
+})
 
 app.post('/register', (req, res) => {
   const registerStatus = {
