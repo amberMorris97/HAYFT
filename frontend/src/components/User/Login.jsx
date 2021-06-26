@@ -1,6 +1,11 @@
+const axios = require('axios');
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { USER_LOADING, LOGIN_FAIL, LOGIN_SUCCESS } from '../../redux/types';
+import loadUser from '../../redux/actions/authActions';
 
-const Login = () => {
+const Login = ({ login }) => {
+  const dispatch = useDispatch();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -9,10 +14,17 @@ const Login = () => {
     if (e.target.name === 'password') setPassword(e.target.value);
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    console.log('submitted');
-    console.log(username, password);
+    dispatch({ type: USER_LOADING });
+    const user = await axios.post('/login', {
+      username,
+      password,
+    });
+    if (!user) dispatch({ type: LOGIN_FAIL });
+
+    login(user);
+    dispatch({ type: LOGIN_SUCCESS, payload: user.data });
   }
 
   return (

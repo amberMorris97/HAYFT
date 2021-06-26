@@ -5,17 +5,17 @@ import Login from './User/Login.jsx';
 
 const App = () => {
   const dispatch = useDispatch();
+  const [login, setLogin] = useState(null);
 
   useEffect(() => {
-    dispatch(loadUser());
-  }, []);
-
-
+    if (login) dispatch(loadUser(login));
+  }, [login]);
 
   return (
     <div>
       <h1>App</h1>
-      <Login />
+      <Login login={(user) => setLogin(user)}/>
+      <button onClick={() => dispatch({type: 'LOGOUT_SUCCESS'})}>logout</button>
     </div>
   );
 };

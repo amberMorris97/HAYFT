@@ -6,9 +6,8 @@ const login = async(username, password, cb) => {
   if (username.includes('@')) {
      user = await User.findOne({ email: username });
   } else {
-     user = await User.findOne({ username });
+      user = await User.findOne({ username });
   }
-
   if (!user) return cb(400, 'no_user_found');
 
   const checkMatch = await bcrypt.compare(password, user.password);

@@ -7,9 +7,8 @@ const auth = (req, res, next) => {
   if (!token) return res.status(400).send('no token, access denied');
 
   try {
-    const decoded = jwt.verify(token, JWT_SECRET);
-    console.log(decoded);
-    // req.user = decoded;
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = decoded;
     next();
   } catch(err) {
     res.status(400).send('invalid token');

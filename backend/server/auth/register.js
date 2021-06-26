@@ -6,7 +6,7 @@ const register = async(name, username, email, password, cb) => {
   if (checkUsername) return cb(400, 'username_exists');
   const user = await User.findOne({ email });
   if (user) return cb(400, 'email_exists');
-
+  username = username.toLowerCase();
   const newUser = new User({
     name,
     username,

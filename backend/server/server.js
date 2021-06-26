@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const jwt = require('jsonwebtoken');
-const { Post } = require('../database/schemas');
+const { Post, User } = require('../database/schemas');
 const register = require('./auth/register');
 const login = require('./auth/login');
 const auth = require('./auth/middleware');
@@ -36,9 +36,12 @@ app.get('/posts', async(req, res) => {
   }
 });
 
-app.get('/user', auth, (req, res) => {
+app.get('/user', auth, async(req, res) => {
   const { id } = req.user.id;
-  if (id) console.log(id)
+    const user = await User.findById(id)
+      .select('-password');
+      console.log(user)
+      res.send(user);
 })
 
 app.post('/register', (req, res) => {
@@ -80,9 +83,7 @@ app.post('/login', (req, res) => {
 
   const { username, password } = req.body;
   if (!username || !password) return res.sendStatus(400);
-
   login(username, password, (status, user) => {
-
     if (status === 400) return res.status(400).send(authStatus[user]);
 
     jwt.sign(
