@@ -33,17 +33,17 @@ const commentThreadSchema = new mongoose.Schema({
   likes: { type: Number, default: 0 }
 });
 
-const userSchema = new mongoose.Schema({
-  name: String,
-  username: String,
-  email: String,
-  password: String,
-  },
-);
+// const userSchema = new mongoose.Schema({
+//   name: String,
+//   username: String,
+//   email: String,
+//   password: String,
+//   },
+// );
 
 const Post = mongoose.model('Post', postSchema);
 const Comment = mongoose.model('Comment', commentsSchema);
 const Thread = mongoose.model('Thread', commentThreadSchema);
-const User = mongoose.model('User', userSchema);
+// const User = mongoose.model('User', userSchema);
 
-module.exports = { Post, Comment, Thread, User }
+module.exports = { Post, Comment, Thread }

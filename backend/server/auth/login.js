@@ -14,7 +14,7 @@ const login = async(username, password, cb) => {
   if (!checkMatch) {
     cb(400, 'bad_password');
   } else {
-    cb (200, user);
+    cb(200, user);
   }
 }
 
