@@ -11,6 +11,10 @@ import {
   REGISTER_FAIL,
 } from '../types';
 
+const loadSession = (session) => (dispatch, getState) => {
+  
+}
+
   const loadUser = () => (dispatch, getState) => {
   // User Loading
   // const token = getState().authReducer.token;

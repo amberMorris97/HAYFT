@@ -17,7 +17,7 @@ const Login = ({ login }) => {
   const handleSubmit = async(e) => {
     e.preventDefault();
     dispatch({ type: USER_LOADING });
-    const user = await axios.post('/login', {
+    const user = await axios.post('/api/users/login', {
       username,
       password,
     });

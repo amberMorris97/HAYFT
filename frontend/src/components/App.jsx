@@ -7,8 +7,9 @@ import Login from './User/Login.jsx';
 const App = () => {
   const dispatch = useDispatch();
   const [user, updateUser] = useState(null);
-
+console.log(user)
   useEffect(() => {
+    console.log(user)
     // dispatch(loadUser());
     // dispatch({ type: 'USER_LOADING'})
   }, [user]);

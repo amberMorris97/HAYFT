@@ -11,7 +11,7 @@ const UsersSchema = new Schema({
   password: String,
 });
 
-UsersSchema.methods.setPassword = (password) => {
+UsersSchema.methods.setPassword = function(password) {
   bcrypt.genSalt(10, (err, salt) => {
     bcrypt.hash(password, salt, (err, hashedPwd) => {
       this.password = hashedPwd;
@@ -19,12 +19,13 @@ UsersSchema.methods.setPassword = (password) => {
   });
 };
 
-UsersSchema.methods.validatePassword = async (password) => {
+UsersSchema.methods.validatePassword = async function(password) {
+  console.log(this, 'THIS')
   const checkMatch = await bcrypt.compare(password, this.password);
   return checkMatch || false;
 };
 
-UsersSchema.methods.generateJWT = () => {
+UsersSchema.methods.generateJWT = function() {
   const today = new Date();
   const expirationDate = new Date(today);
   expirationDate.setDate(today.getDate() + 60);
@@ -36,13 +37,15 @@ UsersSchema.methods.generateJWT = () => {
   }, 'secret');
 };
 
-UsersSchema.methods.toAuthJSON = () => {
-  console.log(this)
+UsersSchema.methods.toAuthJSON = function() {
   return {
     _id: this._id,
+    name: this.name,
+    username: this.username,
     email: this.email,
     token: this.generateJWT()
   };
 };
 
-mongoose.model('Users', UsersSchema);
+const Users = mongoose.model('Users', UsersSchema);
+module.exports = Users;

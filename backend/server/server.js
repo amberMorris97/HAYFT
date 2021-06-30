@@ -9,6 +9,7 @@ const { User } = require('../database/models/users');
 const register = require('./auth/register');
 const login = require('./auth/login');
 const auth = require('./auth/middleware');
+const users = require('./routes/api/users')
 const checkCookies = require('./auth/checkCookies');
 const MongoStore = require('connect-mongo');
 const app = express();
@@ -19,6 +20,8 @@ require('./config/passport');
 
 app.use(express.json());
 app.use(require('./routes'));
+app.use('/api/users', users);
+// use users file to handle endpoints that start with / login
 
 
 app.use(session({
@@ -31,9 +34,25 @@ app.use(session({
         if (user.username) req.user = user;
       })
   },
-  store: MongoStore.create({ mongoUrl: 'mongodb://localhost/hayft' }),
+  store: MongoStore.create({
+    mongoUrl: 'mongodb://localhost/hayft',
+    ttl: 1 * 1 * 60 * 60,
+    autoRemove: 'native',
+  }),
+}));
 
-}))
+app.get('/', (req, res, next) => {
+  next();
+});
+
+app.get('/end', (req, res, next) => {
+  req.session.destroy((err) => {
+    if (err) {
+      throw err;
+    }
+    res.send('Session is destroyed');
+  });
+});
 
 // app.use((req, res, next) => {
 //   console.log(req.session)
@@ -96,9 +115,9 @@ app.get('/posts', async(req, res) => {
 });
 
 app.get('/user', async(req, res) => {
-  console.log(req.user)
+  // console.log(req.user)
   if (!req.user) return res.status(400).send('not logged in');
-  console.log(req.user)
+  console.log(req.user, 'REQ.USER')
   const { id } = req.user
   const user = await User.findOne({_id:mongoose.Types.ObjectId(`${id}`)})
       .select('-password');

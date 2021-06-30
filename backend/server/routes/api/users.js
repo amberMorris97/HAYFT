@@ -4,8 +4,7 @@ const router = require('express').Router();
 const auth = require('../auth');
 const Users = mongoose.model('Users');
 
-router.post('/', auth.optional, (req, res, next) => {
-  console.log(req.body)
+router.post('/register', auth.optional, (req, res, next) => {
   const { user } = req.body;
 
   if (!user.email) {
@@ -42,7 +41,7 @@ router.post('/', auth.optional, (req, res, next) => {
 
   const finalUser = new Users(user);
 
-  console.log(finalUser)
+  console.log(finalUser, 'FINAL U')
 
   finalUser.setPassword(user.password);
 
@@ -52,35 +51,19 @@ router.post('/', auth.optional, (req, res, next) => {
 
 //POST login route (optional, everyone has access)
 router.post('/login', auth.optional, (req, res, next) => {
-  const { body: { user } } = req;
-console.log(user)
-  if (!user.email) {
-    return res.status(422).send({
-      errors: {
-        email: 'is required',
-      },
-    });
-  }
-
-  if (!user.password) {
-    return res.status(422).send({
-      errors: {
-        password: 'is required',
-      },
-    });
-  }
-
-  if (!user.name) {
-    return res.status(422).send({
-      errors: {
-        name: 'is required',
-      },
-    });
-  }
-  if (!user.username) {
+  const { body: { username, password } } = req;
+  if (!username) {
     return res.status(422).send({
       errors: {
         username: 'is required',
+      },
+    });
+  }
+
+  if (!password) {
+    return res.status(422).send({
+      errors: {
+        password: 'is required',
       },
     });
   }
@@ -89,11 +72,10 @@ console.log(user)
     if (err) {
       return next(err);
     }
-
     if (passportUser) {
       const user = passportUser;
       user.token = passportUser.generateJWT();
-
+      console.log('u, token, toauth', user, user.token, user.toAuthJSON)
       return res.send({ user: user.toAuthJSON() });
     }
 
@@ -107,6 +89,7 @@ router.get('/current', auth.required, (req, res, next) => {
 
   return Users.findById(id)
     .then((user) => {
+      console.log(user, id, 'user ID')
       if (!user) {
         return res.sendStatus(400);
       }
