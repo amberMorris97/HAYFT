@@ -73,9 +73,9 @@ router.post('/login', auth.optional, (req, res, next) => {
       return next(err);
     }
     if (passportUser) {
+      console.log(passportUser, 'PASSPORT')
       const user = passportUser;
       user.token = passportUser.generateJWT();
-      console.log('u, token, toauth', user, user.token, user.toAuthJSON)
       return res.send({ user: user.toAuthJSON() });
     }
 
@@ -83,10 +83,10 @@ router.post('/login', auth.optional, (req, res, next) => {
   })(req, res, next);
 });
 
-//GET current route (required, only authenticated users have access)
+// //GET current route (required, only authenticated users have access)
 router.get('/current', auth.required, (req, res, next) => {
+  // console.log(req)
   const { payload: { id } } = req;
-
   return Users.findById(id)
     .then((user) => {
       console.log(user, id, 'user ID')

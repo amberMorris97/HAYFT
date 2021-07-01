@@ -4,7 +4,7 @@ const { User } = require('../../database/schemas');
 const cookieParser = async (req, res) => {
   let user;
   const { cookie } = req.headers;
-  console.log(cookie)
+  console.log(cookie, 'COOKIE')
   // if (cookie) {
   //   const cookieArr = cookie.split(";").join('').split('=')[1].split('.').slice(0, 2);
   //   const getToken = cookieArr.map((el) => JSON.parse(Buffer.from(el, 'base64').toString()));

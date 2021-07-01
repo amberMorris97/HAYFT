@@ -4,6 +4,8 @@ const jwt = require('jsonwebtoken');
 const expressJwt = require('express-jwt');
 const session = require('express-session');
 const mongoose = require('mongoose');
+const passportLocalMongoose = require('passport-local-mongoose');
+const passport = require('passport');
 const { Post } = require('../database/schemas');
 const { User } = require('../database/models/users');
 const register = require('./auth/register');
@@ -28,11 +30,11 @@ app.use(session({
   secret: process.env.JWT_SECRET,
   saveUninitialized: true,
   resave: true,
-  getToken: (req) => {
-    checkCookies(req)
-      .then((user) => {
-        if (user.username) req.user = user;
-      })
+  cookie: {
+    path: '/',
+    maxAge: 3600000,
+    httpOnly: true,
+    secure: false,
   },
   store: MongoStore.create({
     mongoUrl: 'mongodb://localhost/hayft',
@@ -40,10 +42,6 @@ app.use(session({
     autoRemove: 'native',
   }),
 }));
-
-app.get('/', (req, res, next) => {
-  next();
-});
 
 app.get('/end', (req, res, next) => {
   req.session.destroy((err) => {
@@ -88,8 +86,6 @@ app.use(express.static(path.join(__dirname, '../../frontend/public')));
 //         // if session expired , logout
 // });
 
-
-
 app.post('/newPost', async(req, res) => {
   const { title, userId, body } = req.body;
   const post = new Post({
@@ -124,36 +120,36 @@ app.get('/user', async(req, res) => {
       res.send(user);
 });
 
-app.post('/register', (req, res) => {
-  const registerStatus = {
-    'username_exists': 'username already exists',
-    'email_exists': 'email already exists',
-  };
+// app.post('/register', (req, res) => {
+//   const registerStatus = {
+//     'username_exists': 'username already exists',
+//     'email_exists': 'email already exists',
+//   };
 
-  const { name, username, email, password } = req.body;
-  if (!name || !username || !email || !password) return res.sendStatus(400);
+//   const { name, username, email, password } = req.body;
+//   if (!name || !username || !email || !password) return res.sendStatus(400);
 
-  register(name, username, email, password, (status, user) => {
-    if (status === 400) return res.status(400).send(user[registerStatus]);
+//   register(name, username, email, password, (status, user) => {
+//     if (status === 400) return res.status(400).send(user[registerStatus]);
 
-    jwt.sign(
-      { id: user._id },
-      process.env.JWT_SECRET,
-      { expiresIn: 3000 },
-      (err, token) => {
-        if (err) throw err;
-        const newUser = {
-          token,
-          id: user._id,
-          name: user.name,
-          username: user.username,
-        };
-        res.cookie('jwt', token, { expires: new Date(Date.now() + 10000), httpOnly: true });
-        res.send(newUser);
-      }
-    );
-  });
-});
+//     jwt.sign(
+//       { id: user._id },
+//       process.env.JWT_SECRET,
+//       { expiresIn: 3000 },
+//       (err, token) => {
+//         if (err) throw err;
+//         const newUser = {
+//           token,
+//           id: user._id,
+//           name: user.name,
+//           username: user.username,
+//         };
+//         res.cookie('jwt', token, { expires: new Date(Date.now() + 10000), httpOnly: true });
+//         res.send(newUser);
+//       }
+//     );
+//   });
+// });
 
 // app.post('/login', (req, res) => {
 //   const authStatus = {

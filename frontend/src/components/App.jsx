@@ -7,11 +7,10 @@ import Login from './User/Login.jsx';
 const App = () => {
   const dispatch = useDispatch();
   const [user, updateUser] = useState(null);
-console.log(user)
+
   useEffect(() => {
-    console.log(user)
-    // dispatch(loadUser());
-    // dispatch({ type: 'USER_LOADING'})
+    axios.get('/api/users/current')
+      .then(res => console.log(res))
   }, [user]);
 
   return (
