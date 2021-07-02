@@ -1,5 +1,6 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
-const mongoUri = 'mongodb://localhost/hayft';
+const mongoUri = process.env.MONGO_URL;
 mongoose.set('useFindAndModify', false);
 
 mongoose.connect(mongoUri, {

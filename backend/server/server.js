@@ -8,11 +8,7 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const passport = require('passport');
 const { Post } = require('../database/schemas');
 const { User } = require('../database/models/users');
-const register = require('./auth/register');
-const login = require('./auth/login');
-const auth = require('./auth/middleware');
 const users = require('./routes/api/users')
-const checkCookies = require('./auth/checkCookies');
 const MongoStore = require('connect-mongo');
 const app = express();
 
@@ -21,11 +17,6 @@ require('./config/passport');
 
 
 app.use(express.json());
-app.use(require('./routes'));
-app.use('/api/users', users);
-// use users file to handle endpoints that start with / login
-
-
 app.use(session({
   secret: process.env.JWT_SECRET,
   saveUninitialized: true,
@@ -37,54 +28,26 @@ app.use(session({
     secure: false,
   },
   store: MongoStore.create({
-    mongoUrl: 'mongodb://localhost/hayft',
+    mongoUrl: process.env.MONGO_URL,
     ttl: 1 * 1 * 60 * 60,
     autoRemove: 'native',
   }),
 }));
+app.use(require('./routes'));
+app.use('/api/users', users);
+// use users file to handle endpoints that start with / login
 
 app.get('/end', (req, res, next) => {
   req.session.destroy((err) => {
     if (err) {
       throw err;
     }
-    res.send('Session is destroyed');
+    res.clearCookie('Token');
+    res.send('logged out');
   });
 });
 
-// app.use((req, res, next) => {
-//   console.log(req.session)
-//   console.log('===')
-//   console.log(req.user)
-//   next()
-// })
-
-// app.get('/',
-//   expressJwt({
-//     secret: process.env.JWT_SECRET,
-//     algorithms: ['HS256'],
-//     getToken: (req) => {
-//       checkCookies(req)
-//         .then((user) => {
-//           if (user.username) req.session.user = user;
-//           console.log(req.session, 'session')
-//         });
-//     },
-//     credentialsRequired: false,
-//   })
-// );
-
 app.use(express.static(path.join(__dirname, '../../frontend/public')));
-// app.use('/', auth, (req, res, next) => {
-//   // when page is loaded (?) check if token
-//   // if no token, just return out or something
-//   // if there is a token
-//     // check for cookie
-//       // no cookie ? create new session
-//       // cookie ? look up session
-//         // if session active , continue
-//         // if session expired , logout
-// });
 
 app.post('/newPost', async(req, res) => {
   const { title, userId, body } = req.body;
@@ -113,7 +76,6 @@ app.get('/posts', async(req, res) => {
 app.get('/user', async(req, res) => {
   // console.log(req.user)
   if (!req.user) return res.status(400).send('not logged in');
-  console.log(req.user, 'REQ.USER')
   const { id } = req.user
   const user = await User.findOne({_id:mongoose.Types.ObjectId(`${id}`)})
       .select('-password');

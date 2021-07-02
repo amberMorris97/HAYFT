@@ -3,6 +3,7 @@ const passport = require('passport');
 const router = require('express').Router();
 const auth = require('../auth');
 const Users = mongoose.model('Users');
+const db = require('../../../database/index');
 
 router.post('/register', auth.optional, (req, res, next) => {
   const { user } = req.body;
@@ -73,9 +74,11 @@ router.post('/login', auth.optional, (req, res, next) => {
       return next(err);
     }
     if (passportUser) {
-      console.log(passportUser, 'PASSPORT')
+      console.log(passportUser._id, 'PASSPORT')
       const user = passportUser;
       user.token = passportUser.generateJWT();
+      console.log(user, user.token)
+      res.cookie('Token', user.token);
       return res.send({ user: user.toAuthJSON() });
     }
 
@@ -84,18 +87,24 @@ router.post('/login', auth.optional, (req, res, next) => {
 });
 
 // //GET current route (required, only authenticated users have access)
-router.get('/current', auth.required, (req, res, next) => {
-  // console.log(req)
-  const { payload: { id } } = req;
-  return Users.findById(id)
-    .then((user) => {
-      console.log(user, id, 'user ID')
-      if (!user) {
-        return res.sendStatus(400);
-      }
+router.get('/current', async (req, res, next) => {
+  if (!req.headers.cookie.split(';')[1]) return res.send('user not logged in');
+  const token = req.headers.cookie.split(';')[1].split('Token=')[1];
 
-      return res.json({ user: user.toAuthJSON() });
-    });
+  const jsonPayload = Buffer.from(token, 'base64').toString();
+  const splitJson = jsonPayload.split(",");
+  const sliceJson = splitJson.slice(0, splitJson.length - 1);
+  const id = JSON.parse(sliceJson[2].split(':')[1]);
+
+  const user = await Users.findOne({_id:mongoose.Types.ObjectId(`${id}`)})
+      .select('-password');
+
+  if (user) {
+    res.send(user);
+  } else {
+    res.sendStatus(400);
+  }
+
 });
 
 module.exports = router;
