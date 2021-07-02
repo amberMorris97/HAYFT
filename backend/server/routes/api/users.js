@@ -8,7 +8,6 @@ const db = require('../../../database/index');
 
 router.post('/register', auth.optional, (req, res, next) => {
   const { name, username, email, password } = req.body;
-
   if (!email) {
     return res.status(422).send({
       errors: {
@@ -71,14 +70,11 @@ router.post('/login', auth.optional, (req, res, next) => {
   }
 
   return passport.authenticate('local', { session: false }, (err, passportUser, info) => {
-    if (err) {
-      return next(err);
-    }
+    if (err) return next(err);
+
     if (passportUser) {
-      console.log(passportUser._id, 'PASSPORT')
       const user = passportUser;
       user.token = passportUser.generateJWT();
-      console.log(user, user.token)
       res.cookie('Token', user.token);
       return res.send({ user: user.toAuthJSON() });
     }
@@ -87,9 +83,11 @@ router.post('/login', auth.optional, (req, res, next) => {
   })(req, res, next);
 });
 
-// //GET current route (required, only authenticated users have access)
 router.get('/current', async (req, res, next) => {
-  if (!req.headers.cookie.split(';')[1]) return res.send('user not logged in');
+  const cookie = !req.headers.cookie.split(';')[1];
+
+  if (!cookie) return res.send('user not logged in');
+
   const token = req.headers.cookie.split(';')[1].split('Token=')[1];
 
   const jsonPayload = Buffer.from(token, 'base64').toString();
@@ -105,12 +103,12 @@ router.get('/current', async (req, res, next) => {
   } else {
     res.sendStatus(400);
   }
-
 });
 
 router.patch('/updateUser/:id', async (req, res) => {
   const { id } = req.params;
   const { name, email, username, password } = req.body;
+
   let filter;
   if (name) filter = { name };
   if (email) filter = { email };
@@ -124,16 +122,20 @@ router.patch('/updateUser/:id', async (req, res) => {
      });
      return;
   }
-  const updated = await Users.updateOne({_id:mongoose.Types.ObjectId(`${id}`)}, filter)
+
+  const updated = await Users.updateOne({_id:mongoose.Types.ObjectId(`${id}`)}, filter);
+
   if (updated) res.status(200).send('Information updated');
   if (!updated) res.status(400).send('Information could not be updated at this time');
 });
 
 router.put('/deleteUser/:id', async (req, res) => {
   const { id }  = req.params;
+
   const deleted = await Users.deleteOne({ _id:mongoose.Types.ObjectId(`${id}`) });
-  if (deleted) res.send('User has been deleted');
-  if (!deleted) res.send('User could not be deleted at this time');
+
+  if (deleted) res.status(200).send('User has been deleted');
+  if (!deleted) res.status(200).send('User could not be deleted at this time');
 });
 
 module.exports = router;
