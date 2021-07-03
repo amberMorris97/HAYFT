@@ -2,24 +2,23 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Header from './Header/Header.jsx';
-import loadUser from '../redux/actions/authActions';
+import User from '../redux/actions/authActions';
 import Login from './Header/User/Login.jsx';
 import Signup from './Header/User/Signup.jsx';
 
 const App = () => {
   const dispatch = useDispatch();
-  const [user, updateUser] = useState(null);
+  const user = useSelector(state => state.authReducer.user);
+  const [loadedUser, setLoadedUser] = useState(null);
   const [view, setView] = useState('home');
 
   useEffect(() => {
-    axios.get('/api/users/current')
-      .then((res) => {
-        console.log(res)
-        if (res.data.email) {
-          updateUser(res.data);
-        };
-      })
+    const loadUser = new User();
+    dispatch(loadUser.load());
+    setLoadedUser(user);
   }, []);
+
+  if (!user) return (<div>wait</div>)
 
   if (view === 'Login') {
     return <Login setView={setView}/>
@@ -27,7 +26,7 @@ const App = () => {
 
   if (view === 'Signup') {
     return <Signup setView={setView}/>
-  }
+  };
 
   return (
     <div>
@@ -38,5 +37,3 @@ const App = () => {
 };
 
 export default App;
-
-// -

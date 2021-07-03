@@ -1,25 +1,21 @@
 import axios from 'axios';
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import User from '../../../redux/actions/authActions';
 // import { LOGOUT_SUCCESS }  from '../../redux/types';
 
-const Logout = () => {
+const Logout = ({ setView }) => {
   const dispatch = useDispatch();
 
   const handleLogout = () => {
-    axios.get('/end')
-      .then((res) => {
-        console.log(res)
-        // if (res.data === 'logged out') dispatch({ type: LOGOUT_SUCCESS });
-      })
-      .catch((err) => {
-        throw err;
-      });
-  }
+    const user = new User();
+    dispatch(user.logout());
+    setView('home');
+  };
 
   return (
     <div>
-      <button onClick={() => handleLogout()}>Logout</button>
+      <button onClick={handleLogout}>Logout</button>
     </div>
   );
 };

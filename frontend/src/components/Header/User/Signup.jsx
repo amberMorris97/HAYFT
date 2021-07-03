@@ -22,10 +22,10 @@ const Signup = ({ setView }) => {
     <div id="signupView" className="pageView">
       <Header setView={setView} />
       <form onSubmit={handleSubmit}>
-        <input type="text" name="name" label="name" value={name} onChange={handleChange} className="formInput"></input>
-        <input type="text" name="username" label="username" value={username} onChange={handleChange} className="formInput"></input>
-        <input type="text" name="email" label="email" value={email} onChange={handleChange} className="formInput"></input>
-        <input type="password" name="password" label="password" value={password} onChange={handleChange} className="formInput"></input>
+        <h5>Name</h5><input type="text" name="name" label="name" value={name} onChange={handleChange} className="formInput"></input>
+        <h5>Username</h5><input type="text" name="username" label="username" value={username} onChange={handleChange} className="formInput"></input>
+        <h5>Email</h5><input type="text" name="email" label="email" value={email} onChange={handleChange} className="formInput"></input>
+        <h5>Password</h5><input type="password" name="password" label="password" value={password} onChange={handleChange} className="formInput"></input>
         <button type="submit" name="signupBtn" label="signupBtn" className="formBtn" id="signupBtn">Signup</button>
       </form>
     </div>

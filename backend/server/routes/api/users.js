@@ -54,6 +54,7 @@ router.post('/register', auth.optional, (req, res, next) => {
 //POST login route (optional, everyone has access)
 router.post('/login', auth.optional, (req, res, next) => {
   const { body: { username, password } } = req;
+  console.log(username, password)
   if (!username) {
     return res.status(422).send({
       errors: {
@@ -71,7 +72,10 @@ router.post('/login', auth.optional, (req, res, next) => {
   }
 
   return passport.authenticate('local', { session: false }, (err, passportUser, info) => {
-    if (err) return next(err);
+    if (err) {
+      throw err;
+      return res.status(422).send({ error: err });
+    }
 
     if (passportUser) {
       const user = passportUser;
@@ -80,7 +84,7 @@ router.post('/login', auth.optional, (req, res, next) => {
       return res.status(200).send({ success: user.toAuthJSON() });
     }
 
-    return status(400).info;
+    return res.status(200).send({ errors: 'Invalid credentials' });
   })(req, res, next);
 });
 
