@@ -10,7 +10,7 @@ router.post('/register', auth.optional, (req, res, next) => {
   const { name, username, email, password } = req.body;
   if (!email) {
     return res.status(422).send({
-      errors: {
+      error: {
         email: 'is required',
       },
     });
@@ -18,7 +18,7 @@ router.post('/register', auth.optional, (req, res, next) => {
 
   if (!password) {
     return res.status(422).send({
-      errors: {
+      error: {
         password: 'is required',
       },
     });
@@ -26,7 +26,7 @@ router.post('/register', auth.optional, (req, res, next) => {
 
   if (!name) {
     return res.status(422).send({
-      errors: {
+      error: {
         name: 'is required',
       },
     });
@@ -34,7 +34,7 @@ router.post('/register', auth.optional, (req, res, next) => {
 
   if (!username) {
     return res.status(422).send({
-      errors: {
+      error: {
         username: 'is required',
       },
     });
@@ -47,7 +47,8 @@ router.post('/register', auth.optional, (req, res, next) => {
   finalUser.setPassword(password);
 
   return finalUser.save()
-    .then(() => res.send({ user: finalUser.toAuthJSON() }));
+    .then(() => res.send({ user: finalUser.toAuthJSON() }))
+    .catch((err) => res.send({ error: 'Register failed' }));
 });
 
 //POST login route (optional, everyone has access)
@@ -76,7 +77,7 @@ router.post('/login', auth.optional, (req, res, next) => {
       const user = passportUser;
       user.token = passportUser.generateJWT();
       res.cookie('Token', user.token);
-      return res.send({ user: user.toAuthJSON() });
+      return res.status(200).send({ success: user.toAuthJSON() });
     }
 
     return status(400).info;
@@ -84,8 +85,7 @@ router.post('/login', auth.optional, (req, res, next) => {
 });
 
 router.get('/current', async (req, res, next) => {
-  const cookie = !req.headers.cookie.split(';')[1];
-
+  let cookie = req.headers.cookie.split(';')[1];
   if (!cookie) return res.send('user not logged in');
 
   const token = req.headers.cookie.split(';')[1].split('Token=')[1];
@@ -99,9 +99,9 @@ router.get('/current', async (req, res, next) => {
       .select('-password');
 
   if (user) {
-    res.send(user);
+    res.send({ success: user });
   } else {
-    res.sendStatus(400);
+    res.status(400).send({ error: 'user not found' });
   }
 });
 
@@ -116,17 +116,17 @@ router.patch('/updateUser/:id', async (req, res) => {
     bcrypt.genSalt(10, async (err, salt) => {
       bcrypt.hash(password, salt, async (err, hashed) => {
         const updated = await Users.updateOne({ _id:mongoose.Types.ObjectId(`${id}`) }, { password: hashed });
-        if (updated) return res.status(200).send('Information updated');
-        if (!updated) return res.status(400).send('Information could not be updated at this time');
-      })
+        if (updated) return res.status(200).send({ success: 'Information updated' });
+        if (!updated) return res.status(400).send({ error: 'Information could not be updated at this time' });
+      });
      });
      return;
   }
 
   const updated = await Users.updateOne({_id:mongoose.Types.ObjectId(`${id}`)}, filter);
 
-  if (updated) res.status(200).send('Information updated');
-  if (!updated) res.status(400).send('Information could not be updated at this time');
+  if (updated) res.status(200).send({ success: 'Information updated' });
+  if (!updated) res.status(400).send({error: 'Information could not be updated at this time' });
 });
 
 router.put('/deleteUser/:id', async (req, res) => {
@@ -134,8 +134,8 @@ router.put('/deleteUser/:id', async (req, res) => {
 
   const deleted = await Users.deleteOne({ _id:mongoose.Types.ObjectId(`${id}`) });
 
-  if (deleted) res.status(200).send('User has been deleted');
-  if (!deleted) res.status(200).send('User could not be deleted at this time');
+  if (deleted) res.status(200).send({ success: 'User has been deleted' });
+  if (!deleted) res.status(200).send({ error: 'User could not be deleted at this time' });
 });
 
 module.exports = router;
