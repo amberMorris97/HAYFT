@@ -124,16 +124,56 @@ textarea {
 }
 #footer {
   display: grid;
-  grid-template-areas: 'contact line resources';
+  grid-template-areas: 'contact contact line resources resources';
   align-items: center;
   background-color: #788fff;
   font-family: 'Marcellus';
 }
 #footer-form {
   grid-area: contact;
-  display: flex;
-  flex-direction: column;
   margin: auto;
+}
+#contact-form {
+  display: grid;
+  grid-template-areas:
+    'name company'
+    'email phone'
+    'subject subject'
+    'message message'
+    'button button';
+  grid-gap: 0.5em;
+  align-items: center;
+}
+#contact-name {
+  grid-area: name;
+}
+#contact-company {
+  grid-area: company;
+}
+#contact-email {
+  grid-area: email;
+}
+#contact-phone {
+  grid-area: phone;
+}
+#contact-subject {
+  grid-area: subject;
+}
+#contact-message {
+  grid-area: message;
+}
+#contact-form button {
+  grid-area: button;
+}
+input[type=text] {
+  width: 100%;
+  height: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+textarea[name=message] {
+  width: 500px;
 }
 #footer-vl {
   grid-area: line;
@@ -143,4 +183,6 @@ textarea {
 #footer-resources {
   grid-area: resources;
 }
+
+
 
