@@ -7,6 +7,7 @@ import Main from './Landing/Main.jsx'
 import About from './About/About.jsx'
 import Services from './Services/Services.jsx'
 import Testimonials from './Testimonials/Testimonials.jsx'
+import Footer from './Footer/Footer.jsx'
 
 const App = () => {
   const dispatch = useDispatch();
@@ -33,6 +34,7 @@ const App = () => {
       <Services />
       <About />
       <Testimonials />
+      <Footer />
     </div>
   );
 };

@@ -78,7 +78,7 @@ const output = `
 // Step 2
 let mailOptions = {
     from: email,
-    to: 'ambermorris1997@gmail.com',
+    to: 'jrwebsitecorrespondence@gmail.com',
     subject: subject,
     html: output,
 };
