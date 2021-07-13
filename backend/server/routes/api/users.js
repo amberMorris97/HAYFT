@@ -92,8 +92,9 @@ router.get('/current', async (req, res, next) => {
   let cookie = req.headers.cookie.split(';')[1];
   if (!cookie) return res.send('user not logged in');
 
-  const token = req.headers.cookie.split(';')[1].split('Token=')[1];
-
+  const cookies = req.headers.cookie.split(';');
+  const filterCookies = cookies.filter(el => el.includes('Token='));
+  const token = filterCookies[0].split('Token=')[1];
   const jsonPayload = Buffer.from(token, 'base64').toString();
   const splitJson = jsonPayload.split(",");
   const sliceJson = splitJson.slice(0, splitJson.length - 1);

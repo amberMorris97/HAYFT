@@ -18,11 +18,10 @@ const Header = ({ setView }) => {
 
   return (
     <div id="header" className="headerDiv">
-      <h4 className="headerEl">Idk What This App Is Yet</h4>
+      <h4 className="headerEl">T I T L E | title</h4>
       <nav id="navHeader">
         <button label="homeBtn" name="Home" className="headerBtns" id="homeBtn" onClick={handleClick}>Home</button>
         {!user ? <button label="loginBtn" name="Login" className="headerBtns" id="loginBtn" onClick={handleClick}>Login</button> : <button label="logoutBtn" name="logout" id="logoutBtn" onClick={handleLogout}>Logout</button>}
-        {!user ? <button label="signupBtn" name="Signup" className="headerBtns" id="signupBtn" onClick={handleClick}>Signup</button> : <></>}
       </nav>
     </div>
   );

@@ -1,0 +1,112 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  /* overflow: hidden; */
+}
+.openSans {
+  font-family: 'Open-Sans';
+}
+.marcellus {
+  font-family: 'Marcellus', 'serif';
+}
+.headerDiv {
+  padding: 17px 25px;
+  height: 41px;
+  background-color: grey;
+  color: black;
+  display: grid;
+  grid-template-areas: 'head . . nav';
+  -webkit-box-shadow: 0px 0px 9px 3px rgba(41,41,41,.25);
+  -moz-box-shadow: 0px 0px 9px 3px rgba(41,41,41,.25);
+  box-shadow: 0px 0px 9px 3px rgba(41,41,41,.25);
+}
+.headerEl {
+  grid-area: head;
+  height: 12px;
+  color: white;
+}
+#navHeader {
+  grid-area: nav;
+}
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+#landingPage {
+  display: grid;
+  grid-template-areas:
+  'title'
+  'para';
+  justify-items: center;
+  background-image: url("./images/deipic.jpeg"), linear-gradient(rgba(250,250,250,0.5),rgba(250,250,250,0.5));
+  background-blend-mode: overlay;
+}
+#landingTitle {
+  grid-area: title;
+  align-self: end;
+  background-color: white;
+  padding: 25px;
+}
+#landingText {
+  grid-area: para;
+  width: 25%;
+  height: 25%;
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+}
+#landing-btn {
+  grid-area: para;
+  margin-top: 125px;
+}
+#about-page {
+  display: grid;
+  grid-template-areas:
+  'header header'
+  'image para';
+  align-items: center;
+}
+.about-heading {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#about-page img {
+  grid-area: image;
+}
+.about-para, .jane {
+  grid-area: para;
+}
+.jane {
+  margin-bottom: 250px;
+}
+#services-page {
+  text-align: center;
+  background-color: red;
+  color: white;
+}
+#services-page h1, span, p {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 125px;
+  font-family: 'Marcellus'
+}
+.service {
+  margin-top: 100px;
+}
+#services-page h1 {
+  font-size: 4em;
+}
+#services-page span {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+#services-page button {
+  width: 5%;
+  height: 5%;
+}
+
+

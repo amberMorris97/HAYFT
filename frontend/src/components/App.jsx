@@ -3,8 +3,10 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Header from './Header/Header.jsx';
 import User from '../redux/actions/authActions';
-import Login from './Header/User/Login.jsx';
-import Signup from './Header/User/Signup.jsx';
+import Main from './Landing/Main.jsx'
+import About from './About/About.jsx'
+import Services from './Services/Services.jsx'
+import Testimonials from './Testimonials/Testimonials.jsx'
 
 const App = () => {
   const dispatch = useDispatch();
@@ -18,20 +20,19 @@ const App = () => {
     setLoadedUser(user);
   }, []);
 
-  if (!user) return (<div>wait</div>)
+  // if (!loadedUser) return (<div>wait</div>)
 
   if (view === 'Login') {
     return <Login setView={setView}/>
   };
 
-  if (view === 'Signup') {
-    return <Signup setView={setView}/>
-  };
-
   return (
     <div>
       <Header setView={setView} user={user} />
-      <h1>App</h1>
+      <Main />
+      <Services />
+      <About />
+      <Testimonials />
     </div>
   );
 };

@@ -3,6 +3,7 @@ const path = require('path');
 const jwt = require('jsonwebtoken');
 const expressJwt = require('express-jwt');
 const session = require('express-session');
+const nodemailer = require('nodemailer');
 const mongoose = require('mongoose');
 const passportLocalMongoose = require('passport-local-mongoose');
 const passport = require('passport');
@@ -48,6 +49,48 @@ app.get('/end', (req, res, next) => {
 });
 
 app.use(express.static(path.join(__dirname, '../../frontend/public')));
+
+
+app.post('/email', (req, res) => {
+  const { name, email, company, phone, subject, message } = req.body;
+
+  let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: process.env.EMAIL,
+        pass: process.env.EMAIL_PASS,
+    },
+});
+
+const output = `
+  <h3>Contact Info </h3>
+  <p>Message from jrwebsite.com</p>
+  <ul>
+    <li>Name: ${name}</li>
+    <li>Company: ${company}</>
+    <li>Email: ${email}</li>
+    <li>Phone: ${phone || 'N/A'}</li>
+  </ul>
+  <h3>Message</h3>
+  <p>${message}</p>
+`;
+
+// Step 2
+let mailOptions = {
+    from: email,
+    to: 'ambermorris1997@gmail.com',
+    subject: subject,
+    html: output,
+};
+
+// Step 3
+transporter.sendMail(mailOptions, (err, data) => {
+    if (err) {
+      throw err;
+    }
+    return res.status(200).send('Message received!');
+  });
+});
 
 
 module.exports = app;
