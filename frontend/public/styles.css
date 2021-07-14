@@ -7,27 +7,8 @@ body, html {
 .openSans {
   font-family: 'Open-Sans';
 }
-.marcellus {
-  font-family: 'Marcellus', 'serif';
-}
-.headerDiv {
-  padding: 17px 25px;
-  height: 41px;
-  background-color: grey;
-  color: black;
-  display: grid;
-  grid-template-areas: 'head . . nav';
-  -webkit-box-shadow: 0px 0px 9px 3px rgba(41,41,41,.25);
-  -moz-box-shadow: 0px 0px 9px 3px rgba(41,41,41,.25);
-  box-shadow: 0px 0px 9px 3px rgba(41,41,41,.25);
-}
-.headerEl {
-  grid-area: head;
-  height: 12px;
-  color: white;
-}
-#navHeader {
-  grid-area: nav;
+.muli {
+  font-family: 'Muli';
 }
 .fullscreen {
   width: 100vw;
@@ -37,32 +18,66 @@ body, html {
   width: 100vw;
   height: 50vh;
 }
+#header {
+  background-color: rgb(89 23 11);
+  padding: 1%;
+  display: flex;
+  justify-content: space-around;
+  font-family: Muli;
+  color: #DCE1E3;
+}
+#nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  align-self: flex-start;
+  gap: 25px;
+}
 #landingPage {
   display: grid;
-  grid-template-areas:
-  'title'
-  'para';
+  grid-template-columns: 25% 25% 25%;
+  align-items: center;
   justify-items: center;
-  background-color: rgb(230, 169, 99);
-  background-blend-mode: overlay;
+  justify-content: space-evenly;
+  background-color: rgb(89 23 11 / 1);
 }
 #landingTitle {
-  grid-area: title;
-  align-self: end;
-  background-color: white;
-  padding: 25px;
+  color: #DCE1E3;
+  font-family: Muli;
+  font-size: 10em;
+  font-weight: 500px;
+  margin-bottom: 250px;
+  border: 1px solid black;
+  padding: 5%;
+  background-color: rgba(92, 95, 88, 0.1);
+  z-index: 1000;
 }
-#landingText {
-  grid-area: para;
-  width: 25%;
-  height: 25%;
-  padding: 10px;
-  text-align: center;
-  background-color: white;
+#landing-image.MuiPaper-root {
+  width: 45vw;
+  height: 50vh;
+  margin-bottom: 10vh;
 }
-#landing-btn {
-  grid-area: para;
-  margin-top: 125px;
+.MuiCardMedia-root.lake {
+  height: 800px;
+}
+#landing-text .MuiButton-label {
+  border: none;
+  font-family: Muli;
+  font-weight: bold;
+  background-color: #004E7C;
+}
+#landing-text p {
+  color: #004E7C;
+  font-size: 3em;
+  border: 1px solid black;
+  padding: 5%;
+  z-index: 1000;
+  background-color: rgba(92, 95, 88, 0.1);
+}
+#landing-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #services {
   display: grid;
@@ -241,6 +256,3 @@ textarea[name=message] {
 #footer-resources {
   grid-area: resources;
 }
-
-
-

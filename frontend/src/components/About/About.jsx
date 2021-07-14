@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div id="about-page" className="fullscreen">
       <div className="about-heading">
-        <h1 id="about-title" className="marcellus">DEI Consultant</h1>
+        <h1 id="about-title" className="muli">DEI Consultant</h1>
         <p className="openSans" id="about-text">Together, we can help your workplace evolve.</p>
       </div>
       <img src={gray} alt="img" height="700" width="600" />

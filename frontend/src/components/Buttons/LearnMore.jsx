@@ -1,10 +1,16 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 
 const LearnMoreBtn = () => {
 
   return (
     <div id="learnMoreBtnDiv" className="btnDiv">
-      <button label="learnMore" className="btn openSans" id="learnMoreBtn">Learn More</button>
+      <Button
+        focusRipple
+        key="learn-more"
+        className="learn-more-btn"
+        label="learn-more"
+      >Learn More</Button>
     </div>
   );
 };

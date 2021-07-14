@@ -18,10 +18,15 @@ const Header = ({ setView }) => {
 
   return (
     <div id="header" className="headerDiv">
-      <h4 className="headerEl">T I T L E | title</h4>
-      <nav id="navHeader">
-        <button label="homeBtn" name="Home" className="headerBtns" id="homeBtn" onClick={handleClick}>Home</button>
-        {!user ? <button label="loginBtn" name="Login" className="headerBtns" id="loginBtn" onClick={handleClick}>Login</button> : <button label="logoutBtn" name="logout" id="logoutBtn" onClick={handleLogout}>Logout</button>}
+      <h4 className="headerEl">J A N E  R O S E N Z W E I G | DEI Strategist</h4>
+      <nav id="nav">
+        <ul id="nav-links">
+          <li>ABOUT</li>
+          <li>SERVICES</li>
+          <li>TESTIMONIALS</li>
+          <li>BLOG</li>
+          <li>CONTACT</li>
+        </ul>
       </nav>
     </div>
   );

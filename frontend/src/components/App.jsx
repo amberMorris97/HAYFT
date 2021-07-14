@@ -28,8 +28,7 @@ const App = () => {
   };
 
   return (
-    <div>
-      <Header setView={setView} user={user} />
+    <div id="app-content">
       <Main />
       <About />
       <Services />
