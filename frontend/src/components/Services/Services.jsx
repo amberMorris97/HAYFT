@@ -1,44 +1,73 @@
-import React, { useState, useEffect } from 'react';
-import LearnMoreBtn from '../Buttons/LearnMore.jsx';
+import React, { useState, useRef } from 'react';
 import ReactSwipe from 'react-swipe';
+import { Slide } from '@material-ui/core';
+import Advising from './Advising.jsx';
+import Coaching from './Coaching.jsx';
+import Gathering from './Gathering.jsx';
+import AboutServices from './AboutServices.jsx';
+import ServiceBar from './ServiceBar.jsx';
+import nodeRef from './helpers/nodeRef';
 
 const Services = () => {
+  const [view, setView] = useState('default');
 
-  let reactSwipeEl;
 
-  return (
-    <div id="services-page" className="fullscreen">
-      <ReactSwipe
-        className="carousel"
-        swipeOptions={{ continuous: true }}
-        ref={el => (reactSwipeEl = el)}
-      >
-        <div id="advisory" className="service openSans">
-          <h1>Advisory</h1>
-          <br />
-          <span className="bold">We start where you are</span>
-          <br />
-          <p className="service-para">I can help you build or refresh your DEI strategy to create deeper meaning and greater impact.</p>
+  const ref = useRef();
+  const isVisible = nodeRef(ref);
+
+  if (!isVisible) return ( <div ref={ref} className="fullscreen"></div> );
+
+  switch(view) {
+    case 'advising': {
+      return (
+        <div id="services" className="fullscreen">
+          <div id="service-content">
+          <button onClick={() => setView('default')} className="services-title">S E R V I C E S</button>
+            <ServiceBar setView={setView} />
+            <Advising setView={setView} />
+          </div>
         </div>
-        <div id="coaching" className="service openSans">
-          <h1>Coaching</h1>
-          <br />
-          <span className="bold">Adaptive change is different</span>
-          <br />
-          <p className="service-para">I can help you explore your assumptions and experiences, in context, create new insights and grow.</p>
+      );
+    }
+    case 'coaching': {
+      return (
+        <div id="services" className="fullscreen">
+          <div id="service-content">
+          <button onClick={() => setView('default')} className="services-title">S E R V I C E S</button>
+            <ServiceBar setView={setView} />
+            <Coaching />
+          </div>
         </div>
-        <div id="gathering" className="service openSans">
-          <h1>Gathering</h1>
-          <br />
-          <span className="bold">Dialogue drives everything</span>
-          <br />
-          <p className="service-para">I can help you and your teams gather, with purpose, to activate new insights and build community.</p>
+      );
+    }
+    case 'gathering': {
+      return (
+        <div id="services" className="fullscreen">
+          <div id="service-content">
+          <button onClick={() => setView('default')} className="services-title">S E R V I C E S</button>
+            <ServiceBar setView={setView} />
+            <Gathering />
+          </div>
         </div>
-      </ReactSwipe>
-      <input type="image" src="https://img.icons8.com/ios/50/000000/chevron-right.png" name="saveForm" id="nextBtn" onClick={() => reactSwipeEl.next()}/>
-      {/* <button className="next-service" onClick={() => reactSwipeEl.next()}>Next</button> */}
-    </div>
-  );
+      );
+    }
+    default:
+      return (
+        <div ref={ref} id="services" className="fullscreen">
+          <div id="service-content">
+            <Slide direction="down" in={isVisible} timeout={1500} mountOnEnter>
+                <button onClick={() => setView('default')} className="services-title">S E R V I C E S</button>
+            </Slide>
+            <Slide direction="down" in={isVisible} timeout={1500} mountOnEnter>
+              <div id="service-slide-div">
+                <ServiceBar setView={setView} />
+                <AboutServices />
+              </div>
+            </Slide>
+            </div>
+        </div>
+      );
+  }
 };
 
 export default Services;

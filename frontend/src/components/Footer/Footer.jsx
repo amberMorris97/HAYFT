@@ -6,7 +6,7 @@ import Resources from './Resources.jsx';
 const Footer = () => {
 
   return (
-    <div id="footer" className="fullscreen">
+    <div id="footer" className="halfscreen">
       <div id="footer-form">
         <EmailForm />
       </div>

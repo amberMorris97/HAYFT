@@ -31,8 +31,8 @@ const App = () => {
     <div>
       <Header setView={setView} user={user} />
       <Main />
-      <Services />
       <About />
+      <Services />
       <Testimonials />
       <Footer />
     </div>
