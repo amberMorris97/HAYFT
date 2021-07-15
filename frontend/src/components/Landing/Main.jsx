@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import LearnMoreBtn from '../Buttons/LearnMore.jsx';
+import PurpleButton from '../Buttons/PurpleButton.jsx';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -29,7 +29,7 @@ const Main = () => {
         <div id="landing-text">
           <p className="landing-para">together, we can create a cycle of <strong>inquiry</strong>, <strong>reflection</strong> and <strong>being</strong> that will help you grow and your teams thrive.</p>
           <br />
-          <LearnMoreBtn />
+          <PurpleButton text={'LEARN MORE'}/>
         </div>
       </div>
     </div>

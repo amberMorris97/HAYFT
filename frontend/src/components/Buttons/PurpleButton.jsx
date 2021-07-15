@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 
-const LearnMoreBtn = () => {
+const PurpleButton = ({ text }) => {
 
   return (
     <div id="learnMoreBtnDiv" className="btnDiv">
@@ -10,9 +10,9 @@ const LearnMoreBtn = () => {
         key="learn-more"
         className="learn-more-btn"
         label="learn-more"
-      >Learn More</Button>
+      >{text}</Button>
     </div>
   );
 };
 
-export default LearnMoreBtn;
+export default PurpleButton;

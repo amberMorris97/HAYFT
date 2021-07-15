@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import LearnMoreBtn from '../Buttons/LearnMore.jsx';
 import ReactSwipe from 'react-swipe';
 const square = './images/gray.jpg';
 const christian = './images/ChristianLanger.jpeg';
