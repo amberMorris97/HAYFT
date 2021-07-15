@@ -17,57 +17,74 @@ const Services = () => {
 
   if (!isVisible) return ( <div ref={ref} className="fullscreen"></div> );
 
-  switch(view) {
-    case 'advising': {
-      return (
-        <div id="services" className="fullscreen">
-          <div id="service-content">
-          <button onClick={() => setView('default')} className="services-title">S E R V I C E S</button>
-            <ServiceBar setView={setView} />
-            <Advising setView={setView} />
-          </div>
-        </div>
-      );
-    }
-    case 'coaching': {
-      return (
-        <div id="services" className="fullscreen">
-          <div id="service-content">
-          <button onClick={() => setView('default')} className="services-title">S E R V I C E S</button>
-            <ServiceBar setView={setView} />
+  return (
+    <div ref={ref} id="services" className="fullscreen">
+      <div id="service-content">
+        <Slide direction="down" in={isVisible} timeout={1500} mountOnEnter>
+          <h1 className="services-title">S E R V I C E S</h1>
+        </Slide>
+        <Slide direction="down" in={isVisible} timeout={1500} mountOnEnter>
+          <div id="service-slide-div">
+            <Advising />
             <Coaching />
-          </div>
-        </div>
-      );
-    }
-    case 'gathering': {
-      return (
-        <div id="services" className="fullscreen">
-          <div id="service-content">
-          <button onClick={() => setView('default')} className="services-title">S E R V I C E S</button>
-            <ServiceBar setView={setView} />
             <Gathering />
           </div>
+        </Slide>
         </div>
-      );
-    }
-    default:
-      return (
-        <div ref={ref} id="services" className="fullscreen">
-          <div id="service-content">
-            <Slide direction="down" in={isVisible} timeout={1500} mountOnEnter>
-                <button onClick={() => setView('default')} className="services-title">S E R V I C E S</button>
-            </Slide>
-            <Slide direction="down" in={isVisible} timeout={1500} mountOnEnter>
-              <div id="service-slide-div">
-                <ServiceBar setView={setView} />
-                <AboutServices />
-              </div>
-            </Slide>
-            </div>
-        </div>
-      );
-  }
+    </div>
+  );
+
+  // switch(view) {
+  //   case 'advising': {
+  //     return (
+  //       <div id="services" className="fullscreen">
+  //         <div id="service-content">
+  //         <button onClick={() => setView('default')} className="services-title">S E R V I C E S</button>
+  //           <ServiceBar setView={setView} />
+  //           <Advising setView={setView} />
+  //         </div>
+  //       </div>
+  //     );
+  //   }
+  //   case 'coaching': {
+  //     return (
+  //       <div id="services" className="fullscreen">
+  //         <div id="service-content">
+  //         <button onClick={() => setView('default')} className="services-title">S E R V I C E S</button>
+  //           <ServiceBar setView={setView} />
+  //           <Coaching />
+  //         </div>
+  //       </div>
+  //     );
+  //   }
+  //   case 'gathering': {
+  //     return (
+  //       <div id="services" className="fullscreen">
+  //         <div id="service-content">
+  //         <button onClick={() => setView('default')} className="services-title">S E R V I C E S</button>
+  //           <ServiceBar setView={setView} />
+  //           <Gathering />
+  //         </div>
+  //       </div>
+  //     );
+  //   }
+  //   default:
+  //     return (
+  //       <div ref={ref} id="services" className="fullscreen">
+  //         <div id="service-content">
+  //           <Slide direction="down" in={isVisible} timeout={1500} mountOnEnter>
+  //               <button onClick={() => setView('default')} className="services-title">S E R V I C E S</button>
+  //           </Slide>
+  //           <Slide direction="down" in={isVisible} timeout={1500} mountOnEnter>
+  //             <div id="service-slide-div">
+  //               <ServiceBar setView={setView} />
+  //               <AboutServices />
+  //             </div>
+  //           </Slide>
+  //           </div>
+  //       </div>
+  //     );
+  // }
 };
 
 export default Services;

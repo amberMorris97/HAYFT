@@ -30,8 +30,8 @@ const App = () => {
   return (
     <div id="app-content">
       <Main />
-      <About />
       <Services />
+      <About />
       <Testimonials />
       <Footer />
     </div>

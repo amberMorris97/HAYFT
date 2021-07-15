@@ -1,14 +1,7 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  /* overflow: hidden; */
-}
-.openSans {
-  font-family: 'Open-Sans';
-}
-.muli {
-  font-family: 'Muli';
+  width: 100vw;
 }
 .fullscreen {
   width: 100vw;
@@ -19,12 +12,12 @@ body, html {
   height: 50vh;
 }
 #header {
-  background-color: rgb(89 23 11);
+  background-color: #932432;
   padding: 1%;
   display: flex;
   justify-content: space-around;
-  font-family: Muli;
-  color: #DCE1E3;
+  font-family: 'Muli';
+  color: #F3F3F3;
 }
 #nav-links {
   display: flex;
@@ -39,17 +32,16 @@ body, html {
   align-items: center;
   justify-items: center;
   justify-content: space-evenly;
-  background-color: rgb(89 23 11 / 1);
+  background-color: #932432;
 }
 #landingTitle {
-  color: #DCE1E3;
+  color: #F3F3F3;
   font-family: Muli;
   font-size: 10em;
   font-weight: 500px;
-  margin-bottom: 250px;
-  border: 1px solid black;
+  margin-bottom: 500px;
   padding: 5%;
-  background-color: rgba(92, 95, 88, 0.1);
+  background-color: rgba(92, 95, 88, 0.5);
   z-index: 1000;
 }
 #landing-image.MuiPaper-root {
@@ -64,15 +56,15 @@ body, html {
   border: none;
   font-family: Muli;
   font-weight: bold;
-  background-color: #004E7C;
+  background-color: #3C1874;
 }
 #landing-text p {
-  color: #004E7C;
+  color: #283747;
   font-size: 3em;
-  border: 1px solid black;
   padding: 5%;
   z-index: 1000;
-  background-color: rgba(92, 95, 88, 0.1);
+  background-color: #F3F3F3;
+  margin-top: 125px;
 }
 #landing-text {
   display: flex;
@@ -81,22 +73,42 @@ body, html {
 }
 #services {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.1fr 0.2fr;
+  grid-template-areas:
+  'title'
+  'card';
   align-items: center;
   justify-items: center;
-  background-color: whitesmoke;
+  background: repeating-linear-gradient(#932432, #932432 49.9%, #F3F3F3 50.1%, #F3F3F3 100%);
   overflow: hidden;
 }
-#service-content {
-  margin-top: 250px;
-}
-.MuiCard-root {
-  width: 50vw;
-  height: 25vh;
+.services-title {
+  grid-area: title;
   text-align: center;
-  margin-top: 50px;
+  font-size: 5em;
+  color: #F3F3F3;
 }
+
+#service-content #service-slide-div {
+  display: inline-flex;
+  gap: 25px;
+  margin-top: 150px;
+}
+
+#service-slide-div .MuiPaper-root {
+  width: 20vw;
+  height: 40vh;
+  text-align: center;
+  background-color: #3C1874;
+  border-radius: 5%;
+}
+#service-slide-div .MuiCardContent-root {
+  display: flex;
+  flex-direction: column;
+  color: #F3F3F3;
+  font-family: 'Muli';
+  font-size: 1.5em;
+}
+
 .MuiButton-label {
   background-color: #5555da;
   padding: 12px 24px;
@@ -110,14 +122,9 @@ body, html {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 5em;
-  margin-top: 200px;
+  margin-top: 100px;
 }
-.services-title {
-  font-size: 3em;
-  margin-left: 500px;
-  font-family: Georgia;
-  margin-left: 400px;
-}
+
 /* #services-page {
   text-align: center;
   background-color: red;
