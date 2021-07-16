@@ -5,7 +5,7 @@ const gray = './images/gray.jpg';
 
 const About = () => {
   return (
-    <div id="about-page" className="fullscreen">
+    <div id="about-page" className="quarter3Screen">
       <div className="about-heading">
         <h1 id="about-title" className="muli">DEI Consultant</h1>
         <p className="openSans" id="about-text">Together, we can help your workplace evolve.</p>
