@@ -180,6 +180,31 @@ body, html {
 form {
   font-size: 0.8em;
 }
+.carousel {
+  background-color: #FDF8F5;
+  height: 25vh;
+  color: 266150;
+  text-align: center;
+}
+.carousel h3 {
+  margin-top: 5vh;
+  font-size: 2em;
+  font-style: italic;
+}
+.carousel p {
+  width: 50%;
+  margin: auto;
+  margin-top: 5vh;
+  font-size: 1.5em;
+}
+.carousel.slide img {
+  width: 20vw;
+  height: 25vh;
+}
+div.carousel-caption {
+  width: 25%;
+  margin-left: 25vw;
+}
 input[type=text] {
   width: 50%;
   height: 50%;
@@ -190,6 +215,12 @@ input[type=text] {
 textarea {
   width: 75%;
   height: 250px;
+}
+#testimonials-page {
+  background-color: #FDF8F5;
+}
+#testimonials-page h1 {
+  text-align: center
 }
 #footer {
   display: grid;
