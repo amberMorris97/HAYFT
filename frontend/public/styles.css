@@ -84,23 +84,32 @@ body, html {
   'card';
   align-items: center;
   justify-items: center;
-  background: repeating-linear-gradient(#DDAF94, #DDAF94 49.9%, #FDF8F5 50.1%, #FDF8F5 100%);
-  padding-bottom: 25px;
+  background-color: #DDAF94;
+  background: repeating-linear-gradient(#DDAF94, #DDAF94 74.9%, #FDF8F5 75.1%, #FDF8F5 100%);
   overflow: hidden;
 }
 .services-title {
   grid-area: title;
   text-align: center;
-  font-size: 6em;
+  font-size: 7em;
   color: #F3F3F3;
+  font-family: 'Cormorant';
 }
 
 #service-content #service-slide-div {
   display: inline-flex;
   gap: 25px;
-  margin-top: 50px;
+  margin-top: 10vh;
 }
-
+#service-content .MuiPaper-root h1 {
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+#service-content h3 {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bolder;
+}
 #service-slide-div .MuiPaper-root {
   width: 20vw;
   height: 40vh;
@@ -114,6 +123,7 @@ body, html {
   color: #F3F3F3;
   font-family: 'Muli';
   font-size: 2em;
+  gap: 1vh;
 }
 
 .MuiButton-label {
@@ -134,19 +144,25 @@ body, html {
   background-color: #FDF8F5;
   font-family: 'Muli';
 }
+#about-title {
+  font-size: 4em
+}
 .about-heading {
   grid-area: header;
   display: flex;
   flex-direction: column;
+  gap: 1vh;
   align-items: center;
   text-align: center;
   font-size: 2em;
   color: #4F4846;
+  font-family: 'Cormorant'
 }
 #about-text {
   margin: auto;
 }
 #about-content {
+  margin-bottom: 25vh;
   display: grid;
   grid-template-areas:
   'image text'
@@ -175,36 +191,55 @@ body, html {
   align-self: center;
   grid-area: btn;
   margin-top: 25px;
-  margin-left: 325px;
 }
 form {
   font-size: 0.8em;
 }
 .carousel {
-  background-color: #FDF8F5;
-  height: 25vh;
-  color: 266150;
+/*   background-color: rgb(232 206 191 / 0.5); */
+  height: 50vh;
+  color: #4F4846;
   text-align: center;
+}
+#testimonials-page h1 {
+  font-family: 'Cormorant';
 }
 .carousel h3 {
   margin-top: 5vh;
-  font-size: 2em;
+  font-size: 2.5em;
   font-style: italic;
+  font-family: 'Muli';
 }
 .carousel p {
   width: 50%;
-  margin: auto;
-  margin-top: 5vh;
+  margin: 5vh auto 0;
+  font-size: 2em;
+  font-family: 'Cormorant';
+}
+.carousel-content {
+  display: grid;
+  grid-template-areas:
+    'title'
+    'para'
+    'image'
+    'name';
+  justify-items: center;
+}
+.carousel span {
+  grid-area: name;
+  margin-top: 1vh;
+  font-family: 'Cormorant';
   font-size: 1.5em;
 }
-.carousel.slide img {
-  width: 20vw;
-  height: 25vh;
+.carousel img {
+  grid-area: image;
+  margin-top: 4vh;
+  width: 10vw;
 }
-div.carousel-caption {
-  width: 25%;
-  margin-left: 25vw;
+div.carousel-item.active {
+  height: 100vh;
 }
+
 input[type=text] {
   width: 50%;
   height: 50%;
@@ -219,9 +254,24 @@ textarea {
 #testimonials-page {
   background-color: #FDF8F5;
 }
-#testimonials-page h1 {
-  text-align: center
+#testimonials-page svg:nth-child(2) {
+  width: 100vw;
 }
+#testimonials-page .MuiPaper-root {
+  width: 50vw;
+  height: 50vh;
+  margin: auto;
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+#testimonials-page h1 {
+  text-align: center;
+  font-size: 7em;
+  color: #266150;
+
+}
+
 #footer {
   display: grid;
   grid-template-areas: 'contact contact line resources resources';

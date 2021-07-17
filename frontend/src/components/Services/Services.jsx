@@ -1,15 +1,14 @@
-import React, { useState, useRef } from 'react';
-import ReactSwipe from 'react-swipe';
+import React, { useRef } from 'react';
 import { Slide } from '@material-ui/core';
 import Advising from './Advising.jsx';
 import Coaching from './Coaching.jsx';
 import Gathering from './Gathering.jsx';
-import AboutServices from './AboutServices.jsx';
-import ServiceBar from './ServiceBar.jsx';
+// import AboutServices from './AboutServices.jsx';
+// import ServiceBar from './ServiceBar.jsx';
 import nodeRef from './helpers/nodeRef';
 
 const Services = () => {
-  const [view, setView] = useState('default');
+  // const [view, setView] = useState('default');
 
 
   const ref = useRef();

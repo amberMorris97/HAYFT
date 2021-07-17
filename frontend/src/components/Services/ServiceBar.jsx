@@ -1,8 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 
-const ServiceBar = ({ setView }) => {
-  const handleClick = e => setView(e.target.innerText.toLowerCase());
+const ServiceBar = () => {
   return (
     <div id="service-bar" className="service-content">
       <Button
@@ -10,7 +9,6 @@ const ServiceBar = ({ setView }) => {
         key="advising"
         className="service-button"
         label="advising"
-        onClick={handleClick}
       >Advising</Button>
       {' '}
       <Button
@@ -18,7 +16,6 @@ const ServiceBar = ({ setView }) => {
         key="coaching"
         className="service-button"
         label="coaching"
-        onClick={handleClick}
         >Coaching</Button>
       {' '}
       <Button
@@ -26,7 +23,6 @@ const ServiceBar = ({ setView }) => {
         key="gathering"
         className="service-button"
         label="gathering"
-        onClick={handleClick}
       >Gathering</Button>
     </div>
   );
