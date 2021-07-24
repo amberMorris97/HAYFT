@@ -1,0 +1,444 @@
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+#header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 3rem;
+  padding: 3rem;
+}
+
+#header-container select {
+  display: none;
+}
+
+#header-container nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5rem;
+}
+
+#landing-content {
+  background-image: url("./images/lake.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Muli';
+  padding: 3rem;
+}
+
+#landing-content h1, #landing-content p {
+  background-color: #DADED4;
+  padding: 1rem;
+  text-align: center;
+}
+
+#landing-content h1 {
+  font-size: 7rem;
+}
+
+#landing-content .main-button {
+  background-color: #A3BCB6;
+  padding: 5px;
+  border-radius: 5%;
+  font-family: 'Cormorant';
+}
+
+#landing-content .main-button Button {
+  padding: 10px;
+}
+
+#landing-content #services-container {
+  font-family: 'Cormorant';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5vh;
+}
+
+#landing-content #services-container #service-cards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5em;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 560px) {
+  #header-container nav ul {
+    display: none;
+  }
+  #header-container nav select {
+    display: revert;
+  }
+  #landing-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-family: 'Muli';
+    padding: 3rem;
+  }
+  #landing-content h1 {
+    font-size: 5rem;
+    padding: 0;
+  }
+  #landing-content p {
+    font-size: 2rem;
+    padding: 0;
+  }
+  .main-button {
+    text-align: center;
+  }
+  .main-button Button {
+    font-size: 1rem;
+    color: #3C403D;
+  }
+  #services-container {
+    background-color: #DADED4;
+    font-family: 'Cormorant';
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #services-container h1 {
+    font-size: 1.5em;
+    font-family: 'Muli';
+  }
+  #services-container h3 {
+    font-style: italic;
+    font-weight: bolder;
+  }
+  #services-container .services-title {
+    font-size: 3em;
+    font-family: 'Cormorant';
+  }
+  #services-container #service-cards-container {
+    padding: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2em;
+  }
+  #services-container #service-cards-container .service-card .MuiPaper-root {
+    background-color: #A3BCB6;
+    height: 25vh;
+    text-align: center;
+  }
+  #about-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 3em;
+    gap: 2em;
+    text-align: center;
+  }
+  #about-container h1 {
+    font-size: 2.5em;
+    font-family: 'Cormorant';
+  }
+  #about-container span {
+    font-style: italic;
+    font-family: 'Muli';
+  }
+  #about-container .MuiPaper-root {
+    width: 75vw;
+    height: 50vh;
+  }
+  #about-container .MuiButton-label {
+    background-color: #A3BCB6;
+    padding: 1em;
+    border-radius: 5%;
+    font-style: normal;
+    font-family: 'Muli';
+  }
+  #testimonials-page {
+    padding: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #testimonials-page h1 {
+    font-size: 2em;
+    font-family: 'Cormorant';
+    color: #39603D;
+  }
+  #testimonials-page .carousel-item.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  #testimonials-page .carousel-item.active h3 {
+    color: #39603D;
+    width: 75vw;
+  }
+  #testimonials-page .carousel-item.active p {
+    width: 75vw;
+  }
+  #testimonials-page .carousel-item.active img {
+    width: 50vw;
+    height: 25vh;
+  }
+}
+
+@media (min-width: 561px) {
+  #header-container nav ul {
+    display: none;
+  }
+  #header-container nav select {
+    display: revert;
+  }
+  #landing-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-family: 'Muli';
+    padding: 3rem;
+  }
+  #landing-content h1 {
+    font-size: 5rem;
+    padding: 0;
+  }
+  #landing-content p {
+    font-size: 2rem;
+    padding: 0;
+  }
+  .main-button {
+    text-align: center;
+  }
+  .main-button Button {
+    font-size: 1rem;
+    color: #3C403D;
+  }
+  #services-container {
+    background-color: #DADED4;
+    font-family: 'Cormorant';
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #services-container h1 {
+    font-size: 2em;
+    font-family: 'Muli';
+  }
+  #services-container h3 {
+    font-style: italic;
+    font-weight: bolder;
+  }
+  #services-container .services-title {
+    font-size: 5em;
+    font-family: 'Cormorant';
+  }
+  #services-container #service-cards-container {
+    padding: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2em;
+  }
+  #services-container #service-cards-container .service-card .MuiPaper-root {
+    background-color: #A3BCB6;
+    height: 25vh;
+    text-align: center;
+    font-size: 2em;
+  }
+  #about-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 3em;
+    gap: 2em;
+    text-align: center;
+  }
+  #about-container h1 {
+    font-size: 4em;
+    font-family: 'Cormorant';
+  }
+  #about-container span {
+    font-style: italic;
+    font-family: 'Muli';
+  }
+  #about-container .MuiPaper-root {
+    width: 75vw;
+    height: 50vh;
+  }
+  #about-container p {
+    font-size: 2em;
+  }
+  #about-container .MuiButton-label {
+    background-color: #A3BCB6;
+    padding: 1em;
+    border-radius: 5%;
+    font-style: normal;
+    font-family: 'Muli';
+  }
+  #testimonials-page {
+    padding: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #testimonials-page h1 {
+    font-size: 2em;
+    font-family: 'Cormorant';
+    color: #39603D;
+  }
+  #testimonials-page .carousel-item.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  #testimonials-page .carousel-item.active h3 {
+    color: #39603D;
+    width: 75vw;
+  }
+  #testimonials-page .carousel-item.active p {
+    width: 75vw;
+  }
+  #testimonials-page .carousel-item.active img {
+    width: 50vw;
+    height: 25vh;
+  }
+}
+/*# sourceMappingURL=index.css.map */

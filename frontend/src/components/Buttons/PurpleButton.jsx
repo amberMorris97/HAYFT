@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 const PurpleButton = ({ text }) => {
 
   return (
-    <div id="learnMoreBtnDiv" className="btnDiv">
+    <div className="main-button">
       <Button
         focusRipple
         key="learn-more"

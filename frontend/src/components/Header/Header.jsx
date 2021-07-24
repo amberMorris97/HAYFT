@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -17,8 +19,8 @@ const Header = ({ setView }) => {
   };
 
   return (
-    <div id="header" className="headerDiv">
-      <h4 className="headerEl">J A N E  R O S E N Z W E I G | DEI Strategist</h4>
+    <div id="header-container">
+      <h4>J A N E  R O S E N Z W E I G | DEI Strategist</h4>
       <nav id="nav">
         <ul id="nav-links">
           <li>ABOUT</li>
@@ -27,6 +29,14 @@ const Header = ({ setView }) => {
           <li>BLOG</li>
           <li>CONTACT</li>
         </ul>
+
+        <select>
+          <option>About</option>
+          <option>Services</option>
+          <option>Testimonials</option>
+          <option>Blog</option>
+          <option>Contact</option>
+        </select>
       </nav>
     </div>
   );

@@ -17,20 +17,18 @@ const Services = () => {
   if (!isVisible) return ( <div ref={ref} className="fullscreen"></div> );
 
   return (
-    <div ref={ref} id="services" className="fullscreen">
-      <div id="service-content">
-        <Slide direction="down" in={isVisible} timeout={1500} mountOnEnter>
-          <h1 className="services-title">S E R V I C E S</h1>
-        </Slide>
-        <Slide direction="down" in={isVisible} timeout={1500} mountOnEnter>
-          <div id="service-slide-div">
-            <Advising />
-            <Coaching />
-            <Gathering />
-          </div>
-        </Slide>
+    <div ref={ref} id="services-container" className="fullscreen">
+      <Slide direction="down" in={isVisible} timeout={1500} mountOnEnter>
+        <h1 className="services-title">S E R V I C E S</h1>
+      </Slide>
+      <Slide direction="down" in={isVisible} timeout={1500} mountOnEnter>
+        <div id="service-cards-container">
+          <Advising />
+          <Coaching />
+          <Gathering />
         </div>
-    </div>
+      </Slide>
+      </div>
   );
 
   // switch(view) {

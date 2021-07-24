@@ -1,0 +1,448 @@
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+#header-container {
+  display: flex;
+  justify-content: space-between;
+  height: 3rem;
+  padding: 3rem;
+
+  select {
+    display: none;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 5rem;
+  }
+}
+#landing-content {
+  background-image: url('./images/lake.jpg');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Muli';
+  padding: 3rem;
+
+    h1, p {
+      background-color: #DADED4;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 7rem;
+    }
+
+    .main-button {
+      background-color: #A3BCB6;
+      padding: 5px;
+      border-radius: 5%;
+      font-family: 'Cormorant';
+    }
+
+    .main-button Button {
+      padding: 10px;
+    }
+
+    #services-container {
+      font-family: 'Cormorant';
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5vh;
+
+      #service-cards-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5em;
+      }
+    }
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 560px) {
+  #header-container {
+    nav ul {
+      display: none;
+    }
+    nav select {
+      display: revert;
+    }
+  }
+
+  #landing-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Muli';
+    padding: 3rem;
+
+    h1 {
+      font-size: 5rem;
+      padding: 0;
+    }
+    p {
+      font-size: 2rem;
+      padding: 0;
+    }
+  }
+
+  .main-button {
+    // width: 75vw;
+    text-align: center;
+  }
+
+  .main-button Button {
+    font-size: 1rem;
+    color: #3C403D;
+  }
+
+  #services-container {
+    background-color: #DADED4;
+    font-family: 'Cormorant';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-size: 1.5em;
+      font-family: 'Muli';
+    }
+
+    h3 {
+      font-style: italic;
+      font-weight: bolder;
+    }
+
+    .services-title {
+      font-size: 3em;
+      font-family: 'Cormorant';
+    }
+
+    #service-cards-container {
+      padding: 3em;
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+
+      .service-card .MuiPaper-root {
+        background-color: #A3BCB6;
+        height: 25vh;
+        text-align: center;
+      }
+    }
+  }
+
+  #about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+    gap: 2em;
+    text-align: center;
+
+    h1 {
+      font-size: 2.5em;
+      font-family: 'Cormorant';
+    }
+    span {
+      font-style: italic;
+      font-family: 'Muli';
+    }
+    .MuiPaper-root {
+      width: 75vw;
+      height: 50vh;
+    }
+    .MuiButton-label {
+      background-color: #A3BCB6;
+      padding: 1em;
+      border-radius: 5%;
+      font-style: normal;
+      font-family: 'Muli';
+    }
+
+  }
+
+  #testimonials-page {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-size: 2em;
+      font-family: 'Cormorant';
+      color: #39603D
+    }
+   .carousel-item.active {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     h3 {
+       color: #39603D;
+       width: 75vw;
+     }
+     p {
+       width: 75vw;
+     }
+     img {
+       width: 50vw;
+       height: 25vh;
+     }
+   }
+  }
+}
+@media (min-width: 561px) {
+  #header-container {
+    nav ul {
+      display: none;
+    }
+    nav select {
+      display: revert;
+    }
+  }
+
+  #landing-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Muli';
+    padding: 3rem;
+
+    h1 {
+      font-size: 5rem;
+      padding: 0;
+    }
+    p {
+      font-size: 2rem;
+      padding: 0;
+    }
+  }
+
+  .main-button {
+    // width: 75vw;
+    text-align: center;
+  }
+
+  .main-button Button {
+    font-size: 1rem;
+    color: #3C403D;
+  }
+
+  #services-container {
+    background-color: #DADED4;
+    font-family: 'Cormorant';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-size: 2em;
+      font-family: 'Muli';
+    }
+
+    h3 {
+      font-style: italic;
+      font-weight: bolder;
+    }
+
+    .services-title {
+      font-size: 5em;
+      font-family: 'Cormorant';
+    }
+
+    #service-cards-container {
+      padding: 3em;
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+
+      .service-card .MuiPaper-root {
+        background-color: #A3BCB6;
+        height: 25vh;
+        text-align: center;
+        font-size: 2em;
+      }
+    }
+  }
+
+  #about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+    gap: 2em;
+    text-align: center;
+
+    h1 {
+      font-size: 4em;
+      font-family: 'Cormorant';
+    }
+    span {
+      font-style: italic;
+      font-family: 'Muli';
+    }
+    .MuiPaper-root {
+      width: 75vw;
+      height: 50vh;
+    }
+    p {
+      font-size: 2em;
+    }
+    .MuiButton-label {
+      background-color: #A3BCB6;
+      padding: 1em;
+      border-radius: 5%;
+      font-style: normal;
+      font-family: 'Muli';
+    }
+
+  }
+
+  #testimonials-page {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-size: 2em;
+      font-family: 'Cormorant';
+      color: #39603D
+    }
+   .carousel-item.active {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     h3 {
+       color: #39603D;
+       width: 75vw;
+     }
+     p {
+       width: 75vw;
+     }
+     img {
+       width: 50vw;
+       height: 25vh;
+     }
+   }
+  }
+}
+
+// @media (min-width: 769px) {
+//   #header-container {
+//     nav ul {
+//       display: none;
+//     }
+//     nav select {
+//       display: revert;
+//     }
+//   }
+//   #landing-content {
+//     h1 {
+//       font-size: 7rem;
+//     }
+//     p {
+//       font-size: 2rem;
+//     }
+//   }
+//   .main-button {
+//     text-align: center;
+//   }
+
+//   .main-button Button {
+//     font-size: 2rem;
+//     color: #3C403D;
+//   }
+
+//   #services-container {
+//     font-family: 'Cormorant';
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     gap: 5vh;
+
+//     #service-cards-container {
+//       display: flex;
+//       flex-direction: column;
+//       gap: 5em;
+
+//       .service-card .MuiPaper-root {
+//         height: 50vh;
+//         text-align: center;
+//         font-size: 1.5em;
+//       }
+//     }
+//   }
+// }
+
+// @media (min-width: 1024px) {
+//   #header-container {
+//     nav ul {
+//       display: none;
+//     }
+//     nav select {
+//       display: revert;
+//     }
+//   }
+//   #landing-content {
+//     h1 {
+//       font-size: 7rem;
+//     }
+//     p {
+//       font-size: 2rem;
+//     }
+//   }
+//   .main-button {
+
+//     text-align: center;
+//   }
+
+//   .main-button Button {
+//     font-size: 2rem;
+//     color: #3C403D;
+//   }
+
+//   #services-container {
+//     font-family: 'Cormorant';
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     gap: 5vh;
+
+//     #service-cards-container {
+//       display: flex;
+//       flex-direction: column;
+//       gap: 5em;
+
+//       .service-card .MuiPaper-root {
+//         height: 50vh;
+//         text-align: center;
+//         font-size: 1.5em;
+//       }
+//     }
+//   }
+// }
+// }
+
+// @media (max-width: 1200px) {
+
+// }

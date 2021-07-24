@@ -1,7 +1,7 @@
 // import axios from 'axios';
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-// import Header from './Header/Header.jsx';
+import Header from './Header/Header.jsx';
 import User from '../redux/actions/authActions';
 import Main from './Landing/Main.jsx'
 import About from './About/About.jsx'
@@ -29,11 +29,12 @@ const App = () => {
 
   return (
     <div id="app-content">
+      <Header />
       <Main />
       <Services />
       <About />
       <Testimonials />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

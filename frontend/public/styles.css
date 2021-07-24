@@ -1,9 +1,14 @@
 body, html {
   margin: 0;
-  padding: 0;
-  width: 100vw;
+  font-family: 'Muli';
+
 }
-.fullscreen {
+#app-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+/* .fullscreen {
   width: 100vw;
   height: 100vh;
 }
@@ -196,7 +201,7 @@ form {
   font-size: 0.8em;
 }
 .carousel {
-/*   background-color: rgb(232 206 191 / 0.5); */
+
   height: 50vh;
   color: #4F4846;
   text-align: center;
@@ -332,4 +337,4 @@ textarea[name=message] {
 }
 #footer-resources {
   grid-area: resources;
-}
+} */
