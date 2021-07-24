@@ -20,13 +20,15 @@ const Testimonials = () => {
     fontSize: '5em',
     color: '#000',
     marginRight: '10vw',
-    marginTop: '25vh'
+    marginTop: '50vh',
+    position: 'absolute'
   }
   const leftArrowstyle = {
     fontSize: '5em',
     color: '#000',
     marginLeft: '10vw',
-    marginTop: '25vh',
+    marginTop: '50vh',
+    position: 'absolute'
   }
 
   const rightArrow = <ArrowForwardIcon style={rightArrowStyle} />;
@@ -37,7 +39,7 @@ const Testimonials = () => {
     <div id="testimonials-page">
       <h1 id="testimonials-title" className="header-text muli">T E S T I M O N I A L S</h1>
         <FormatQuoteIcon style={quoteIconStyle} />
-      <Carousel nextLabel={null} prevLabel={null} interval={null} indicators keyboard slide wrap touch nextIcon={rightArrow} prevIcon={leftArrow}>
+      <Carousel nextLabel={null} prevLabel={null} interval={null} indicators keyboard slide wrap touch nextIcon={null} prevIcon={null}>
         <Carousel.Item className="carousel-item">
           {/* <Card elevation={23}> */}
           <h3>&quot;Jane connects easily with others and builds trust throughout the process.&quot;</h3>

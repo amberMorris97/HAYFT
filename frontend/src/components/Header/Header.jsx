@@ -20,7 +20,7 @@ const Header = ({ setView }) => {
 
   return (
     <div id="header-container">
-      <h4>J A N E  R O S E N Z W E I G | DEI Strategist</h4>
+      <h6>JANE ROSENZWEIG</h6>
       <nav id="nav">
         <ul id="nav-links">
           <li>ABOUT</li>
