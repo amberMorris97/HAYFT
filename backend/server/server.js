@@ -10,7 +10,9 @@ const passport = require('passport');
 const { Post } = require('../database/schemas');
 const { User } = require('../database/models/users');
 const users = require('./routes/api/users');
-const blogs = require('./routes/api/blogs');
+const posts = require('./routes/api/blog/posts');
+const comments = require('./routes/api/blog/comments');
+const replies = require('./routes/api/blog/replies');
 const MongoStore = require('connect-mongo');
 const app = express();
 
@@ -37,7 +39,9 @@ app.use(session({
 }));
 app.use(require('./routes'));
 app.use('/api/users', users);
-app.use('/api/blogs', blogs);
+app.use('/api/blog', posts);
+app.use('/api/blog', comments);
+app.use('/api/blog', replies);
 // use users file to handle endpoints that start with / login
 
 app.get('/end', (req, res, next) => {

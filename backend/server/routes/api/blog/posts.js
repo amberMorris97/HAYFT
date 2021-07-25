@@ -1,15 +1,30 @@
 const mongoose = require('mongoose');
 const router = require('express').Router();
-const Blogs = require('../../../database/models/blogs');
-const db = require('../../../database/index');
+const Blogs = require('../../../../database/models/blogs');
+const toId = mongoose.Types.ObjectId;
 
-router.get('/posts', async (req, res) => {
-  const blogPosts = await Blogs.find({});
+router.get('/fetchPosts', async (req, res) => {
+  const blogPosts = await Blogs.find({}).populate({
+    path: 'comments',
+    populate: {
+      path: 'replies',
+      populate: {
+        path: 'replies'
+      }
+    }
+  });
 
   if (blogPosts) return res.send(blogPosts);
 
   return res.status(400).send('No blog posts found.');
 });
+
+router.get('/fetchSinglePost', async (req, res) => {
+  const { id } = req.query;
+  console.log(id)
+  const singlePost = await Blogs.findOne({ _id:toId(`${id}`) });
+  res.send(singlePost)
+})
 
 router.post('/newPost', async (req, res) => {
   const data = req.body;
@@ -46,8 +61,7 @@ router.patch('/updatePost/:id', async (req, res) => {
 
   const updatedBlog = await exisitingBlogPost.save();
 
-  if (updatedBlog) return res.send('Post updated successfully.');
-  return res.status(400).send('Post cannot be updated at this time.');
+  return updatedBlog ? res.send('Post updated successfully.') : res.status(400).send('Post cannot be updated at this time.');
 });
 
 module.exports = router;
