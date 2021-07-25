@@ -1,9 +1,11 @@
+/* eslint-disable no-undef */
 const mongoose = require('mongoose');
 const router = require('express').Router();
 const Blogs = require('../../../../database/models/blogs');
 const toId = mongoose.Types.ObjectId;
 
 router.get('/fetchPosts', async (req, res) => {
+  /* might need to recurisvely populate these */
   const blogPosts = await Blogs.find({}).populate({
     path: 'comments',
     populate: {
@@ -24,7 +26,7 @@ router.get('/fetchSinglePost', async (req, res) => {
   console.log(id)
   const singlePost = await Blogs.findOne({ _id:toId(`${id}`) });
   res.send(singlePost)
-})
+});
 
 router.post('/newPost', async (req, res) => {
   const data = req.body;

@@ -1,6 +1,11 @@
 // import axios from 'axios';
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 import Header from './Header/Header.jsx';
 import User from '../redux/actions/authActions';
 import Main from './Landing/Main.jsx'
@@ -8,6 +13,7 @@ import About from './About/About.jsx'
 import Services from './Services/Services.jsx'
 import Testimonials from './Testimonials/Testimonials.jsx'
 import Footer from './Footer/Footer.jsx'
+import Blog from './Blog/Blog.jsx';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -29,6 +35,11 @@ const App = () => {
 
   return (
     <div id="app-content">
+      <Switch>
+        <Route path="/blog">
+          <Blog />
+        </Route>
+      </Switch>
       <Header />
       <Main />
       <Services />
