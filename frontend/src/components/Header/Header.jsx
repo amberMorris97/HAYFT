@@ -26,8 +26,9 @@ const Header = ({ setView }) => {
 
   return (
     <div id="header-container">
-      <h6>JANE ROSENZWEIG</h6>
-      <Router>
+      <h6>
+        <Link to="/">JANE ROSENZWEIG</Link>
+      </h6>
         <nav id="nav">
           <ul id="nav-links">
             <li>ABOUT</li>
@@ -47,7 +48,6 @@ const Header = ({ setView }) => {
             <option>Contact</option>
           </select>
         </nav>
-      </Router>
     </div>
   );
 };

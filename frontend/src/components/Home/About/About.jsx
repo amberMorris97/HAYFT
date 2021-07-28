@@ -1,5 +1,5 @@
 import React from 'react';
-import PurpleButton from '../Buttons/PurpleButton.jsx';
+import PurpleButton from '../../Buttons/PurpleButton.jsx';
 import { Card } from '@material-ui/core';
 // const gray = './images/gray.jpg';
 

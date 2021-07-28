@@ -4,7 +4,6 @@ const bcrypt = require('bcryptjs');
 const router = require('express').Router();
 const auth = require('../auth');
 const Users = mongoose.model('Users');
-const db = require('../../../database/index');
 
 router.post('/register', auth.optional, (req, res, next) => {
   const { name, username, email, password } = req.body;

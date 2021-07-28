@@ -7,46 +7,24 @@ import {
   Route
 } from "react-router-dom";
 import Header from './Header/Header.jsx';
-import User from '../redux/actions/authActions';
-import Main from './Landing/Main.jsx'
-import About from './About/About.jsx'
-import Services from './Services/Services.jsx'
-import Testimonials from './Testimonials/Testimonials.jsx'
+import Main from './Home/Main.jsx'
+
 import Footer from './Footer/Footer.jsx'
-import Blog from './Blog/Blog.jsx';
+import Blog from './Blog/Main.jsx';
 
 const App = () => {
-  const dispatch = useDispatch();
-  // const user = useSelector(state => state.authReducer.user);
-  // const [loadedUser, setLoadedUser] = useState(null);
-  // const [view, setView] = useState('home');
-
-  useEffect(() => {
-    const loadUser = new User();
-    dispatch(loadUser.load());
-    // setLoadedUser(user);
-  }, []);
-
-  // if (!loadedUser) return (<div>wait</div>)
-
-  // if (view === 'Login') {
-  //   return <Login setView={setView}/>
-  // }
 
   return (
+    <Router>
     <div id="app-content">
-      <Switch>
-        <Route path="/blog">
-          <Blog />
-        </Route>
-      </Switch>
-      <Header />
-      <Main />
-      <Services />
-      <About />
-      <Testimonials />
-      {/* <Footer /> */}
+   <Header />
+   <Switch>
+     <Route exact path="/" component={Main} />
+     <Route exact path="/blog" component={Blog} />
+   </Switch>
+    <Footer />
     </div>
+   </Router>
   );
 };
 

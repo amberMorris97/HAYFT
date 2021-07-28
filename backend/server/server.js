@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const express = require('express');
 const path = require('path');
 const jwt = require('jsonwebtoken');
@@ -7,7 +8,6 @@ const nodemailer = require('nodemailer');
 const mongoose = require('mongoose');
 const passportLocalMongoose = require('passport-local-mongoose');
 const passport = require('passport');
-const { Post } = require('../database/schemas');
 const { User } = require('../database/models/users');
 const users = require('./routes/api/users');
 const posts = require('./routes/api/blog/posts');
@@ -44,6 +44,7 @@ app.use('/api/blog', comments);
 app.use('/api/blog', replies);
 // use users file to handle endpoints that start with / login
 
+
 app.get('/end', (req, res, next) => {
   req.session.destroy((err) => {
     if (err) {
@@ -55,6 +56,10 @@ app.get('/end', (req, res, next) => {
 });
 
 app.use(express.static(path.join(__dirname, '../../frontend/public')));
+
+app.get('*', function (request, response){
+  response.sendFile(path.resolve(__dirname, '../../frontend', 'public', 'index.html'))
+});
 
 
 app.post('/email', (req, res) => {

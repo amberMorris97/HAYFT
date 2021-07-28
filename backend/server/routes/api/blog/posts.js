@@ -2,6 +2,7 @@
 const mongoose = require('mongoose');
 const router = require('express').Router();
 const Blogs = require('../../../../database/models/blogs');
+const db = require('../../../../database/index');
 const toId = mongoose.Types.ObjectId;
 
 router.get('/fetchPosts', async (req, res) => {
@@ -15,7 +16,6 @@ router.get('/fetchPosts', async (req, res) => {
       }
     }
   });
-
   if (blogPosts) return res.send(blogPosts);
 
   return res.status(400).send('No blog posts found.');
