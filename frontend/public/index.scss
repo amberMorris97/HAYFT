@@ -1,9 +1,9 @@
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
 #app-content {
-  body {
-    margin: 0;
-    background-color: #DADED4;
-
-  }
+  background-color: #DADED4;
 }
 #header-container {
   display: flex;
@@ -98,7 +98,21 @@
       }
 
     }
-
+  #blog-container {
+    text-align: center;
+    font-family: 'Muli';
+    #blog-post-preview {
+      display: flex;
+      text-align: center;
+    }
+  }
+  #single-post-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+  }
 }
 
 /* MEDIA QUERIES */
@@ -245,6 +259,19 @@
      }
    }
   }
+  #blog-container {
+    text-align: center;
+    #blog-post-preview {
+      display: flex;
+      text-align: center;
+    }
+  }
+  #single-post-view {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 @media (min-width: 561px) {
   #header-container {
@@ -388,6 +415,20 @@
      }
    }
   }
+  #blog-container {
+    text-align: center;
+    font-family: 'Muli';
+    #blog-post-preview {
+      display: flex;
+      text-align: center;
+    }
+  }
+  #single-post-view {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media (min-width: 768px) {
@@ -448,6 +489,19 @@
         height: 25vh;
       }
     }
+  }
+  #blog-container {
+    text-align: center;
+    #blog-post-preview {
+      display: flex;
+      text-align: center;
+    }
+  }
+  #single-post-view {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -595,6 +649,21 @@
        height: 30vh;
      }
    }
+  }
+  #blog-container {
+    text-align: center;
+    font-family: 'Muli';
+    #blog-post-preview {
+      display: flex;
+      justify-content: space-evenly;
+      text-align: center;
+    }
+  }
+  #single-post-view {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -891,5 +960,37 @@
        height: 25vh;
      }
    }
+  }
+  #blog-container {
+    text-align: center;
+    #blog-post-preview {
+      display: flex;
+      justify-content: space-evenly;
+      text-align: center;
+    }
+  }
+  #single-post-view {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #footer {
+    padding: 3em;
+    display: flex;
+    gap: 5em;
+    #footer-form {
+      width: 50%;
+      .form form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+        align-content: center;
+      }
+      Button {
+        justify-self: start;
+        background-color: #39603D
+      }
+    }
   }
 }

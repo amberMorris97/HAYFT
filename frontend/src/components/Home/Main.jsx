@@ -1,6 +1,7 @@
 import React from "react";
 import Services from './Services/Services.jsx';
 import Testimonials from './Testimonials/Testimonials.jsx';
+import Blog from './Blog/Main.jsx';
 import About from './About/About.jsx';
 import PurpleButton from "../Buttons/PurpleButton.jsx";
 // import Button from "@material-ui/core/Button";
@@ -26,6 +27,7 @@ const Main = () => {
     <Services />
     <About />
     <Testimonials />
+    <Blog />
     </div>
   );
 };

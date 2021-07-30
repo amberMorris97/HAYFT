@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 const sendEmail = require('./helpers/sendEmail');
 const validateContactInfo = require('./helpers/validateContactInfo');
@@ -46,7 +48,7 @@ const EmailForm = () => {
         });
         sendButton.disabled = true;
         sendButton.innerText = 'Thanks for reaching out! We will get back to you soon.';
-      };
+      }
     } else {
       setContactInfo({
         ...contactInfo,
@@ -58,42 +60,35 @@ const EmailForm = () => {
   return (
     <div id="email-form-div" className="form">
       <h1 id="contact-title">Get In Touch!</h1>
-      <div id="contact-form-div">
         <form id="contact-form" onSubmit={handleSubmit}>
-          <div id="contact-name">
-            <label htmlFor="name">Name: </label>
-            <input type="text" name="name" id="name" label="form-name" value={contactInfo.name} placeholder="John Doe" onChange={handleChange}></input>
-            <span id="nameErr" className="error">{contactInfo.nameError}</span>
+          <div>
+            <TextField color="secondary" variant="standard" type="text" name="name" id="name" label="Full Name" value={contactInfo.name} placeholder="John Doe" onChange={handleChange}></TextField> <br />
+            <span style={{color: "red"}} id="nameErr" className="error">{contactInfo.nameError}</span>
           </div>
-          <div id="contact-company">
-            <label htmlFor="company">Company: </label>
-            <input type="text" name="company" id="company" label="form-company" value={contactInfo.company} placeholder="John Doe Worldwide" onChange={handleChange}></input>
-            <span id="companyErr" className="error">{contactInfo.companyError}</span>
+          <div>
+            <TextField color="secondary" variant="standard" type="text" name="company" id="company" label="Company" value={contactInfo.company} placeholder="John Doe Worldwide" onChange={handleChange} ></TextField> <br />
+            <span style={{color: "red"}} id="companyErr" className="error">{contactInfo.companyError}</span>
           </div>
-          <div id="contact-email">
-            <label htmlFor="email">Email: </label>
-            <input type="text" name="email" id="email" label="form-email" value={contactInfo.email} placeholder="johndoe@email.com" onChange={handleChange}></input>
-            <span id="emailErr" className="error">{contactInfo.emailError}</span>
+          <div>
+            <TextField color="secondary" variant="standard" type="text" name="email" id="email" label="Email" value={contactInfo.email} placeholder="johndoe@email.com" onChange={handleChange}></TextField> <br />
+            <span style={{color: "red"}} id="emailErr" className="error">{contactInfo.emailError}</span>
           </div>
-          <div id="contact-phone">
-            <label htmlFor="phone">Phone: </label>
-            <input type="text" name="phone" id="phone" label="form-phone" value={contactInfo.phone} placeholder="(Optional) (555) 555-5555" onChange={handleChange}></input>
-            <span id="phoneErr" className="error">{contactInfo.phoneError}</span>
+          <div>
+            <TextField color="secondary" variant="standard" type="text" name="phone" id="phone" label="Phone" value={contactInfo.phone} placeholder="(Optional) (555) 555-5555" onChange={handleChange}></TextField> <br />
+            <span style={{color: "red"}} id="phoneErr" className="error">{contactInfo.phoneError}</span>
           </div>
-          <div id="contact-subject">
-            <label htmlFor="subject">Subject: </label>
-            <input type="text" name="subject" id="subject" label="form-subject" value={contactInfo.subject} placeholder="Need Experienced DEI Specialist" onChange={handleChange}></input>
-            <span id="subjectErr" className="error">{contactInfo.subjectError}</span>
+          <div>
+            <TextField color="secondary" variant="standard" type="text" name="subject" id="subject" label="Subject" value={contactInfo.subject} placeholder="Need Experienced DEI Specialist" onChange={handleChange}></TextField> <br />
+            <span style={{color: "red"}} id="subjectErr" className="error">{contactInfo.subjectError}</span>
           </div>
-          <div id="contact-message">
-            <label htmlFor="message">Message: </label>
-            <textarea type="text" name="message" id="message" label="form-message" value={contactInfo.message} placeholder="Your message goes here..." onChange={handleChange} width="750" height="500"></textarea>
-            <span id="messageErr" className="error">{contactInfo.messageError}</span>
+          <div>
+            <TextField color="secondary" variant="standard" type="text" name="message" id="message" label="Message" value={contactInfo.message} placeholder="Your message goes here..." onChange={handleChange} multiline maxRows={50}></TextField> <br />
+            <span style={{color: "red"}} id="messageErr" className="error">{contactInfo.messageError}</span>
           </div>
           <br />
-          <button type="submit" name="form-submit-btn" disabled={false}>Send</button>
+          <Button type="submit" name="form-submit-btn" disabled={false}>Send</Button>
         </form>
-      </div>
+
     </div>
   );
 };

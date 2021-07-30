@@ -13,6 +13,7 @@ const users = require('./routes/api/users');
 const posts = require('./routes/api/blog/posts');
 const comments = require('./routes/api/blog/comments');
 const replies = require('./routes/api/blog/replies');
+const auth = require('./routes/auth');
 const MongoStore = require('connect-mongo');
 const app = express();
 
@@ -21,6 +22,7 @@ require('./config/passport');
 
 
 app.use(express.json());
+
 app.use(session({
   secret: process.env.JWT_SECRET,
   saveUninitialized: true,
@@ -44,7 +46,6 @@ app.use('/api/blog', comments);
 app.use('/api/blog', replies);
 // use users file to handle endpoints that start with / login
 
-
 app.get('/end', (req, res, next) => {
   req.session.destroy((err) => {
     if (err) {
@@ -60,7 +61,6 @@ app.use(express.static(path.join(__dirname, '../../frontend/public')));
 app.get('*', function (request, response){
   response.sendFile(path.resolve(__dirname, '../../frontend', 'public', 'index.html'))
 });
-
 
 app.post('/email', (req, res) => {
   const { name, email, company, phone, subject, message } = req.body;

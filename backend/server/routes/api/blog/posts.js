@@ -1,9 +1,12 @@
 /* eslint-disable no-undef */
 const mongoose = require('mongoose');
 const router = require('express').Router();
+const multer = require('multer');
 const Blogs = require('../../../../database/models/blogs');
 const db = require('../../../../database/index');
 const toId = mongoose.Types.ObjectId;
+
+const upload = multer({ dest: 'upload/'});
 
 router.get('/fetchPosts', async (req, res) => {
   /* might need to recurisvely populate these */
@@ -28,8 +31,9 @@ router.get('/fetchSinglePost', async (req, res) => {
   res.send(singlePost)
 });
 
-router.post('/newPost', async (req, res) => {
+router.post('/newPost', upload.single('img'), async (req, res) => {
   const data = req.body;
+
   const newPost = new Blogs(data);
 
   const saved = await newPost.save();

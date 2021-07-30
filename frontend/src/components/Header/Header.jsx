@@ -9,9 +9,10 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import Login from './User/Login.jsx';
+import Login from '../Admin/Login.jsx';
 import Signup from './User/Signup.jsx';
 import User from '../../redux/actions/authActions';
+
 
 const Header = ({ setView }) => {
   const dispatch = useDispatch();
@@ -38,6 +39,7 @@ const Header = ({ setView }) => {
               <Link to="/blog">BLOG</Link>
             </li>
             <li>CONTACT</li>
+            <li><Login /></li>
           </ul>
 
           <select>

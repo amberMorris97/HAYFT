@@ -28,10 +28,11 @@ class User {
   login = () => async (dispatch, getState) => {
     dispatch({ type: USER_LOADING });
     const info = {
-      username: this.username,
+      email: this.email,
       password: this.password,
     };
     const user = await axios.post('/api/users/login', info);
+    console.log(user)
     if (user.data.success) {
       dispatch({ type: LOGIN_SUCCESS, payload: user.data.success });
       dispatch({ type: USER_LOADED , payload: user.data });
