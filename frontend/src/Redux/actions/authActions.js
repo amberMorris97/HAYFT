@@ -31,29 +31,27 @@ class User {
       email: this.email,
       password: this.password,
     };
-    const user = await axios.post('/api/users/login', info);
-    console.log(user)
-    if (user.data.success) {
-      dispatch({ type: LOGIN_SUCCESS, payload: user.data.success });
+
+    try {
+      const user = await axios.post('/api/users/login', info);
+      dispatch({ type: LOGIN_SUCCESS, payload: user.data });
       dispatch({ type: USER_LOADED , payload: user.data });
-    }
-    else {
+    } catch(err) {
       dispatch({ type: LOGIN_FAIL });
-      return user.data.errors;
     }
   };
 
   load = () => async (dispatch, getState) => {
     dispatch({ type: USER_LOADING });
     const user = await axios.get('/api/users/current');
-    if (user.data.success) dispatch({ type: USER_LOADED, payload: user.data.success });
-    else dispatch({ type: AUTH_ERROR, payload: user.data.error });
+    if (user.data.email) dispatch({ type: USER_LOADED, payload: user.data });
+    else dispatch({ type: AUTH_ERROR, payload: user.data });
   };
 
   logout = () => async (dispatch, getState) => {
     const loggedOut = await axios.get('/end');
-    if (loggedOut.data.success) dispatch({ type: LOGOUT_SUCCESS });
-    else dispatch({ type: 'LOGOUT_ERROR', payload: loggedOut.data.error });
+    if (loggedOut.data) dispatch({ type: LOGOUT_SUCCESS });
+    else dispatch({ type: 'LOGOUT_ERROR', payload: loggedOut.data });
   };
 
   update = (id) => async (dispatch, getState) => {

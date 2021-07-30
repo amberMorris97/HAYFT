@@ -1,5 +1,5 @@
 // import axios from 'axios';
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import {
   BrowserRouter as Router,
@@ -13,14 +13,31 @@ import Footer from './Footer/Footer.jsx'
 import Blog from './Home/Blog/Main.jsx';
 import SinglePost from './Blog/SinglePost.jsx';
 import NewPost from './Blog/NewPost.jsx';
-import Login from './Admin/Login.jsx';
+import User from '../redux/actions/authActions';
+import Nav from './Admin/Nav.jsx';
+import ProtectedRoute from './ProtectedRoute.jsx';
 
 const App = () => {
+  const dispatch = useDispatch();
+  const [view, setView] = useState('home');
+
+  useEffect(() => {
+    const user = new User();
+    dispatch(user.load());
+  }, []);
+
+  if (view === 'nav') {
+    return <Nav />
+  }
+
+  if (view === 'protected') {
+    return <ProtectedRoute />
+  }
 
   return (
     <Router>
     <div id="app-content">
-   <Header />
+   <Header setView={setView} />
    <Switch>
      <Route exact path="/" component={Main} />
      <Route exact path="/blog" render={() => <Blog fullscreen="fullscreen" />} />

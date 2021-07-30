@@ -8,7 +8,6 @@ const Nav = () => {
         <Link to="/create-blog-post">
           <li>New Blog Post</li>
         </Link>
-        <li>Logout</li>
       </ul>
     </div>
   );

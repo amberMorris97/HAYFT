@@ -21,7 +21,6 @@ UsersSchema.methods.setPassword = function(password) {
 };
 
 UsersSchema.methods.validatePassword = async function(password) {
-  console.log(this, 'THIS password')
   const checkMatch = await bcrypt.compare(password, this.password);
   return checkMatch || false;
 };
@@ -43,7 +42,6 @@ UsersSchema.methods.toAuthJSON = function() {
     name: this.name,
     username: this.username,
     email: this.email,
-    token: this.generateJWT(),
   };
 };
 

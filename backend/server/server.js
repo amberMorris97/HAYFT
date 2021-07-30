@@ -18,8 +18,7 @@ const MongoStore = require('connect-mongo');
 const app = express();
 
 require('dotenv').config();
-require('./config/passport');
-
+require('./config/passport')(passport);
 
 app.use(express.json());
 
@@ -39,6 +38,10 @@ app.use(session({
     autoRemove: 'native',
   }),
 }));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(require('./routes'));
 app.use('/api/users', users);
 app.use('/api/blog', posts);
@@ -46,21 +49,22 @@ app.use('/api/blog', comments);
 app.use('/api/blog', replies);
 // use users file to handle endpoints that start with / login
 
-app.get('/end', (req, res, next) => {
+app.get('/end', (req, res) => {
+  req.logout();
   req.session.destroy((err) => {
     if (err) {
       throw err;
     }
-    res.clearCookie('Token');
+    res.clearCookie('connect.sid');
     res.send('logged out');
   });
 });
 
 app.use(express.static(path.join(__dirname, '../../frontend/public')));
 
-app.get('*', function (request, response){
-  response.sendFile(path.resolve(__dirname, '../../frontend', 'public', 'index.html'))
-});
+// app.get('*', function (req, res){
+//   res.sendFile(path.resolve(__dirname, '../../frontend', 'public', 'index.html'))
+// });
 
 app.post('/email', (req, res) => {
   const { name, email, company, phone, subject, message } = req.body;

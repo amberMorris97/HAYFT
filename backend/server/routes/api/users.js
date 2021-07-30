@@ -51,13 +51,12 @@ router.post('/register', auth.optional, (req, res, next) => {
 });
 
 //POST login route (optional, everyone has access)
-router.post('/login', auth.optional, (req, res, next) => {
-  const { body: { username, password } } = req;
-  console.log(username, password)
-  if (!username) {
+router.post('/login', (req, res, next) => {
+  const { body: { email, password } } = req;
+  if (!email) {
     return res.status(422).send({
       errors: {
-        username: 'is required',
+        email: 'is required',
       },
     });
   }
@@ -69,44 +68,29 @@ router.post('/login', auth.optional, (req, res, next) => {
       },
     });
   }
-
-  return passport.authenticate('local', { session: false }, (err, passportUser, info) => {
+  return passport.authenticate('local', { session: true }, (err, passportUser, info) => {
     if (err) {
-      throw err;
       return res.status(422).send({ error: err });
     }
+    req.logIn(passportUser, (err) => {
+      if (err) return next(err);
+      return res.status(200).send({ success: passportUser.toAuthJSON() });
+    });
 
-    if (passportUser) {
-      const user = passportUser;
-      user.token = passportUser.generateJWT();
-      res.cookie('Token', user.token);
-      return res.status(200).send({ success: user.toAuthJSON() });
-    }
-
-    return res.status(200).send({ errors: 'Invalid credentials' });
+    return res.status(401).send(info);
   })(req, res, next);
 });
 
-router.get('/current', async (req, res, next) => {
-  let cookie = req.headers.cookie.split(';')[1];
-  if (!cookie) return res.send('user not logged in');
-
-  const cookies = req.headers.cookie.split(';');
-  const filterCookies = cookies.filter(el => el.includes('Token='));
-  const token = filterCookies[0].split('Token=')[1];
-  const jsonPayload = Buffer.from(token, 'base64').toString();
-  const splitJson = jsonPayload.split(",");
-  const sliceJson = splitJson.slice(0, splitJson.length - 1);
-  const id = JSON.parse(sliceJson[2].split(':')[1]);
-
-  const user = await Users.findOne({_id:mongoose.Types.ObjectId(`${id}`)})
-      .select('-password');
-
-  if (user) {
-    res.send({ success: user });
-  } else {
-    res.status(400).send({ error: 'user not found' });
+router.get('/current', async (req, res) => {
+  let user = {};
+  if (req.isAuthenticated()) {
+    user['_id'] = req.user._id;
+    user['name'] = req.user.name;
+    user['username'] = req.user.username;
+    user['email'] = req.user.email;
+    return res.send(user);
   }
+  return res.send('No user logged in');
 });
 
 router.patch('/updateUser/:id', async (req, res) => {
