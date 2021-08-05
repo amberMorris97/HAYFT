@@ -11,6 +11,8 @@ const Posts = ({ blogPosts }) => {
           <Link to={`/blog/${post._id}`}>
             <h1>{post.title}</h1>
           </Link>
+          <img src={post.img} alt="blog-thumbnail" height="150" width="200" />
+          <br />
           <span>By: {post.author}</span>
           <br />
           <span>{moment(post.createdAt).format('MMMM Do YYYY')}</span>

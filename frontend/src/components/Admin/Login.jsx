@@ -6,6 +6,8 @@ import User from '../../redux/actions/authActions';
 import Modal from '../Modal';
 
 const Login = () => {
+  const buttonStyle = { color: '#EEFBFB' };
+
   const dispatch = useDispatch();
   const [isOpen, setIsOpen] = useState(false);
   const [loginInfo, setLoginInfo] = useState({
@@ -29,7 +31,7 @@ const Login = () => {
 
   return (
     <div id="login-container">
-      <button onClick={() => setIsOpen(true)}>LOGIN</button>
+      <button style={buttonStyle} onClick={() => setIsOpen(true)}>LOGIN</button>
       <Modal id="login-modal" open={isOpen} onClose={() => setIsOpen(false)}>
         <form onSubmit={handleSubmit}>
           <TextField variant="standard" id="email" label="email" name="email" onChange={handleChange}>Email</TextField>

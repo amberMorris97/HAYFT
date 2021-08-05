@@ -179,7 +179,11 @@
     justify-content: center;
     font-family: 'Muli';
     padding: 3rem;
-    background-color: #12232E;
+    background-image: linear-gradient(
+      rgba(32, 54, 71, 0.5),
+      rgba(32, 54, 71, 0.5)
+    ),
+    url('./images/jrbg.jpg');
     color: #EEFBFB;
 
 
@@ -373,13 +377,17 @@
   }
 
   #landing-content {
+    background-image: linear-gradient(
+      rgba(32, 54, 71, 0.5),
+      rgba(32, 54, 71, 0.5)
+    ),
+    url('./images/jrbg.jpg');
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-family: 'Muli';
     padding: 3rem;
-    background-color: #12232E;
     color: #EEFBFB;
 
 
@@ -461,8 +469,7 @@
       font-family: 'Muli';
     }
     .MuiPaper-root {
-      width: 250px;
-      height: 500px;
+      height: 50%;
     }
     .MuiButton-label {
       text-align: center;
@@ -582,7 +589,11 @@
     justify-content: center;
     font-family: 'Muli';
     padding: 3rem;
-    background-color: #12232E;
+    background-image: linear-gradient(
+      rgba(32, 54, 71, 0.5),
+      rgba(32, 54, 71, 0.5)
+    ),
+    url('./images/jrbg.jpg');
     color: #EEFBFB;
 
 
@@ -878,14 +889,23 @@
   #header-container {
     display: flex;
     justify-content: space-between;
-    background-color: #EEFBFB;
+    background-color: #12232E;
     font-family: 'Muli';
+    color: #EEFBFB;
+
+    h4 {
+      font-size: 2em;
+    }
+
+    h4:active {
+      font-style: none;
+    }
 
     nav {
       ul {
         list-style: none;
         display: flex;
-        gap: 2em;
+        gap: 3em;
       }
       select {
         display: none;
@@ -963,7 +983,7 @@
         overflow: auto;
         width: 30vw;
         height: 30vh;
-        background-color: #4DA8DA;
+        background-color: #12232E;
         text-align: center;
         font-size: 1.2em;
       }
@@ -982,11 +1002,11 @@
     padding: 3em;
     gap: 2em;
     text-align: center;
-    margin-top: 15vh;
+    margin-top: 5vh;
 
     h1 {
-      font-size: 4em;
-      font-family: 'Cormorant';
+      font-size: 2.5em;
+      font-family: 'Muli';
     }
     span {
       font-style: italic;
@@ -1019,8 +1039,8 @@
     align-items: center;
     justify-content: center;
     h1 {
-      font-size: 4em;
-      font-family: 'Cormorant';
+      font-size: 2.5em;
+      font-family: 'mULI';
       color: #12232E
     }
    .carousel-item.active {
@@ -1061,6 +1081,35 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  #blog-posts-container {
+    text-align: center;
+    #blog-post-preview {
+      text-align: center;
+      font-family: 'Muli';
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+    }
+  }
+  #footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    #footer-vl {
+      border: 1px solid black;
+      height: 600px;
+    }
+
+    #contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      Button {
+        grid-column: 1 / 3;
+      }
+    }
   }
 }
 

@@ -30,9 +30,9 @@ const Header = ({ setView }) => {
   if (!isAuth) {
     return (
       <div id="header-container">
-      <h6>
+      <h4>
         <Link to="/">JANE ROSENZWEIG</Link>
-      </h6>
+      </h4>
         <nav id="nav">
           <ul id="nav-links">
             <li>ABOUT</li>
@@ -59,9 +59,9 @@ const Header = ({ setView }) => {
 
   return (
     <div id="header-container">
-      <h6>
+      <h4>
         <Link to="/">JANE ROSENZWEIG</Link>
-      </h6>
+      </h4>
         <nav id="nav">
           <ul id="nav-links">
             <li>ABOUT</li>

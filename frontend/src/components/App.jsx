@@ -10,7 +10,7 @@ import Header from './Header/Header.jsx';
 import Main from './Home/Main.jsx'
 
 import Footer from './Footer/Footer.jsx'
-import Blog from './Home/Blog/Main.jsx';
+import Blog from './Blog/Main.jsx';
 import SinglePost from './Blog/SinglePost.jsx';
 import NewPost from './Blog/NewPost.jsx';
 import User from '../redux/actions/authActions';

@@ -4,7 +4,7 @@ const Resources = () => {
 
   return (
     <div id="resources">
-      <h1>Resources</h1>
+      <h1>RESOURCES</h1>
       <ul>
         <li><a href="www.google.com" target="_blank">resource1</a></li>
         <li><a href="www.google.com" target="_blank">resource@resource.com</a></li>
