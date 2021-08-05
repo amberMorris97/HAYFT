@@ -16,7 +16,7 @@ const Main = () => {
       <h1>
         Diversity
         <br />
-        Equity
+        Equity &amp;
         <br />
         Inclusion
       </h1>

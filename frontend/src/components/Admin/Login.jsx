@@ -29,7 +29,7 @@ const Login = () => {
 
   return (
     <div id="login-container">
-      <button onClick={() => setIsOpen(true)}>Login</button>
+      <button onClick={() => setIsOpen(true)}>LOGIN</button>
       <Modal id="login-modal" open={isOpen} onClose={() => setIsOpen(false)}>
         <form onSubmit={handleSubmit}>
           <TextField variant="standard" id="email" label="email" name="email" onChange={handleChange}>Email</TextField>

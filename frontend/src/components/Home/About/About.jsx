@@ -5,8 +5,8 @@ import { Card } from '@material-ui/core';
 
 const About = () => {
   const cardStyle = {
-    width: '50vw',
-    height: '25vh',
+    width: '25vw',
+    height: '30vh',
   }
   return (
     <div id="about-container" >

@@ -5,24 +5,20 @@ import Coaching from './Coaching.jsx';
 import Gathering from './Gathering.jsx';
 // import AboutServices from './AboutServices.jsx';
 // import ServiceBar from './ServiceBar.jsx';
-import nodeRef from './helpers/nodeRef';
+import PurpleButton from '../../Buttons/PurpleButton.jsx';
 
 const Services = () => {
   // const [view, setView] = useState('default');
 
-
-  const ref = useRef();
-  const isVisible = nodeRef(ref);
-
-  if (!isVisible) return ( <div ref={ref} className="halfscreen"></div> );
-
   return (
-    <div ref={ref} id="services-container" className="halfscreen">
+    <div id="services-container">
+      <h1>S E R V I C E S</h1>
         <div id="service-cards-container">
           <Advising />
           <Coaching />
           <Gathering />
         </div>
+        <PurpleButton text={'LEARN MORE'} />
       </div>
   );
 }
