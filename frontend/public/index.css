@@ -189,6 +189,7 @@
     height: 25vh;
   }
   #blog-container {
+    display: none;
     text-align: center;
     padding: 3em;
   }
@@ -443,6 +444,7 @@
     height: 25vh;
   }
   #blog-container {
+    display: none;
     text-align: center;
     padding: 3em;
   }
