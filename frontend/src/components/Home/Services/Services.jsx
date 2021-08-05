@@ -14,20 +14,15 @@ const Services = () => {
   const ref = useRef();
   const isVisible = nodeRef(ref);
 
-  if (!isVisible) return ( <div ref={ref} className="fullscreen"></div> );
+  if (!isVisible) return ( <div ref={ref} className="halfscreen"></div> );
 
   return (
-    <div ref={ref} id="services-container" className="fullscreen">
-      <Slide direction="down" in={isVisible} timeout={1500} mountOnEnter>
-        <h1 className="services-title">S E R V I C E S</h1>
-      </Slide>
-      <Slide direction="down" in={isVisible} timeout={1500} mountOnEnter>
+    <div ref={ref} id="services-container" className="halfscreen">
         <div id="service-cards-container">
           <Advising />
           <Coaching />
           <Gathering />
         </div>
-      </Slide>
       </div>
   );
 }

@@ -4,12 +4,15 @@ import { Card } from '@material-ui/core';
 // const gray = './images/gray.jpg';
 
 const About = () => {
+  const cardStyle = {
+    width: '50vw',
+    height: '25vh',
+  }
   return (
-    <div id="about-container">
-      <h1 id="about-title" className="muli header text">DE&amp;I Consultant</h1>
-      <span className="openSans" id="about-text">Together, we can help your workplace evolve.</span>
-      <Card variant="elevation" elevation={15}></Card>
-      <p className="openSans about-para">Lorem Ipsum... Brown guilty eyes and little white lies yea I played dumb but I always knew. That you talked to her, maybe, did even worse. I kept quiet so I could keep you. Aint it funny? How you ran to her, the second that we called it quits. And aint it funny, how you said you were friends. Now it sure as hell don&#39;t look like it. You betrayed me. And I know that you&#39;ll never feel sorry, for the I hurt. Yeah, you talked to her when we were together loved you at your worst but that didn&#39;t matter. It took you two weeks, to go off and date her, guess you didn&#39;t cheat. But you&#39;re still a traitor.</p>
+    <div id="about-container" >
+      <h1 id="about-title" className="muli header text">About Me</h1>
+      <Card style={cardStyle} variant="elevation" elevation={15}></Card>
+      <p className="openSans about-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <PurpleButton text={'WORK WITH ME'} />
     </div>
   );

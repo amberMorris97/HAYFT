@@ -36,9 +36,8 @@ const Testimonials = () => {
 
 
   return (
-    <div id="testimonials-page">
+    <div id="testimonials-page" className="halfscreen">
       <h1 id="testimonials-title" className="header-text muli">T E S T I M O N I A L S</h1>
-        <FormatQuoteIcon style={quoteIconStyle} />
       <Carousel nextLabel={null} prevLabel={null} interval={null} indicators keyboard slide wrap touch nextIcon={null} prevIcon={null}>
         <Carousel.Item className="carousel-item">
           {/* <Card elevation={23}> */}

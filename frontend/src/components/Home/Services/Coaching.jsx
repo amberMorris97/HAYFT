@@ -8,7 +8,7 @@ const Coaching = () => {
     <div className="service-card">
       <Card variant="elevation" elevation={15}>
         <CardContent>
-          <h1 className="services-card-title">Coaching</h1>
+          <h1 className="services-card-title">COACHING</h1>
           <h3>Adaptive change is different.</h3>
           <p id="service-coaching-text" className="service-text">I can help you explore your assumptions and experiences, in context, create new insights and grow.</p>
         </CardContent>

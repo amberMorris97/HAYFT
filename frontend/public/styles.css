@@ -3,11 +3,7 @@ body, html {
   font-family: 'Muli';
 
 }
-#app-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2vh;
-}
+
 /* .fullscreen {
   width: 100vw;
   height: 100vh;

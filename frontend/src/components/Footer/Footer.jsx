@@ -6,13 +6,9 @@ const Footer = () => {
 
   return (
     <div id="footer" className="halfscreen">
-      <div id="footer-form">
-        <EmailForm />
-      </div>
+      <EmailForm />
       <div id="footer-vl"></div>
-      <div id="footer-resources">
-        <Resources />
-      </div>
+      <Resources />
     </div>
   );
 };

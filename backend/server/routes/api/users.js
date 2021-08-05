@@ -2,10 +2,9 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const bcrypt = require('bcryptjs');
 const router = require('express').Router();
-const auth = require('../auth');
 const Users = mongoose.model('Users');
 
-router.post('/register', auth.optional, (req, res, next) => {
+router.post('/register', (req, res, next) => {
   const { name, username, email, password } = req.body;
   if (!email) {
     return res.status(422).send({
@@ -82,15 +81,13 @@ router.post('/login', (req, res, next) => {
 });
 
 router.get('/current', async (req, res) => {
-  let user = {};
+  if (!req.user) return res.end();
+
+  const { user: { _id, name, username, email } } = req;
   if (req.isAuthenticated()) {
-    user['_id'] = req.user._id;
-    user['name'] = req.user.name;
-    user['username'] = req.user.username;
-    user['email'] = req.user.email;
+    const user = { _id, name, username, email };
     return res.send(user);
   }
-  return res.send('No user logged in');
 });
 
 router.patch('/updateUser/:id', async (req, res) => {

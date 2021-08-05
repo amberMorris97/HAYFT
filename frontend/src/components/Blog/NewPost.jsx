@@ -26,7 +26,7 @@ const newPost = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addNewBlogPost());
+    dispatch(addNewBlogPost(blogInfo));
     return (
       <SinglePost />
     );
@@ -39,6 +39,7 @@ const newPost = () => {
         <TextField color="secondary" variant="outlined" id="author" label="author" name="author" onChange={handleChange}></TextField>
         <TextField color="secondary" variant="outlined" id="img" label="img" name="img" onChange={handleChange}></TextField>
         <TextField color="secondary" variant="outlined" id="post" label="post" name="post" onChange={handleChange}></TextField>
+        <button type="submit">Share</button>
       </form>
     </div>
   );

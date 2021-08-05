@@ -1,18 +1,15 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { useLocation, useParams } from 'react-router-dom';
 import moment from 'moment';
-import { fetchSinglePost } from '../../redux/actions/blogActions';
 
 const SinglePost = () => {
-  const dispatch = useDispatch();
-  const location = useLocation();
-  const post = useSelector(state => state.blogReducer.singlePost);
+  const params = useParams();
+  const posts = useSelector(state => state.blogReducer.posts);
+  let post;
 
-  useEffect(() => {
-    const id = location.pathname.split('/')[2];
-    dispatch(fetchSinglePost(id))
-  }, []);
+  const id = params.id;
+  post = posts.find(el => el._id === id);
 
   return (
     <div id="single-post-view" className="fullscreen">

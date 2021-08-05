@@ -58,8 +58,8 @@ const EmailForm = () => {
   };
 
   return (
-    <div id="email-form-div" className="form">
-      <h1 id="contact-title">Get In Touch!</h1>
+    <div id="footer-form-container" className="form">
+      <h1 id="contact-title">Get In Touch</h1>
         <form id="contact-form" onSubmit={handleSubmit}>
           <div>
             <TextField color="secondary" variant="standard" type="text" name="name" id="name" label="Full Name" value={contactInfo.name} placeholder="John Doe" onChange={handleChange}></TextField> <br />
