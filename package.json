@@ -6,11 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \"cd backend && npm run dev-server\" \"cd frontend && npm run build-watch\" ",
-    "start": "concurrently \"cd backend && npm install && npm run start\" \"cd frontend && npm install && npm run build\" "
+    "start": "concurrently \"cd backend && npm run start\" \"cd frontend && npm run build\" "
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amberMorris97/blockchain-app.git"
+    "url": "git+https://github.com/amberMorris97/jr-website.git"
   },
   "author": "",
   "license": "ISC",
@@ -20,9 +20,9 @@
   "homepage": "https://github.com/amberMorris97/blockchain-app#readme",
   "dependencies": {
     "axios": "^0.21.1",
-    "concurrently": "^6.2.0",
     "passport": "^0.4.1",
-    "webpack-cli": "^4.7.2"
+    "webpack-cli": "^4.7.2",
+    "concurrently": "^6.2.0"
   },
   "devDependencies": {
     "concurrently": "^6.2.0",

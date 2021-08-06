@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const router = require('express').Router();
 const Comments = require('../../../../database/models/comments');
-const Replies = require('../../../../database/models/Replies');
+const Replies = require('../../../../database/models/replies');
 const toId = mongoose.Types.ObjectId;
 
 router.get('/fetchReplies', async (req, res) => {
