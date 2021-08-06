@@ -49,6 +49,7 @@ app.use('/api/blog', replies);
 // use users file to handle endpoints that start with / login
 
 
+
 app.get('/end', (req, res) => {
   req.logout();
   req.session.destroy((err) => {
@@ -63,8 +64,14 @@ app.get('/end', (req, res) => {
 app.use(express.static(path.join(__dirname, '../../frontend/public')));
 
 // app.get('*', function (req, res){
-//   res.sendFile(path.resolve(__dirname, '../../frontend', 'public', 'index.html'))
-// });
+  //   res.sendFile(path.resolve(__dirname, '../../frontend', 'public', 'index.html'))
+  // });
+
+  app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../frontend/public', 'index.html'), (err) => {
+      if (err) res.status(500).send(err);
+    });
+  });
 
 app.post('/email', (req, res) => {
   const { name, email, company, phone, subject, message } = req.body;

@@ -7,9 +7,9 @@ const Blog = ({ fullscreen }) => {
   const dispatch = useDispatch();
   const fetchedPosts = useSelector(state => state.blogReducer.posts);
 
-  useEffect(() => {
-    dispatch(fetchBlogPosts());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(fetchBlogPosts());
+  // }, []);
 
   const posts = fetchedPosts.slice(0, 3);
 

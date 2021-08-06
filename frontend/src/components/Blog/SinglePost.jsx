@@ -1,25 +1,45 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import { useLocation, useParams } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { useParams, useLocation } from 'react-router-dom';
+import Disqus from "disqus-react"
 import moment from 'moment';
+import { fetchBlogPosts } from '../../redux/actions/blogActions';
 
 const SinglePost = () => {
+  const dispatch = useDispatch();
   const params = useParams();
+  const location = useLocation();
   const posts = useSelector(state => state.blogReducer.posts);
-  let post;
+
+  useEffect(() => {
+    dispatch(fetchBlogPosts());
+  }, []);
+
+  if (!posts.length) return (<h1>Loading...</h1>);
 
   const id = params.id;
-  post = posts.find(el => el._id === id);
+  const singlePost = posts.find(el => el._id === id);
+
+
+  const disqusShortname = "janerosenzweig";
+  const disqusConfig = {
+      url: window.location.href,
+      identifier: id,
+      title: singlePost.title,
+    };
 
   return (
-    <div id="single-post-view" className="fullscreen">
-      {!post && <h1>Fetching post....</h1>}
-      <h1>{post.title}</h1>
-      <img src={post.img} alt="post-photo" width="500px" height="350px"/>
-      <span>By: {post.author}</span>
+    <div id="single-post-view">
+      <h1>{singlePost.title}</h1>
+      <img src={singlePost.img} alt="singlePost-photo" width="500px" height="350px"/>
+      <span>By: {singlePost.author}</span>
       <br />
-      <span>{moment(post.createdAt).format('MMMM Do YYYY')}</span>
-      <p>{post.post}</p>
+      <p>{singlePost.post}</p>
+      Posted on: <span>{moment(singlePost.createdAt).format('MMMM Do YYYY')}</span>
+        <Disqus.DiscussionEmbed
+          shortname={disqusShortname}
+          config={disqusConfig}
+        />
     </div>
   )
 }

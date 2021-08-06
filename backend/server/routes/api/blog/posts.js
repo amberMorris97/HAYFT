@@ -26,9 +26,8 @@ router.get('/fetchPosts', async (req, res) => {
 
 router.get('/fetchSinglePost', async (req, res) => {
   const { id } = req.query;
-  console.log(id)
   const singlePost = await Blogs.findOne({ _id:toId(`${id}`) });
-  res.send(singlePost)
+  return res.send(singlePost);
 });
 
 router.post('/newPost', upload.single('img'), async (req, res) => {

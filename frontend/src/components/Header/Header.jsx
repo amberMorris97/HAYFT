@@ -35,13 +35,19 @@ const Header = ({ setView }) => {
       </h4>
         <nav id="nav">
           <ul id="nav-links">
-            <li>ABOUT</li>
-            <li>SERVICES</li>
+            <li>
+              <Link to="/about">ABOUT</Link>
+            </li>
+            <li>
+              <Link to="/services">SERVICES</Link>
+            </li>
             <li>TESTIMONIALS</li>
             <li>
               <Link to="/blog">BLOG</Link>
             </li>
-            <li>CONTACT</li>
+            <li>
+              <Link to="/contact">CONTACT</Link>
+            </li>
             <li><Login /></li>
           </ul>
 

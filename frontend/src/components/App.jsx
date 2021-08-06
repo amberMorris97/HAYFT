@@ -15,7 +15,11 @@ import SinglePost from './Blog/SinglePost.jsx';
 import NewPost from './Blog/NewPost.jsx';
 import User from '../redux/actions/authActions';
 import Nav from './Admin/Nav.jsx';
+import ServicesMain from './Services.jsx';
+import AboutMain from './About.jsx';
+import Contact from './Contact.jsx';
 import ProtectedRoute from './ProtectedRoute.jsx';
+import { fetchBlogPosts } from '../redux/actions/blogActions';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -24,6 +28,7 @@ const App = () => {
   useEffect(() => {
     const user = new User();
     dispatch(user.load());
+    dispatch(fetchBlogPosts());
   }, []);
 
   if (view === 'nav') {
@@ -43,6 +48,9 @@ const App = () => {
      <Route exact path="/blog" render={() => <Blog fullscreen="fullscreen" />} />
      <Route exact path="/blog/:id" component={SinglePost} />
      <Route exact path="/create-blog-post" component={NewPost} />
+     <Route exact path="/services" component={ServicesMain} />
+     <Route exact path="/about" component={AboutMain} />
+     <Route exact path="/contact" component={Contact} />
    </Switch>
     <Footer />
     </div>

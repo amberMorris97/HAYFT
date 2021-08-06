@@ -33,13 +33,13 @@ const newPost = () => {
   };
 
   return (
-    <div id="single-post-view" className="fullscreen">
+    <div id="create-post-container" className="fullscreen">
       <form id="blog-post-form" onSubmit={handleSubmit}>
-        <TextField color="secondary" variant="outlined" id="title" label="title" name="title" onChange={handleChange}></TextField>
-        <TextField color="secondary" variant="outlined" id="author" label="author" name="author" onChange={handleChange}></TextField>
-        <TextField color="secondary" variant="outlined" id="img" label="img" name="img" onChange={handleChange}></TextField>
-        <TextField color="secondary" variant="outlined" id="post" label="post" name="post" onChange={handleChange}></TextField>
-        <button type="submit">Share</button>
+        <TextField color="secondary" variant="outlined" id="title" label="Title" name="title" onChange={handleChange}></TextField>
+        <TextField color="secondary" variant="outlined" id="author" label="Author" name="author" onChange={handleChange}></TextField>
+        <TextField color="secondary" variant="outlined" id="img" label="Img Url" name="img" onChange={handleChange}></TextField>
+        <TextField color="secondary" multiline variant="outlined" id="post" label="Post" name="post" onChange={handleChange}></TextField>
+        <Button type="submit">Share</Button>
       </form>
     </div>
   );
