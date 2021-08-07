@@ -1,21 +1,11 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-// import Card from '@material-ui/core/Card';
-// import CardContent from '@material-ui/core/CardContent';
-// import CardMedia from '@material-ui/core/CardMedia';
-import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { Link } from 'react-router-dom';
+import { TK, CL, SK } from './quotes';
 
-const teriKelly = './images/terikelly.png';
-const christianLanger = './images/christianLanger.png';
-const shailaKapur = './images/shailakapur.png';
 
 const Testimonials = () => {
-  const quoteIconStyle = {
-    fontSize: '5em',
-    color: '#266150',
-  }
   const rightArrowStyle = {
     fontSize: '5em',
     color: '#000',
@@ -23,48 +13,34 @@ const Testimonials = () => {
     marginTop: '50vh',
     position: 'absolute'
   }
-  const leftArrowstyle = {
-    fontSize: '5em',
-    color: '#000',
-    marginLeft: '10vw',
-    marginTop: '50vh',
-    position: 'absolute'
-  }
 
   const rightArrow = <ArrowForwardIcon style={rightArrowStyle} />;
-  const leftArrow = <ArrowBackIcon style={leftArrowstyle} />;
-
 
   return (
     <div id="testimonials-page" className="halfscreen">
-      <h1 id="testimonials-title" className="header-text muli">T E S T I M O N I A L S</h1>
+      <h1 id="testimonials-title" className="header-text muli">
+        <Link to="/testimonials">T E S T I M O N I A L S</Link>
+      </h1>
       <Carousel nextLabel={null} prevLabel={null} interval={null} indicators keyboard slide wrap touch nextIcon={null} prevIcon={null}>
         <Carousel.Item className="carousel-item">
-          {/* <Card elevation={23}> */}
-          <h3>&quot;Jane connects easily with others and builds trust throughout the process.&quot;</h3>
-          <p>&quot;She is incredibly insightful and takes the time to truly understand the culture of the organization as an essential component of her work. Working with Jane is a very rewarding experience.&quot;</p>
-            <img src={teriKelly} alt="teri-kelli-img" width="100" height="100"/>
-            <span>Teri Kelly, former CEO, W.L. Gore &amp; Associates</span>
-          {/* </Card> */}
+          <h3>{TK.head}</h3>
+          <p>{TK.para}</p>
+          <img src={TK.img} alt="teri-kelly-photo" width="100" height="100" />
+          <span>{TK.spn}</span>
         </Carousel.Item>
 
         <Carousel.Item className="carousel-item">
-            {/* <Card elevation={23}> */}
-            <h3>&quot;Jane Rosenzweig is your insightful, experienced and fun-to-work-with guide. Enjoy the ride.&quot;</h3>
-            <p>“A workplace can be virtuous and fun or it can be treacherous and a grind. Jane helps you realize that leading through diversity, equity, inclusion and belonging can translate into both engaged employees &amp; higher profits.”</p>
-              <img src={christianLanger} alt="christian-langer-img" width="100" height="100"/>
-              <span>Christian Langer, Founder &amp; MD KORE</span>
-            {/* </Card> */}
+          <h3>{CL.head}</h3>
+          <p>{CL.para}</p>
+          <img src={CL.img} alt="teri-kelly-photo" width="100" height="100" />
+          <span>{CL.spn}</span>
        </Carousel.Item>
 
       <Carousel.Item className="carousel-item">
-          {/* <Card elevation={23}> */}
-          <h3>&quot;Jane was a pleasure to work with from the beginning, bringing knowledge, enthusiasm and generosity.&quot;</h3>
-          <p>&quot;We worked with Jane recently when she volunteered to facilitate a DE&amp;I discussion for a not for profit girls school, Serviam Academy. She did an excellent job facilitating the workshop, sharing her knowledge skillfully, and encouraging thoughtful discussion. Jane has been a great partner and would bring a lot of value to DE&amp;I topics for any organization.&quot;</p>
-            <img src={shailaKapur} alt="shaila-kapur-img" width="100" height="100" />
-            <span>Shaila Kapur, Business Strategy Principal, Mergence Advisors</span>
-
-          {/* </Card> */}
+        <h3>{SK.head}</h3>
+        <p>{SK.para}</p>
+        <img src={SK.img} alt="teri-kelly-photo" width="100" height="100" />
+        <span>{SK.spn}</span>
         </Carousel.Item>
       </Carousel>
     </div>

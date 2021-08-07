@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Slide } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 import Advising from './Advising.jsx';
 import Coaching from './Coaching.jsx';
 import Gathering from './Gathering.jsx';
@@ -18,7 +18,7 @@ const Services = () => {
           <Coaching />
           <Gathering />
         </div>
-        <PurpleButton text={'LEARN MORE'} />
+        <Link to="/services"><PurpleButton text={'LEARN MORE'} /></Link>
       </div>
   );
 }

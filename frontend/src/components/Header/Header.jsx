@@ -8,7 +8,7 @@ import {
   Switch,
   Route,
   Link,
-} from "react-router-dom";
+} from 'react-router-dom';
 import Login from '../Admin/Login.jsx';
 import User from '../../redux/actions/authActions';
 import Logout from '../Admin/Logout.jsx';
@@ -41,7 +41,9 @@ const Header = ({ setView }) => {
             <li>
               <Link to="/services">SERVICES</Link>
             </li>
-            <li>TESTIMONIALS</li>
+            <li>
+              <Link to="/testimonials">TESTIMONIALS</Link>
+            </li>
             <li>
               <Link to="/blog">BLOG</Link>
             </li>
@@ -70,13 +72,21 @@ const Header = ({ setView }) => {
       </h4>
         <nav id="nav">
           <ul id="nav-links">
-            <li>ABOUT</li>
-            <li>SERVICES</li>
-            <li>TESTIMONIALS</li>
+          <li>
+              <Link to="/about">ABOUT</Link>
+            </li>
+            <li>
+              <Link to="/services">SERVICES</Link>
+            </li>
+            <li>
+              <Link to="/testimonials">TESTIMONIALS</Link>
+            </li>
             <li>
               <Link to="/blog">BLOG</Link>
             </li>
-            <li>CONTACT</li>
+            <li>
+              <Link to="/contact">CONTACT</Link>
+            </li>
             <li><ProtectedRoute /></li>
             <li><Logout setView={setView} /></li>
           </ul>

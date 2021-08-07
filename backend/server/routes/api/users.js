@@ -71,6 +71,7 @@ router.post('/login', (req, res, next) => {
     if (err) {
       return res.status(422).send({ error: err });
     }
+    console.log(passportUser)
     req.logIn(passportUser, (err) => {
       if (err) return next(err);
       return res.status(200).send({ success: passportUser.toAuthJSON() });

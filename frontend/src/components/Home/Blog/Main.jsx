@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchBlogPosts } from '../../../redux/actions/blogActions';
 import Posts from './Posts.jsx';
 
@@ -15,7 +16,9 @@ const Blog = ({ fullscreen }) => {
 
   return (
     <div id="blog-container" className="halfscreen">
-      <h1>B L O G</h1>
+      <h1>
+        <Link to="/blog">B L O G</Link>
+      </h1>
         {fetchedPosts[0] && <Posts blogPosts={posts} />}
     </div>
   );

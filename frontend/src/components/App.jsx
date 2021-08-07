@@ -18,6 +18,7 @@ import Nav from './Admin/Nav.jsx';
 import ServicesMain from './Services.jsx';
 import AboutMain from './About.jsx';
 import Contact from './Contact.jsx';
+import Testimonials from './Testimonials.jsx';
 import ProtectedRoute from './ProtectedRoute.jsx';
 import { fetchBlogPosts } from '../redux/actions/blogActions';
 
@@ -51,6 +52,7 @@ const App = () => {
      <Route exact path="/services" component={ServicesMain} />
      <Route exact path="/about" component={AboutMain} />
      <Route exact path="/contact" component={Contact} />
+     <Route exact path="/testimonials" component={Testimonials} />
    </Switch>
     <Footer />
     </div>
