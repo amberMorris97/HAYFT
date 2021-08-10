@@ -46,6 +46,7 @@ const App = () => {
    <Header setView={setView} />
    <Switch>
      <Route exact path="/" component={Main} />
+     <Route exact path="/home" component={Main} />
      <Route exact path="/blog" render={() => <Blog fullscreen="fullscreen" />} />
      <Route exact path="/blog/:id" component={SinglePost} />
      <Route exact path="/create-blog-post" component={NewPost} />

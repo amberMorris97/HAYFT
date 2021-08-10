@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import User from '../../redux/actions/authActions';
@@ -13,6 +13,7 @@ const Login = () => {
   const [loginInfo, setLoginInfo] = useState({
     email: '',
     password: '',
+    error: '',
   });
 
   const handleChange = (e) => {
@@ -20,13 +21,21 @@ const Login = () => {
     setLoginInfo({
       ...loginInfo,
       [field]: e.target.value,
+      error: '',
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const user = new User(null, null, loginInfo.email, loginInfo.password);
-    dispatch(user.login());
+    const loggedIn = await dispatch(user.login());
+
+    if (!loggedIn) {
+      setLoginInfo({
+        ...loginInfo,
+        error: 'Invalid credentials',
+      });
+    }
   };
 
   return (
@@ -37,6 +46,8 @@ const Login = () => {
           <TextField variant="standard" id="email" label="email" name="email" onChange={handleChange}>Email</TextField>
           <TextField variant="standard" id="password" label="password" name="password" type="password" onChange={handleChange}>Email</TextField>
         <Button type="submit">Login</Button>
+        <br />
+        <span style={{color: "red"}} id="phoneErr" className="error">{loginInfo.error}</span>
         </form>
       </Modal>
     </div>

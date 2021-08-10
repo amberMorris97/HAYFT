@@ -2,9 +2,10 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const bcrypt = require('bcryptjs');
 const router = require('express').Router();
-const Users = mongoose.model('Users');
+const Users = require('../../../database/models/users');
+const db = require('../../../database/index');
 
-router.post('/register', (req, res, next) => {
+router.post('/register', async (req, res, next) => {
   const { name, username, email, password } = req.body;
   if (!email) {
     return res.status(422).send({
@@ -42,7 +43,7 @@ router.post('/register', (req, res, next) => {
 
   const finalUser = new Users(user);
 
-  finalUser.setPassword(password);
+  await finalUser.setPassword(password);
 
   return finalUser.save()
     .then(() => res.send({ user: finalUser.toAuthJSON() }))
@@ -68,16 +69,16 @@ router.post('/login', (req, res, next) => {
     });
   }
   return passport.authenticate('local', { session: true }, (err, passportUser, info) => {
-    if (err) {
-      return res.status(422).send({ error: err });
-    }
-    console.log(passportUser)
+
+    if (err) return res.status(422).send({ error: err });
+
+    if (!passportUser) return res.status(401).send(info);
+
     req.logIn(passportUser, (err) => {
       if (err) return next(err);
-      return res.status(200).send({ success: passportUser.toAuthJSON() });
+      return res.status(200).send(passportUser.toAuthJSON());
     });
 
-    return res.status(401).send(info);
   })(req, res, next);
 });
 

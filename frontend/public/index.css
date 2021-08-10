@@ -3,6 +3,10 @@
   height: 100vh;
 }
 
+a {
+  text-decoration: none;
+}
+
 @media (max-width: 413px) {
   #header-container {
     display: -webkit-box;
@@ -157,6 +161,9 @@
     font-family: 'Cormorant';
     color: #12232E;
   }
+  #testimonials-page #arrow-right {
+    display: none;
+  }
   #testimonials-page .carousel-item.active {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -273,6 +280,17 @@
   #create-post-container #blog-post-form Button {
     background-color: #007CC7;
     margin: auto;
+  }
+  .all-testimonials {
+    padding: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2em;
   }
 }
 
@@ -432,6 +450,9 @@
     font-family: 'Cormorant';
     color: #12232E;
   }
+  #testimonials-page #arrow-right {
+    display: none;
+  }
   #testimonials-page .carousel-item.active {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -535,6 +556,7 @@
     background-color: #12232E;
     color: #EEFBFB;
     margin: auto;
+    height: 5em;
   }
   #create-post-container {
     padding: 3em;
@@ -552,6 +574,17 @@
   #create-post-container #blog-post-form Button {
     background-color: #007CC7;
     margin: auto;
+  }
+  .all-testimonials {
+    padding: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2em;
   }
 }
 
@@ -677,9 +710,6 @@
     font-size: 2.5em;
     font-family: 'Cormorant';
   }
-  #about-container span {
-    font-family: 'Muli';
-  }
   #about-container .MuiPaper-root {
     width: 250px;
     height: 500px;
@@ -688,7 +718,7 @@
     text-align: center;
     font-size: 1rem;
     color: #EEFBFB;
-    background-color: #4DA8DA;
+    background-color: #12232E;
   }
   #testimonials-page {
     padding: 3em;
@@ -711,6 +741,9 @@
     font-size: 2em;
     font-family: 'Cormorant';
     color: #12232E;
+  }
+  #testimonials-page .span2 {
+    display: none;
   }
   #testimonials-page .carousel-item.active {
     display: -webkit-box;
@@ -828,6 +861,17 @@
     background-color: #007CC7;
     margin: auto;
   }
+  .all-testimonials {
+    padding: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2em;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -845,8 +889,11 @@
   #header-container h4 {
     font-size: 2em;
   }
-  #header-container h4:active {
-    font-style: none;
+  #header-container a {
+    color: #EEFBFB;
+  }
+  #header-container a:hover {
+    color: #4DA8DA;
   }
   #header-container nav ul {
     list-style: none;
@@ -965,14 +1012,10 @@
     padding: 3em;
     gap: 2em;
     text-align: center;
-    margin-top: 5vh;
+    margin-top: 5em;
   }
   #about-container h1 {
     font-size: 2.5em;
-    font-family: 'Muli';
-  }
-  #about-container span {
-    font-style: italic;
     font-family: 'Muli';
   }
   #about-container .MuiPaper-root {
@@ -985,11 +1028,9 @@
     font-size: 2em;
     width: 75%;
   }
-  #about-container .MuiButton-label {
-    background-color: #4DA8DA;
-    padding: 1em;
-    border-radius: 5%;
-    font-style: normal;
+  #about-container Button {
+    background-color: #12232E;
+    height: 2em;
     font-family: 'Muli';
   }
   #testimonials-page {
@@ -1007,6 +1048,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-top: 5em;
   }
   #testimonials-page h1 {
     font-size: 2.5em;
@@ -1041,6 +1083,12 @@
   #testimonials-page .carousel-item.active span {
     color: #007CC7;
   }
+  #testimonials-page a {
+    color: #12232E;
+  }
+  #testimonials-page a:hover {
+    color: #4DA8DA;
+  }
   #blog-container {
     text-align: center;
     font-family: 'Muli';
@@ -1053,6 +1101,12 @@
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     text-align: center;
+  }
+  #blog-container a {
+    color: #12232E;
+  }
+  #blog-container a:hover {
+    color: #4DA8DA;
   }
   #single-post-view {
     padding: 3em;
@@ -1133,6 +1187,9 @@
   #login-container #login-modal {
     width: 50vw;
     height: 50vh;
+  }
+  a {
+    text-decoration: none;
   }
 }
 /*# sourceMappingURL=index.css.map */

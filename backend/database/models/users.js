@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const db = require('../index');
 const passportLocalMongoose = require('passport-local-mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -12,17 +13,18 @@ const UsersSchema = new Schema({
   password: String,
 });
 
-UsersSchema.methods.setPassword = function(password) {
-  bcrypt.genSalt(10, (err, salt) => {
-    bcrypt.hash(password, salt, (err, hashedPwd) => {
-      this.password = hashedPwd;
-    });
-  });
+UsersSchema.methods.setPassword = async function(password) {
+  const saltRounds = 10;
+
+  const hashedPassword = await bcrypt.hash(password, saltRounds);
+
+  this.password = hashedPassword;
 };
 
-UsersSchema.methods.validatePassword = async function(password) {
-  const checkMatch = await bcrypt.compare(password, this.password);
-  return checkMatch || false;
+UsersSchema.methods.validatePassword = async function (password) {
+  const isMatch = await bcrypt.compare(password, this.password);
+  console.log(isMatch)
+  return isMatch;
 };
 
 UsersSchema.methods.generateJWT = function() {
@@ -45,5 +47,5 @@ UsersSchema.methods.toAuthJSON = function() {
   };
 };
 
-const Users = mongoose.model('Users', UsersSchema);
+const Users = db.model('Users', UsersSchema);
 module.exports = Users;

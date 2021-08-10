@@ -19,12 +19,6 @@ class User {
     this.password = password;
   };
 
-  signUp = (user) => async (dispatch, getState) => {
-    const newUser = await axios.post('/api/users/register', user);
-    if (newUser.data.success) dispatch({ type: REGISTER_SUCCESS, payload: newUser.data.success });
-    else dispatch({ type: REGISTER_FAIL, payload: newUser.data.error });
-  };
-
   login = () => async (dispatch, getState) => {
     dispatch({ type: USER_LOADING });
     const info = {
@@ -33,9 +27,9 @@ class User {
     };
 
     try {
-      const user = await axios.post('/api/users/login', info);
-      dispatch({ type: LOGIN_SUCCESS, payload: user.data });
-      dispatch({ type: USER_LOADED , payload: user.data });
+      const { data } = await axios.post('/api/users/login', info);
+      dispatch({ type: LOGIN_SUCCESS, payload: data });
+      return data;
     } catch(err) {
       dispatch({ type: LOGIN_FAIL });
     }

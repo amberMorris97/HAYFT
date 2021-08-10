@@ -18,7 +18,7 @@ const Services = () => {
           <Coaching />
           <Gathering />
         </div>
-        <Link to="/services"><PurpleButton text={'LEARN MORE'} /></Link>
+        <Link style={{ textDecoration: 'none' }} to="/services"><PurpleButton text={'LEARN MORE'} /></Link>
       </div>
   );
 }

@@ -9,24 +9,25 @@ const Testimonials = () => {
   const rightArrowStyle = {
     fontSize: '5em',
     color: '#000',
-    marginRight: '10vw',
-    marginTop: '50vh',
-    position: 'absolute'
+    marginRight: '5em',
+    marginTop: '3em',
+    position: 'absolute',
   }
 
-  const rightArrow = <ArrowForwardIcon style={rightArrowStyle} />;
+  const rightArrow = <ArrowForwardIcon id="arrow-right" style={rightArrowStyle} />;
 
   return (
     <div id="testimonials-page" className="halfscreen">
       <h1 id="testimonials-title" className="header-text muli">
-        <Link to="/testimonials">T E S T I M O N I A L S</Link>
+        <Link style={{ textDecoration: 'none' }} to="/testimonials">T E S T I M O N I A L S</Link>
       </h1>
-      <Carousel nextLabel={null} prevLabel={null} interval={null} indicators keyboard slide wrap touch nextIcon={null} prevIcon={null}>
+      <Carousel nextLabel={null} prevLabel={null} interval={null} indicators={true} keyboard slide wrap touch nextIcon={null} prevIcon={null}>
         <Carousel.Item className="carousel-item">
           <h3>{TK.head}</h3>
           <p>{TK.para}</p>
           <img src={TK.img} alt="teri-kelly-photo" width="100" height="100" />
           <span>{TK.spn}</span>
+          <span className="span2" style={{ fontSize: '0.5em' }}>(swipe for more)</span>
         </Carousel.Item>
 
         <Carousel.Item className="carousel-item">

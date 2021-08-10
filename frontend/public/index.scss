@@ -2,6 +2,9 @@
   width: 100vw;
   height: 100vh;
 }
+a {
+  text-decoration: none;
+}
 // .halfscreen {
 //   width: 100vw;
 //   height: 50vh;
@@ -289,6 +292,9 @@
       color: #12232E
     }
 
+    #arrow-right {
+      display: none;
+    }
    .carousel-item.active {
      display: flex;
      flex-direction: column;
@@ -383,6 +389,13 @@
         margin: auto;
       }
     }
+  }
+
+  .all-testimonials {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
   }
 }
 @media (min-width: 414px) and (max-width: 600px) {
@@ -518,6 +531,9 @@
       color: #12232E
     }
 
+    #arrow-right {
+      display: none;
+    }
    .carousel-item.active {
      display: flex;
      flex-direction: column;
@@ -596,6 +612,7 @@
         background-color: #12232E;
         color: #EEFBFB;
         margin: auto;
+        height: 5em;
       }
     }
   }
@@ -612,6 +629,12 @@
         margin: auto;
       }
     }
+  }
+  .all-testimonials {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
   }
 }
 
@@ -718,10 +741,6 @@
       font-size: 2.5em;
       font-family: 'Cormorant';
     }
-    span {
-      // font-style: italic;
-      font-family: 'Muli';
-    }
     .MuiPaper-root {
       width: 250px;
       height: 500px;
@@ -730,7 +749,7 @@
       text-align: center;
       font-size: 1rem;
       color: #EEFBFB;
-      background-color: #4DA8DA;
+      background-color: #12232E;
     }
 
   }
@@ -748,7 +767,9 @@
       font-family: 'Cormorant';
       color: #12232E
     }
-
+    .span2 {
+      display: none;
+    }
    .carousel-item.active {
      display: flex;
      flex-direction: column;
@@ -842,6 +863,12 @@
         margin: auto;
       }
     }
+  }
+  .all-testimonials {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
   }
 }
 // @media (min-width: 768px) {
@@ -967,8 +994,11 @@
       font-size: 2em;
     }
 
-    h4:active {
-      font-style: none;
+    a {
+      color: #EEFBFB;
+    }
+    a:hover {
+      color: #4DA8DA;
     }
 
     nav {
@@ -985,6 +1015,7 @@
         border: none;
         padding: none;
       }
+
     }
   }
   #landing-content {
@@ -1072,16 +1103,13 @@
     padding: 3em;
     gap: 2em;
     text-align: center;
-    margin-top: 5vh;
+    margin-top: 5em;
 
     h1 {
       font-size: 2.5em;
       font-family: 'Muli';
     }
-    span {
-      font-style: italic;
-      font-family: 'Muli';
-    }
+
     .MuiPaper-root {
       width: 100%;
       max-width: 1000px;
@@ -1092,11 +1120,9 @@
       font-size: 2em;
       width: 75%;
     }
-    .MuiButton-label {
-      background-color: #4DA8DA;
-      padding: 1em;
-      border-radius: 5%;
-      font-style: normal;
+    Button {
+      background-color: #12232E;
+      height: 2em;
       font-family: 'Muli';
     }
 
@@ -1108,6 +1134,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 5em;
+
     h1 {
       font-size: 2.5em;
       font-family: 'mULI';
@@ -1136,6 +1164,12 @@
        color: #007CC7;
      }
    }
+   a {
+    color: #12232E;
+  }
+  a:hover {
+    color: #4DA8DA;
+  }
   }
   #blog-container {
     text-align: center;
@@ -1144,6 +1178,13 @@
       display: flex;
       justify-content: space-evenly;
       text-align: center;
+    }
+
+    a {
+      color: #12232E;
+    }
+    a:hover {
+      color: #4DA8DA;
     }
   }
   #single-post-view {
@@ -1156,6 +1197,8 @@
       width: 1000px;
     }
   }
+
+
 
   #blog-posts-container {
     text-align: center;
@@ -1209,6 +1252,10 @@
       width: 50vw;
       height: 50vh;
     }
+  }
+
+  a {
+    text-decoration: none;
   }
 }
 

@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <div>
       <ul>
-        <Link to="/create-blog-post">
+        <Link style={{ textDecoration: 'none' }} to="/create-blog-post">
           <li>New Blog Post</li>
         </Link>
       </ul>

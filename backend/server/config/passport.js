@@ -2,6 +2,7 @@
 const mongoose = require('mongoose');
 const LocalStrategy = require('passport-local').Strategy;
 const Users = require('../../database/models/users');
+const bcrypt = require('bcryptjs');
 
 const passportConfig = (passport) => {
   passport.use(new LocalStrategy({
@@ -10,12 +11,14 @@ const passportConfig = (passport) => {
     session: true,
   }, (username, password, done) => {
     Users.findOne({ email: username })
-      .then((user) => {
-        if (!user || !user.validatePassword(password)) {
-          return done(null, false, { errors: { 'user or password': 'is invalid' } });
-        }
-        return done(null, user);
-      }).catch(done);
+      .then(async(user) => {
+        const isMatch = await bcrypt.compare(password, user.password);
+        if (isMatch) return done(null, user);
+        else return done(null, false, { error: 'invalid credentials' });
+      })
+      .catch((err) => {
+        throw err;
+      });
   }));
 
   passport.serializeUser((user, done) => {

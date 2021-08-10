@@ -22,7 +22,7 @@ const Main = () => {
       </h1>
       <p> together, we can create a cycle of <strong>inquiry</strong>, <strong>reflection</strong> and <strong>being</strong> that will help you grow and your teams thrive.</p>
       <br />
-      <Link to="/about"><PurpleButton text={"LEARN MORE"} /></Link>
+      <Link style={{ textDecoration: 'none' }} to="/about"><PurpleButton text={"LEARN MORE"} /></Link>
     </div>
     <Services />
     <About />

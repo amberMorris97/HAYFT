@@ -8,6 +8,8 @@ import {
   Switch,
   Route,
   Link,
+  useHistory,
+  useLocation
 } from 'react-router-dom';
 import Login from '../Admin/Login.jsx';
 import User from '../../redux/actions/authActions';
@@ -17,10 +19,14 @@ import ProtectedRoute from '../ProtectedRoute.jsx';
 
 const Header = ({ setView }) => {
   const dispatch = useDispatch();
+  const history = useHistory();
+  const location = useLocation();
   const user = useSelector(state => state.authReducer.user);
   const isAuth = useSelector(state => state.authReducer.isAuthenticated);
 
-  const handleClick = (e => setView(e.target.name));
+  const handleChange = ({ target }) => {
+    history.push(target.value)
+  };
 
   const handleLogout = () => {
     const loadedUser = new User();
@@ -31,29 +37,30 @@ const Header = ({ setView }) => {
     return (
       <div id="header-container">
       <h4>
-        <Link to="/">JANE ROSENZWEIG</Link>
+        <Link style={{ textDecoration: 'none' }} to="/">JANE ROSENZWEIG</Link>
       </h4>
         <nav id="nav">
           <ul id="nav-links">
             <li>
-              <Link to="/about">ABOUT</Link>
+              <Link style={{ textDecoration: 'none' }} to="/about">ABOUT</Link>
             </li>
             <li>
-              <Link to="/services">SERVICES</Link>
+              <Link style={{ textDecoration: 'none' }} to="/services">SERVICES</Link>
             </li>
             <li>
-              <Link to="/testimonials">TESTIMONIALS</Link>
+              <Link style={{ textDecoration: 'none' }} to="/testimonials">TESTIMONIALS</Link>
             </li>
             <li>
-              <Link to="/blog">BLOG</Link>
+              <Link style={{ textDecoration: 'none' }} to="/blog">BLOG</Link>
             </li>
             <li>
-              <Link to="/contact">CONTACT</Link>
+              <Link style={{ textDecoration: 'none' }} to="/contact">CONTACT</Link>
             </li>
             <li><Login /></li>
           </ul>
 
-          <select>
+          <select onChange={handleChange}>
+            <option>Home</option>
             <option>About</option>
             <option>Services</option>
             <option>Testimonials</option>
@@ -68,30 +75,30 @@ const Header = ({ setView }) => {
   return (
     <div id="header-container">
       <h4>
-        <Link to="/">JANE ROSENZWEIG</Link>
+        <Link style={{ textDecoration: 'none' }} to="/">JANE ROSENZWEIG</Link>
       </h4>
         <nav id="nav">
           <ul id="nav-links">
           <li>
-              <Link to="/about">ABOUT</Link>
+              <Link style={{ textDecoration: 'none' }} to="/about">ABOUT</Link>
             </li>
             <li>
-              <Link to="/services">SERVICES</Link>
+              <Link style={{ textDecoration: 'none' }} to="/services">SERVICES</Link>
             </li>
             <li>
-              <Link to="/testimonials">TESTIMONIALS</Link>
+              <Link style={{ textDecoration: 'none' }} to="/testimonials">TESTIMONIALS</Link>
             </li>
             <li>
-              <Link to="/blog">BLOG</Link>
+              <Link style={{ textDecoration: 'none' }} to="/blog">BLOG</Link>
             </li>
             <li>
-              <Link to="/contact">CONTACT</Link>
+              <Link style={{ textDecoration: 'none' }} to="/contact">CONTACT</Link>
             </li>
             <li><ProtectedRoute /></li>
             <li><Logout setView={setView} /></li>
           </ul>
 
-          <select>
+          <select onChange={handleChange}>
             <option>About</option>
             <option>Services</option>
             <option>Testimonials</option>

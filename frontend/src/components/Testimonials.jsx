@@ -2,7 +2,7 @@ import React from 'react';
 import { TK, CL, SK } from './Home/Testimonials/quotes';
 
 const Testimonials = () => (
-  <div className="all-testimonials-container">
+  <div className="all-testimonials">
     <div id="tk-testimonial">
       <h3>{TK.head}</h3>
       <p>{TK.para}</p>
