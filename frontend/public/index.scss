@@ -176,7 +176,12 @@ a {
     }
 
     div.MuiPaper-root {
-      width: 50vw !important;
+      width: 65vw !important;
+
+      img {
+        width: 300px;
+        height: 275px;
+      }
     }
 
   }
@@ -355,6 +360,27 @@ a {
       }
     }
   }
+
+  #contact-main {
+    text-align: center;
+    h1 {
+      margin: 25px;
+    }
+    #footer-form-container {
+      #contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        button {
+          margin: 0 auto 50px auto;
+          justify-self: start;
+          background-color: #12232E;
+          color: #EEFBFB;
+        }
+      }
+    }
+  }
 }
 @media (min-width: 414px) and (max-width: 600px) {
   div.MuiDrawer-paper {
@@ -517,7 +543,7 @@ a {
     }
 
     p {
-      font-size: 1.2em;
+      font-size: 1em;
     }
 
     .MuiButton-label {
@@ -530,7 +556,12 @@ a {
     }
 
     div.MuiPaper-root {
-      width: 50vw !important;
+      width: 65vw !important;
+
+      img {
+        width: 300px;
+        height: 300px;
+      }
     }
 
   }
@@ -703,6 +734,27 @@ a {
         color: #EEFBFB;
         width: 5vw;
         margin-top: 15px;
+      }
+    }
+  }
+
+  #contact-main {
+    text-align: center;
+    h1 {
+      margin: 25px;
+    }
+    #footer-form-container {
+      #contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        button {
+          margin: 0 auto 50px auto;
+          justify-self: start;
+          background-color: #12232E;
+          color: #EEFBFB;
+        }
       }
     }
   }
@@ -1240,7 +1292,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
 
     h1 {
       font-size: 5em;
@@ -1258,7 +1310,7 @@ a {
     }
 
     #service-cards-container {
-      padding: 13em;
+      padding: 3em;
       display: flex;
       flex-direction: row;
       gap: 2em;
@@ -1297,6 +1349,8 @@ a {
 
 
   #about-container {
+    width: 75%;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1305,7 +1359,7 @@ a {
     gap: 2em;
     text-align: center;
     margin-top: 5em;
-    background-color: #EEFBFB;
+    background-color: rgba(77, 168, 218, 0.5);
 
     h1 {
       font-size: 4em;
@@ -1377,7 +1431,10 @@ a {
   #blog-container {
     text-align: center;
     font-family: 'Cormorant';
-    background-color: #EEFBFB;
+    background-color: rgba(77, 168, 218, 0.5);
+    width: 75%;
+    margin: auto;
+
     #blog-post-preview {
       display: flex;
       justify-content: space-evenly;
@@ -1454,6 +1511,7 @@ a {
   #footer {
     display: flex;
     justify-content: space-around;
+    margin-top: 50px;
 
     #contact-title {
       font-size: 5em;

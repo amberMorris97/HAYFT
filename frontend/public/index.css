@@ -185,7 +185,11 @@ a {
     padding: 0.5em;
   }
   #about-container div.MuiPaper-root {
-    width: 50vw !important;
+    width: 65vw !important;
+  }
+  #about-container div.MuiPaper-root img {
+    width: 300px;
+    height: 275px;
   }
   #testimonials-page {
     padding: 3em;
@@ -398,6 +402,29 @@ a {
     width: 5vw;
     margin-top: 15px;
   }
+  #contact-main {
+    text-align: center;
+  }
+  #contact-main h1 {
+    margin: 25px;
+  }
+  #contact-main #footer-form-container #contact-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2em;
+  }
+  #contact-main #footer-form-container #contact-form button {
+    margin: 0 auto 50px auto;
+    -ms-grid-column-align: start;
+        justify-self: start;
+    background-color: #12232E;
+    color: #EEFBFB;
+  }
 }
 
 @media (min-width: 414px) and (max-width: 600px) {
@@ -570,7 +597,7 @@ a {
     height: 50%;
   }
   #about-container p {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   #about-container .MuiButton-label {
     text-align: center;
@@ -581,7 +608,11 @@ a {
     border-radius: 5%;
   }
   #about-container div.MuiPaper-root {
-    width: 50vw !important;
+    width: 65vw !important;
+  }
+  #about-container div.MuiPaper-root img {
+    width: 300px;
+    height: 300px;
   }
   #testimonials-page {
     padding: 3em;
@@ -796,6 +827,29 @@ a {
     color: #EEFBFB;
     width: 5vw;
     margin-top: 15px;
+  }
+  #contact-main {
+    text-align: center;
+  }
+  #contact-main h1 {
+    margin: 25px;
+  }
+  #contact-main #footer-form-container #contact-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2em;
+  }
+  #contact-main #footer-form-container #contact-form button {
+    margin: 0 auto 50px auto;
+    -ms-grid-column-align: start;
+        justify-self: start;
+    background-color: #12232E;
+    color: #EEFBFB;
   }
 }
 
@@ -1283,9 +1337,6 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
   #services-container h1 {
     font-size: 5em;
@@ -1300,7 +1351,7 @@ a {
     color: #12232E;
   }
   #services-container #service-cards-container {
-    padding: 13em;
+    padding: 3em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1334,6 +1385,8 @@ a {
     text-align: center;
   }
   #about-container {
+    width: 75%;
+    margin: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1351,7 +1404,7 @@ a {
     gap: 2em;
     text-align: center;
     margin-top: 5em;
-    background-color: #EEFBFB;
+    background-color: rgba(77, 168, 218, 0.5);
   }
   #about-container h1 {
     font-size: 4em;
@@ -1432,7 +1485,9 @@ a {
   #blog-container {
     text-align: center;
     font-family: 'Cormorant';
-    background-color: #EEFBFB;
+    background-color: rgba(77, 168, 218, 0.5);
+    width: 75%;
+    margin: auto;
   }
   #blog-container #blog-post-preview {
     display: -webkit-box;
@@ -1520,6 +1575,7 @@ a {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    margin-top: 50px;
   }
   #footer #contact-title {
     font-size: 5em;
