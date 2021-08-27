@@ -161,17 +161,34 @@ a {
 // /* MEDIA QUERIES */
 
 @media (max-width: 413px) {
+  div.MuiDrawer-paper {
+    height: auto;
+    background: none;
+    color: #EEFBFB;
+
+    .MuiList-root {
+      display: flex;
+      flex-direction: column;
+      gap: 3em;
+    }
+  }
   #header-container {
     display: flex;
     justify-content: space-between;
     padding: 2em 3em;
     background-color: #12232E;
 
+    a {
+      color: #EEFBFB;
+    }
+
     nav ul {
       display: none;
     }
-    nav select {
+    svg {
       display: revert;
+      color: #EEFBFB;
+      font-size: 40px;
     }
   }
 
@@ -219,8 +236,8 @@ a {
     justify-content: center;
 
     h1 {
-      font-size: 1.5em;
-      font-family: 'Muli';
+      font-size: 1.5;
+      font-family: 'Cormorant' !important;
     }
 
     h3 {
@@ -229,10 +246,7 @@ a {
       font-size: 1em;
     }
 
-    .services-title {
-      font-size: 3em;
-      font-family: 'Cormorant';
-    }
+
 
     #service-cards-container {
       padding: 3em;
@@ -240,15 +254,26 @@ a {
       flex-direction: column;
       gap: 2em;
 
+      h1 {
+        font-size: 1.5em;
+        font-family: 'Muli' !important;
+      }
+
       .service-card .MuiPaper-root {
         font-family: 'Muli';
-        background-color: #4DA8DA;
+        background-color: #12232E;
         color: #EEFBFB;
         height: 30vh;
         text-align: center;
       }
     }
   }
+
+  #about-main {
+    padding: 3em;
+    text-align: center;
+  }
+
 
   #about-container {
     display: flex;
@@ -258,21 +283,30 @@ a {
     padding: 3em;
     gap: 2em;
     text-align: center;
+    background-color: #4DA8DA;
+    margin-top: 25px;
 
     h1 {
-      font-size: 2.5em;
+      font-size: 1.5em;
       font-family: 'Cormorant';
     }
     span {
       // font-style: italic;
       font-family: 'Muli';
+      color: #EEFBFB;
     }
 
     .MuiButton-label {
       text-align: center;
       font-size: 1rem;
       color: #EEFBFB;
-      background-color: #4DA8DA;
+      background-color: #12232E;
+      border-radius: 5%;
+      padding: 0.5em;
+    }
+
+    div.MuiPaper-root {
+      width: 50vw !important;
     }
 
   }
@@ -397,19 +431,58 @@ a {
     flex-direction: column;
     gap: 2em;
   }
+
+  #login-container {
+    padding: 3em;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+
+      input {
+        width: 25vw;
+      }
+
+      button {
+        background-color: #12232E;
+        color: #EEFBFB;
+        width: 5vw;
+        margin-top: 15px;
+      }
+    }
+  }
 }
 @media (min-width: 414px) and (max-width: 600px) {
+  div.MuiDrawer-paper {
+    height: auto;
+    background: none;
+    color: #EEFBFB;
+
+    .MuiList-root {
+      display: flex;
+      flex-direction: column;
+      gap: 3em;
+    }
+  }
+
   #header-container {
     display: flex;
     justify-content: space-between;
     padding: 2em 3em;
     background-color: #12232E;
 
+
+    a {
+      color: #EEFBFB;
+    }
+
     nav ul {
       display: none;
     }
-    nav select {
+    svg {
       display: revert;
+      color: #EEFBFB;
+      font-size: 40px;
     }
   }
 
@@ -458,7 +531,7 @@ a {
 
     h1 {
       font-size: 1.5em;
-      font-family: 'Muli';
+      font-family: 'Cormorant';
     }
 
     h3 {
@@ -478,9 +551,14 @@ a {
       flex-direction: column;
       gap: 2em;
 
+      h1 {
+        font-size: 1.5em;
+        font-family: 'Muli' !important;
+      }
+
       .service-card .MuiPaper-root {
         font-family: 'Muli';
-        background-color: #4DA8DA;
+        background-color: #12232E;
         color: #EEFBFB;
         height: 25vh;
         text-align: center;
@@ -488,7 +566,14 @@ a {
     }
   }
 
+  #about-main {
+    padding: 3em;
+    text-align: center;
+  }
+
+
   #about-container {
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -496,15 +581,17 @@ a {
     padding: 3em;
     gap: 2em;
     text-align: center;
+    background-color: #4DA8DA;
 
     h1 {
-      font-size: 2.5em;
+      font-size: 1.5em;
       font-family: 'Cormorant';
     }
     span {
       // font-style: italic;
       font-family: 'Muli';
     }
+
     .MuiPaper-root {
       height: 50%;
     }
@@ -512,7 +599,13 @@ a {
       text-align: center;
       font-size: 1rem;
       color: #EEFBFB;
-      background-color: #4DA8DA;
+      background-color: #12232E;
+      padding: 0.5em;
+      border-radius: 5%;
+    }
+
+    div.MuiPaper-root {
+      width: 50vw !important;
     }
 
   }
@@ -612,7 +705,6 @@ a {
         background-color: #12232E;
         color: #EEFBFB;
         margin: auto;
-        height: 5em;
       }
     }
   }
@@ -636,20 +728,55 @@ a {
     flex-direction: column;
     gap: 2em;
   }
+
+  #login-container {
+    padding: 3em;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+
+      input {
+        width: 25vw;
+      }
+
+      button {
+        background-color: #12232E;
+        color: #EEFBFB;
+        width: 5vw;
+        margin-top: 15px;
+      }
+    }
+  }
 }
 
 @media (min-width: 601px) {
+  div.MuiDrawer-paper {
+    height: auto;
+    background: none;
+    color: #EEFBFB;
+
+    .MuiList-root {
+      display: flex;
+      flex-direction: column;
+      gap: 3em;
+    }
+  }
   #header-container {
     display: flex;
     justify-content: space-between;
     padding: 2em 3em;
     background-color: #12232E;
 
-    nav ul {
-      display: none;
-    }
-    nav select {
-      display: revert;
+    nav {
+      ul {
+        display: none;
+      }
+      svg {
+        display: revert;
+        color: #EEFBFB;
+        font-size: 48px;
+      }
     }
   }
 
@@ -720,12 +847,17 @@ a {
 
       .service-card .MuiPaper-root {
         font-family: 'Muli';
-        background-color: #4DA8DA;
+        background-color: #12232E;
         color: #EEFBFB;
         height: 25vh;
         text-align: center;
       }
     }
+  }
+
+  #about-main {
+    padding: 3em;
+    text-align: center;
   }
 
   #about-container {
@@ -749,7 +881,7 @@ a {
       text-align: center;
       font-size: 1rem;
       color: #EEFBFB;
-      background-color: #12232E;
+      background-color: #4DA8DA;
     }
 
   }
@@ -793,6 +925,40 @@ a {
      }
    }
   }
+
+  #contact-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Muli';
+    margin-top: 25px;
+
+    #resources {
+      margin-top: 100px;
+    }
+
+
+    #footer-form-container form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2em;
+      margin: 25px;
+
+      input, textarea {
+        width: 30vw;
+      }
+
+      Button {
+        grid-column: 1 / 3;
+        background-color: #12232E;
+        margin: auto;
+        color: #EEFBFB;
+        width: 10vw;
+      }
+    }
+  }
+
   #blog-container {
     text-align: center;
     padding: 3em;
@@ -869,6 +1035,25 @@ a {
     display: flex;
     flex-direction: column;
     gap: 2em;
+  }
+
+  #login-container {
+    padding: 3em;
+    form {
+      display: flex;
+      gap: 2em;
+
+      input {
+        width: 25vw;
+      }
+
+      button {
+        background-color: #12232E;
+        color: #EEFBFB;
+        width: 5vw;
+        margin-top: 15px;
+      }
+    }
   }
 }
 // @media (min-width: 768px) {
@@ -1007,7 +1192,7 @@ a {
         display: flex;
         gap: 3em;
       }
-      select {
+      svg {
         display: none;
       }
       Button {
@@ -1058,10 +1243,9 @@ a {
     align-items: center;
     justify-content: center;
 
-
     h1 {
       font-size: 2.5em;
-      font-family: 'Muli';
+      font-family: 'Cormorant';
     }
 
     h3 {
@@ -1080,6 +1264,11 @@ a {
       flex-direction: row;
       gap: 2em;
 
+      h1 {
+        font-size: 2.5em;
+        font-family: 'Muli' !important;
+      }
+
       .service-card .MuiPaper-root {
         overflow: auto;
         width: 30vw;
@@ -1095,6 +1284,13 @@ a {
       background-color: #12232E;
     }
   }
+
+  #about-main {
+    padding: 3em;
+    text-align: center;
+  }
+
+
   #about-container {
     display: flex;
     flex-direction: column;
@@ -1104,10 +1300,11 @@ a {
     gap: 2em;
     text-align: center;
     margin-top: 5em;
+    background-color: #4DA8DA;
 
     h1 {
       font-size: 2.5em;
-      font-family: 'Muli';
+      font-family: 'Cormorant';
     }
 
     .MuiPaper-root {
@@ -1125,6 +1322,9 @@ a {
       height: 2em;
       font-family: 'Muli';
     }
+    .MuiButton-label {
+      background-color: #12232E;
+    }
 
   }
 
@@ -1138,7 +1338,7 @@ a {
 
     h1 {
       font-size: 2.5em;
-      font-family: 'mULI';
+      font-family: 'Cormorant';
       color: #12232E
     }
    .carousel-item.active {
@@ -1173,11 +1373,12 @@ a {
   }
   #blog-container {
     text-align: center;
-    font-family: 'Muli';
+    font-family: 'Cormorant';
     #blog-post-preview {
       display: flex;
       justify-content: space-evenly;
       text-align: center;
+      font-family: 'Muli';
     }
 
     a {
@@ -1202,6 +1403,7 @@ a {
 
   #blog-posts-container {
     text-align: center;
+
     #blog-post-preview {
       text-align: center;
       font-family: 'Muli';
@@ -1248,9 +1450,21 @@ a {
   }
 
   #login-container {
-    #login-modal {
-      width: 50vw;
-      height: 50vh;
+    padding: 3em;
+    form {
+      display: flex;
+      gap: 2em;
+
+      input {
+        width: 25vw;
+      }
+
+      button {
+        background-color: #12232E;
+        color: #EEFBFB;
+        width: 5vw;
+        margin-top: 15px;
+      }
     }
   }
 

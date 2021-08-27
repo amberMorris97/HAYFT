@@ -11,22 +11,43 @@ import {
   useHistory,
   useLocation
 } from 'react-router-dom';
+import Drawer from '@material-ui/core/Drawer';
+import Button from '@material-ui/core/Button';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import MenuIcon from '@material-ui/icons/Menu';
+import List from '@material-ui/core/List';
 import Login from '../Admin/Login.jsx';
 import User from '../../redux/actions/authActions';
 import Logout from '../Admin/Logout.jsx';
 import ProtectedRoute from '../ProtectedRoute.jsx';
+import Modal from '../Modal';
 
 
 const Header = ({ setView }) => {
   const dispatch = useDispatch();
   const history = useHistory();
   const location = useLocation();
+  const [anchor, toggleAnchor] = useState(false);
+  const [open, setOpen] = useState(false);
   const user = useSelector(state => state.authReducer.user);
   const isAuth = useSelector(state => state.authReducer.isAuthenticated);
+
+  const listStyle = {
+    backgroundColor: 'rgba(18, 35, 46, 0.9)',
+    width: 'auto',
+    height: 'auto',
+  }
 
   const handleChange = ({ target }) => {
     history.push(target.value)
   };
+
+  const toggleDrawer = (anchor) => (e) => {
+    if (e.type === 'keydown' && (e.key === 'Tab' || e.key === 'Shift')) return;
+
+    toggleAnchor(!anchor);
+  }
 
   const handleLogout = () => {
     const loadedUser = new User();
@@ -56,17 +77,20 @@ const Header = ({ setView }) => {
             <li>
               <Link style={{ textDecoration: 'none' }} to="/contact">CONTACT</Link>
             </li>
-            <li><Login /></li>
           </ul>
 
-          <select onChange={handleChange}>
-            <option>Home</option>
-            <option>About</option>
-            <option>Services</option>
-            <option>Testimonials</option>
-            <option>Blog</option>
-            <option>Contact</option>
-          </select>
+          <MenuIcon onClick={toggleDrawer(anchor)}></MenuIcon>
+            <Drawer open={anchor} onClose={toggleDrawer(anchor)}>
+              <List style={listStyle}>
+                {['ABOUT', 'SERVICES', 'TESTIMONIALS', 'BLOG', 'CONTACT'].map((text, index) => (
+                 <Link style={{ textDecoration: 'none', color: '#EEFBFB' }} to={`/${text}`} key={text}>
+                    <ListItem button key={text}>
+                      <ListItemText primary={text} />
+                    </ListItem>
+                  </Link>
+                ))}
+              </List>
+            </Drawer>
         </nav>
     </div>
     );
@@ -98,13 +122,22 @@ const Header = ({ setView }) => {
             <li><Logout setView={setView} /></li>
           </ul>
 
-          <select onChange={handleChange}>
-            <option>About</option>
-            <option>Services</option>
-            <option>Testimonials</option>
-            <option>Blog</option>
-            <option>Contact</option>
-          </select>
+          <MenuIcon onClick={toggleDrawer(anchor)}></MenuIcon>
+            <Drawer open={anchor} onClose={toggleDrawer(anchor)}>
+              <List style={listStyle}>
+                {['ABOUT', 'SERVICES', 'TESTIMONIALS', 'BLOG', 'CONTACT'].map((text, index) => (
+                 <Link style={{ textDecoration: 'none', color: '#EEFBFB' }} to={`/${text.toLowerCase()}`} key={text}>
+                    <ListItem button key={text}>
+                      <ListItemText primary={text} />
+                    </ListItem>
+                  </Link>
+                ))}
+                <hr />
+                {['ADD BLOG POST', 'LOGOUT'].map((text, index) => (
+                  index === 0 ? <Link style={{ textDecoration: 'none', color: '#EEFBFB' }} to="/create-blog-post">Create Blog Post</Link> : <Logout setView={setView} />
+                ))}
+              </List>
+            </Drawer>
         </nav>
     </div>
   );

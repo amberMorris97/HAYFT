@@ -8,6 +8,8 @@ import { addNewBlogPost } from '../../redux/actions/blogActions';
 import SinglePost from './SinglePost.jsx';
 
 const newPost = () => {
+  const auth = useSelector(state => state.authReducer.isAuthenticated);
+
   const dispatch = useDispatch();
   const [blogInfo, setBlogInfo] = useState({
     title: '',
@@ -15,6 +17,12 @@ const newPost = () => {
     img: '',
     post: '',
   });
+
+  if (!auth) {
+    return (
+      <h1>You do not have the correct credentials to access this page.</h1>
+    )
+  }
 
   const handleChange = (e) => {
     const field = e.target.name;

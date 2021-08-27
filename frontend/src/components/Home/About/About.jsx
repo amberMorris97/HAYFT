@@ -10,13 +10,14 @@ const About = () => {
     height: '30vh',
   }
   return (
-    <div id="about-container" >
+    <div id="about-container">
       <h1 id="about-title" className="muli header text">ABOUT JANE</h1>
       <Card style={cardStyle} variant="elevation" elevation={15}></Card>
-      <p className="openSans about-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p className="openSans about-para">Jane has spent her career developing corporate DEI strategies anchored in social justice foundations. As the first Head of DEI (CDO) at W.L. Gore &amp; Associates (www.gore.com) Jane developed a philosophy and strategy that built on Gore’s humanistic values and innovative business model. Relying on culture change and social movement methodologies, Jane galvanized the involvement of thousands of Associates from around the world. Using curiosity and conversation, teams deepened their understanding of identity differences and committed to disrupting bias in day-to-day life. With a strong focus on systems and structures, Jane&apos;s approach is rooted in her belief that empathy and dialogue can solve most things.</p>
       <Link style={{ textDecoration: 'none' }} to="/contact"><PurpleButton text={'WORK WITH ME'} /></Link>
     </div>
   );
 };
 
 export default About;
+

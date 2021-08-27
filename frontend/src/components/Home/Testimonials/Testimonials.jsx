@@ -21,6 +21,7 @@ const Testimonials = () => {
       <h1 id="testimonials-title" className="header-text muli">
         <Link style={{ textDecoration: 'none' }} to="/testimonials">T E S T I M O N I A L S</Link>
       </h1>
+
       <Carousel nextLabel={null} prevLabel={null} interval={null} indicators={true} keyboard slide wrap touch nextIcon={null} prevIcon={null}>
         <Carousel.Item className="carousel-item">
           <h3>{TK.head}</h3>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './Footer/Footer.jsx';
 
 const ServicesMain = () => {
 
@@ -29,6 +30,7 @@ const ServicesMain = () => {
         <li></li>
       </ul>
       <p>Overview here...</p>
+    <Footer />
     </div>
   );
 };

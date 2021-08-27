@@ -9,7 +9,7 @@ import {
 import Header from './Header/Header.jsx';
 import Main from './Home/Main.jsx'
 
-import Footer from './Footer/Footer.jsx'
+import Login from './Admin/Login.jsx'
 import Blog from './Blog/Main.jsx';
 import SinglePost from './Blog/SinglePost.jsx';
 import NewPost from './Blog/NewPost.jsx';
@@ -52,10 +52,10 @@ const App = () => {
      <Route exact path="/create-blog-post" component={NewPost} />
      <Route exact path="/services" component={ServicesMain} />
      <Route exact path="/about" component={AboutMain} />
-     <Route exact path="/contact" component={Contact} />
      <Route exact path="/testimonials" component={Testimonials} />
+     <Route path="/contact" component={Contact} />
+     <Route path="/login" render={ () => <Login setView={setView} />} />
    </Switch>
-    <Footer />
     </div>
    </Router>
   );

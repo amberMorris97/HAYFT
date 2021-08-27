@@ -8,6 +8,7 @@ import PurpleButton from "../Buttons/PurpleButton.jsx";
 import Card from "@material-ui/core/Card";
 // import CardContent from "@material-ui/core/CardContent";
 import { Link } from 'react-router-dom';
+import Footer from '../Footer/Footer.jsx';
 
 const Main = () => {
   return (
@@ -28,6 +29,7 @@ const Main = () => {
     <About />
     <Testimonials />
     <Blog />
+    <Footer />
     </div>
   );
 };

@@ -3,18 +3,24 @@ import { useDispatch, useSelector } from 'react-redux';
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import User from '../../redux/actions/authActions';
-import Modal from '../Modal';
 
-const Login = () => {
-  const buttonStyle = { color: '#EEFBFB' };
+const Login = ({ setView }) => {
+  const auth = useSelector(state => state.authReducer.isAuthenticated);
 
   const dispatch = useDispatch();
-  const [isOpen, setIsOpen] = useState(false);
   const [loginInfo, setLoginInfo] = useState({
     email: '',
     password: '',
     error: '',
   });
+
+
+  if (auth) {
+    return (
+      <h3>Hey Jane, you&apos;re already logged in.</h3>
+    );
+  }
+
 
   const handleChange = (e) => {
     const field = e.target.name;
@@ -35,21 +41,21 @@ const Login = () => {
         ...loginInfo,
         error: 'Invalid credentials',
       });
+    } else {
+      setView('home');
     }
   };
 
+
   return (
     <div id="login-container">
-      <button style={buttonStyle} onClick={() => setIsOpen(true)}>LOGIN</button>
-      <Modal id="login-modal" open={isOpen} onClose={() => setIsOpen(false)}>
-        <form onSubmit={handleSubmit}>
-          <TextField variant="standard" id="email" label="email" name="email" onChange={handleChange}>Email</TextField>
-          <TextField variant="standard" id="password" label="password" name="password" type="password" onChange={handleChange}>Email</TextField>
-        <Button type="submit">Login</Button>
-        <br />
-        <span style={{color: "red"}} id="phoneErr" className="error">{loginInfo.error}</span>
-        </form>
-      </Modal>
+      <form onSubmit={handleSubmit}>
+        <TextField variant="standard" id="email" label="email" name="email" onChange={handleChange}>Email</TextField>
+        <TextField variant="standard" id="password" label="password" name="password" type="password" onChange={handleChange}>Email</TextField>
+      <Button type="submit">Login</Button>
+      <br />
+      <span style={{color: "red"}} id="phoneErr" className="error">{loginInfo.error}</span>
+      </form>
     </div>
   );
 };
