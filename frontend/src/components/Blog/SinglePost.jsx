@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams, useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Disqus from "disqus-react"
 import moment from 'moment';
 import { fetchBlogPosts } from '../../redux/actions/blogActions';
@@ -8,7 +8,6 @@ import { fetchBlogPosts } from '../../redux/actions/blogActions';
 const SinglePost = () => {
   const dispatch = useDispatch();
   const params = useParams();
-  const location = useLocation();
   const posts = useSelector(state => state.blogReducer.posts);
 
   useEffect(() => {

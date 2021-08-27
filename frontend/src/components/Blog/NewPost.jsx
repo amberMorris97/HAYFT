@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import { useLocation } from 'react-router-dom';
-import moment from 'moment';
 import { addNewBlogPost } from '../../redux/actions/blogActions';
 import SinglePost from './SinglePost.jsx';
 
@@ -21,7 +19,7 @@ const newPost = () => {
   if (!auth) {
     return (
       <h1>You do not have the correct credentials to access this page.</h1>
-    )
+    );
   }
 
   const handleChange = (e) => {

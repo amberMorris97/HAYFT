@@ -23,6 +23,8 @@ import Logout from '../Admin/Logout.jsx';
 import ProtectedRoute from '../ProtectedRoute.jsx';
 import Modal from '../Modal';
 
+const logo = './images/jrlogo1.png';
+
 
 const Header = ({ setView }) => {
   const dispatch = useDispatch();
@@ -58,7 +60,7 @@ const Header = ({ setView }) => {
     return (
       <div id="header-container">
       <h4>
-        <Link style={{ textDecoration: 'none' }} to="/">JANE ROSENZWEIG</Link>
+        <Link style={{ textDecoration: 'none' }} to="/"><img src={logo} height="150" width="150" /></Link>
       </h4>
         <nav id="nav">
           <ul id="nav-links">

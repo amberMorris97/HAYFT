@@ -1,14 +1,14 @@
 import React from 'react';
 import EmailForm from './EmailForm.jsx';
-import Resources from './Resources.jsx';
 
 const Footer = () => {
+
+  const contactPhoto = './images/contactpic.png';
 
   return (
     <div id="footer" className="halfscreen">
       <EmailForm />
-      <div id="footer-vl"></div>
-      <Resources />
+      <img src={contactPhoto} width="250" height="250" alt="contact-graphic" />
     </div>
   );
 };

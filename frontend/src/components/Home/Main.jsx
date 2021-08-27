@@ -9,6 +9,7 @@ import Card from "@material-ui/core/Card";
 // import CardContent from "@material-ui/core/CardContent";
 import { Link } from 'react-router-dom';
 import Footer from '../Footer/Footer.jsx';
+import Resources from '../Footer/Resources.jsx';
 
 const Main = () => {
   return (
@@ -21,15 +22,17 @@ const Main = () => {
         <br />
         Inclusion
       </h1>
-      <p> together, we can create a cycle of <strong>inquiry</strong>, <strong>reflection</strong> and <strong>being</strong> that will help you grow and your teams thrive.</p>
+      <p> Together, we can create a cycle of <strong>inquiry</strong>, <strong>reflection</strong> and <strong>being</strong> that will help you grow and your teams thrive.</p>
       <br />
       <Link style={{ textDecoration: 'none' }} to="/about"><PurpleButton text={"LEARN MORE"} /></Link>
     </div>
     <Services />
     <About />
     <Testimonials />
+    <br />
     <Blog />
     <Footer />
+    <Resources />
     </div>
   );
 };

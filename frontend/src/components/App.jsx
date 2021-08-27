@@ -62,3 +62,44 @@ const App = () => {
 };
 
 export default App;
+
+// Header
+  // use Canva or something to design a logo
+
+
+// Services
+  // Perhaps make images for each service
+  // fill out the main services page
+  // STYLING
+    // needs padding
+
+// About
+  // add image of jane
+  // adjust main text
+  // STYLING
+    // On seperate about page, footer is padded and it shouldn't be (#footer: padding 0 !important)
+
+// Testimonials
+  // figure out why CL photo is not showing
+  // STYLING
+    // this could probably look better
+
+// Blog
+  // probably adjust the preview title size
+  // uh 1024 min width footer el is not flushed to the bottom, fix that.
+
+// Performance
+  // Figure out why it takes so long to load *look into caching*
+  // Consider implementing a loading wheel to avoid multiple rendering of components (Can be explored later these issues pertain only to Jane, significant spot where this happens: Login checking to see if user is already logged in)
+
+// Bugs
+  // Login component acts weird when you enter invalid credentials multiple times
+    /* SEARCH: Something like how to notify client when error happens on the backend, this will probably be a backend solution. */
+
+// MISC
+  // Make Test Suite
+    // maybe
+
+// Security
+  // Restrict DB access
+  // Add domain name
