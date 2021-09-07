@@ -25,6 +25,7 @@
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "react-scroll": "^1.8.2",
+    "react-scroll-motion": "^0.2.1",
     "react-swipe": "^6.0.4",
     "redux": "^4.1.0",
     "redux-devtools-extension": "^2.13.9",

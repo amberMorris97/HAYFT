@@ -1337,7 +1337,8 @@ a {
     font-family: 'Lato';
     color: #EEFBFB;
     width: 100%;
-    z-index: 1000;
+    z-index: 10000;
+    position: fixed;
   }
   #header-container h4 {
     font-size: 2em;
@@ -1383,6 +1384,8 @@ a {
     padding: 3rem;
     background-color: #0B0C10;
     margin: auto;
+    margin-top: 50px;
+    height: 200%;
   }
   #landing-content h1 {
     -ms-grid-row: 1;
@@ -1432,8 +1435,7 @@ a {
   }
   #services-container {
     background: #0B0C10;
-    padding: 3em;
-    margin-top: 100px;
+    padding: 10em;
   }
   #services-container button {
     background: #0B0C10;
@@ -1450,6 +1452,7 @@ a {
   #services-container #description-carousel {
     margin-top: 50px;
     position: relative;
+    width: 50vw;
   }
   #services-container #description-carousel .MuiPaper-root {
     background-color: #1f2833;
@@ -1461,7 +1464,7 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 5em;
+    gap: 10em;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1469,7 +1472,6 @@ a {
         -ms-flex-pack: center;
             justify-content: center;
     margin-top: 25px;
-    margin-bottom: 25px;
   }
   #services-container #description-carousel #service-carousel-btns .fas:hover {
     cursor: pointer;
@@ -1479,7 +1481,8 @@ a {
     font-size: 25px;
   }
   #services-container button {
-    margin-top: 25px;
+    margin-top: 50px;
+    padding: 15px;
   }
   #services-container .service-descriptions {
     display: -webkit-box;
@@ -1527,7 +1530,7 @@ a {
   }
   #services-container .service-descriptions .description h1 {
     font-family: 'Lato';
-    font-size: 4em;
+    font-size: 2.5em;
     font-weight: 900;
     position: absolute;
     top: 30%;
@@ -1544,7 +1547,7 @@ a {
     top: 40%;
     position: absolute;
     z-index: 1000;
-    font-size: 1.2em;
+    font-size: 1em;
     font-style: normal;
     font-family: 'Lato';
   }
@@ -1556,9 +1559,10 @@ a {
     margin: auto;
   }
   #services-container .service-descriptions .description .MuiCardContent-root p {
-    width: 75%;
+    width: 50%;
     text-align: center;
     margin: auto;
+    color: green;
   }
   #about-main {
     text-align: center;

@@ -16,7 +16,7 @@ const Services = () => {
   const [tab, setTab] = useState('advising');
 
   return (
-    <div id="services-container">
+    <div id="services-container" className="fullscreen">
       <h1>How I Can Help</h1>
         <Descriptions descriptionList={servicesText} tab={tab} />
         <DescriptionCarousel setTab={(service) => setTab(service)} descriptionList={servicesText} tab={tab}/>
