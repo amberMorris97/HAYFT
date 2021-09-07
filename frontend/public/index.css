@@ -35,6 +35,7 @@ a {
             justify-content: space-between;
     padding: 2em 3em;
     background-color: #12232E;
+    font-family: 'Lato';
   }
   #header-container a {
     color: #EEFBFB;
@@ -46,6 +47,7 @@ a {
     display: revert;
     color: #EEFBFB;
     font-size: 40px;
+    font-family: 'Lato';
   }
   #landing-content {
     display: -webkit-box;
@@ -61,7 +63,7 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    font-family: 'Muli';
+    font-family: 'Lato';
     padding: 3rem;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(32, 54, 71, 0.5)), to(rgba(32, 54, 71, 0.5))), url("./images/jrbg.jpg");
     background-image: linear-gradient(rgba(32, 54, 71, 0.5), rgba(32, 54, 71, 0.5)), url("./images/jrbg.jpg");
@@ -82,7 +84,7 @@ a {
   .main-button Button {
     font-size: 1rem;
     color: #EEFBFB;
-    background-color: #4DA8DA;
+    background-color: #12232E;
   }
   #services-container {
     margin-top: 5em;
@@ -105,7 +107,7 @@ a {
   }
   #services-container h1 {
     font-size: 2.5em;
-    font-family: 'Cormorant' !important;
+    font-family: 'Lato' !important;
   }
   #services-container h3 {
     font-style: italic;
@@ -121,29 +123,53 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 2em;
+    gap: 5em;
   }
   #services-container #service-cards-container h1 {
-    font-size: 2em;
-    font-family: 'Muli' !important;
+    font-size: 2.5em;
+    font-family: 'Lato' !important;
+    font-weight: bold;
   }
   #services-container #service-cards-container img {
     height: 250px;
     width: 250px;
   }
-  #services-container #service-cards-container #service-coaching-card img {
-    margin-right: 50px;
+  #services-container #service-cards-container .service-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #services-container #service-cards-container .service-card h1 {
+    font-weight: bold;
+    margin-top: 25px;
   }
   #services-container #service-cards-container .service-card .MuiPaper-root {
-    font-family: 'Muli';
-    background-color: #12232E;
-    color: #EEFBFB;
+    font-family: 'Open Sans';
+    background-color: #4DA8DA;
+    color: #203647;
     height: 25vh;
+    width: 75vw;
+    font-size: 1.1em;
     text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #about-main {
-    padding: 3em;
     text-align: center;
+  }
+  #about-main p {
+    padding: 3em;
   }
   #about-container {
     display: -webkit-box;
@@ -162,12 +188,12 @@ a {
     padding: 3em;
     gap: 2em;
     text-align: center;
-    background-color: #4DA8DA;
+    background-color: #EEFBFB;
     margin-top: 25px;
   }
   #about-container h1 {
     font-size: 2.5em;
-    font-family: 'Cormorant';
+    font-family: 'Lato';
   }
   #about-container span {
     font-family: 'Muli';
@@ -175,6 +201,7 @@ a {
   }
   #about-container p {
     font-size: 1.2em;
+    font-family: 'Open Sans';
   }
   #about-container .MuiButton-label {
     text-align: center;
@@ -184,12 +211,9 @@ a {
     border-radius: 5%;
     padding: 0.5em;
   }
-  #about-container div.MuiPaper-root {
-    width: 65vw !important;
-  }
-  #about-container div.MuiPaper-root img {
+  #about-container img {
     width: 300px;
-    height: 275px;
+    height: 350px;
   }
   #testimonials-page {
     padding: 3em;
@@ -208,16 +232,17 @@ a {
             justify-content: center;
     gap: 3em;
   }
-  #testimonials-page h1 {
-    font-size: 1.8em;
-    color: pink;
-    font-family: 'Cormorant';
-    color: #12232E;
+  #testimonials-page a {
+    text-decoration: none;
+    color: #203647;
+    font-size: 1em;
+    font-family: 'Lato';
   }
   #testimonials-page #arrow-right {
     display: none;
   }
   #testimonials-page .carousel-item.active {
+    font-family: 'open sans';
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -287,12 +312,18 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   #resources #fn1-resources {
     margin-top: 25px;
   }
   #resources ul {
     list-style: none;
+  }
+  #resources ul li {
+    text-align: left;
   }
   #resources #icons {
     margin-top: 25px;
@@ -323,11 +354,15 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-family: 'Muli';
+    font-family: 'Lato';
     gap: 3em;
     background-color: #4DA8DA;
     color: #EEFBFB;
     padding: 3em;
+  }
+  #footer p {
+    font-family: 'Open Sans';
+    font-size: 1.5em;
   }
   #footer #footer-form-container h1 {
     text-align: center;
@@ -370,7 +405,6 @@ a {
     margin: auto;
   }
   .all-testimonials {
-    padding: 3em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -378,7 +412,12 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 2em;
+    text-align: center;
+    margin-top: 25px;
+  }
+  .all-testimonials .testimonial-text {
+    padding: 2em;
+    font-size: 0.8em;
   }
   #login-container {
     padding: 3em;
@@ -452,8 +491,9 @@ a {
             justify-content: space-between;
     padding: 2em 3em;
     background-color: #12232E;
+    font-family: 'Lato';
   }
-  #header-container a {
+  #header-container a, #header-container h1 {
     color: #EEFBFB;
   }
   #header-container nav ul {
@@ -463,6 +503,7 @@ a {
     display: revert;
     color: #EEFBFB;
     font-size: 40px;
+    font-family: 'Lato';
   }
   #landing-content {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(32, 54, 71, 0.5)), to(rgba(32, 54, 71, 0.5))), url("./images/jrbg.jpg");
@@ -480,7 +521,7 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    font-family: 'Muli';
+    font-family: 'Lato';
     padding: 3rem;
     color: #EEFBFB;
     text-align: center;
@@ -499,11 +540,10 @@ a {
   .main-button Button {
     font-size: 1rem;
     color: #EEFBFB;
-    background-color: #4DA8DA;
+    background-color: #203647;
   }
   #services-container {
-    margin-top: 5em;
-    font-family: 'Cormorant';
+    font-family: 'Lato';
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -522,16 +562,14 @@ a {
   }
   #services-container h1 {
     font-size: 3em;
-    font-family: 'Cormorant';
+    font-family: 'Lato';
   }
   #services-container h3 {
-    font-style: italic;
-    font-weight: bolder;
-    font-size: 1em;
+    font-size: 1.3em;
   }
   #services-container .services-title {
     font-size: 3em;
-    font-family: 'Cormorant';
+    font-family: 'Lato';
   }
   #services-container #service-cards-container {
     padding: 3em;
@@ -542,29 +580,39 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 2em;
+    gap: 5em;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #services-container #service-cards-container h1 {
     font-size: 2em;
-    font-family: 'Muli' !important;
+    font-family: 'Lato' !important;
+    font-weight: bold;
+    margin-top: 25px;
+    color: #12232E;
   }
   #services-container #service-cards-container img {
     height: 250px;
     width: 250px;
   }
-  #services-container #service-cards-container #service-coaching-card img {
-    margin-right: 50px;
-  }
   #services-container #service-cards-container .service-card .MuiPaper-root {
-    font-family: 'Muli';
-    background-color: #12232E;
-    color: #EEFBFB;
+    font-family: 'Open Sans';
+    background-color: #4DA8DA;
+    color: #12232E;
     height: 20vh;
+    width: 75vw;
     text-align: center;
+    margin: auto;
   }
   #about-main {
-    padding: 3em;
     text-align: center;
+  }
+  #about-main p {
+    padding: 3em;
   }
   #about-container {
     margin-top: 25px;
@@ -587,32 +635,28 @@ a {
     background-color: #4DA8DA;
   }
   #about-container h1 {
-    font-size: 2.5em;
-    font-family: 'Cormorant';
-  }
-  #about-container span {
-    font-family: 'Muli';
-  }
-  #about-container .MuiPaper-root {
-    height: 50%;
+    font-size: 3em;
+    font-family: 'Lato';
   }
   #about-container p {
-    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    color: #12232E;
+  }
+  #about-container button {
+    background-color: #12232E;
   }
   #about-container .MuiButton-label {
     text-align: center;
     font-size: 1rem;
     color: #EEFBFB;
     background-color: #12232E;
-    padding: 0.5em;
     border-radius: 5%;
+    z-index: 1000;
+    font-family: 'Muli';
   }
-  #about-container div.MuiPaper-root {
-    width: 65vw !important;
-  }
-  #about-container div.MuiPaper-root img {
+  #about-container img {
     width: 300px;
-    height: 300px;
+    height: 375px;
   }
   #testimonials-page {
     padding: 3em;
@@ -633,13 +677,18 @@ a {
   }
   #testimonials-page h1 {
     font-size: 2em;
-    font-family: 'Cormorant';
+    font-family: 'Lato';
+    color: #12232E;
+  }
+  #testimonials-page a {
+    text-decoration: none;
     color: #12232E;
   }
   #testimonials-page #arrow-right {
     display: none;
   }
   #testimonials-page .carousel-item.active {
+    font-family: 'Open Sans';
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -713,12 +762,18 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   #resources #fn1-resources {
     margin-top: 25px;
   }
   #resources ul {
     list-style: none;
+  }
+  #resources ul li {
+    text-align: left;
   }
   #resources #icons {
     margin-top: 25px;
@@ -756,8 +811,12 @@ a {
     padding: 3em;
   }
   #footer #footer-form-container h1 {
+    font-family: 'Lato';
     text-align: center;
     font-size: 2.5em;
+  }
+  #footer p {
+    font-size: 2em;
   }
   #footer #contact-form {
     display: -webkit-box;
@@ -796,7 +855,6 @@ a {
     margin: auto;
   }
   .all-testimonials {
-    padding: 3em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -804,7 +862,12 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 2em;
+    font-size: 0.8em;
+    text-align: center;
+    margin-top: 25px;
+  }
+  .all-testimonials > * {
+    padding: 2em;
   }
   #login-container {
     padding: 3em;
@@ -851,6 +914,9 @@ a {
     background-color: #12232E;
     color: #EEFBFB;
   }
+  #resources {
+    height: 100%;
+  }
 }
 
 @media (min-width: 601px) {
@@ -886,6 +952,7 @@ a {
     display: revert;
     color: #EEFBFB;
     font-size: 48px;
+    font-family: 'Lato';
   }
   #landing-content {
     display: -webkit-box;
@@ -903,8 +970,6 @@ a {
             justify-content: center;
     font-family: 'Muli';
     padding: 3rem;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(32, 54, 71, 0.5)), to(rgba(32, 54, 71, 0.5))), url("./images/jrbg.jpg");
-    background-image: linear-gradient(rgba(32, 54, 71, 0.5), rgba(32, 54, 71, 0.5)), url("./images/jrbg.jpg");
     color: #EEFBFB;
   }
   #landing-content h1 {
@@ -925,7 +990,7 @@ a {
   }
   #services-container {
     margin-top: 5em;
-    font-family: 'Cormorant';
+    font-family: 'Lilita';
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -943,7 +1008,7 @@ a {
   }
   #services-container h1 {
     font-size: 2.5em;
-    font-family: 'Muli';
+    font-family: 'Lilita';
   }
   #services-container h3 {
     font-style: italic;
@@ -966,7 +1031,7 @@ a {
     width: 25vw !important;
   }
   #services-container #service-cards-container .service-card .MuiPaper-root {
-    font-family: 'Muli';
+    font-family: 'open sans';
     background-color: #12232E;
     color: #EEFBFB;
     height: 15vh !important;
@@ -974,8 +1039,10 @@ a {
     text-align: center;
   }
   #about-main {
-    padding: 3em;
     text-align: center;
+  }
+  #about-main p {
+    padding: 3em;
   }
   #about-container {
     display: -webkit-box;
@@ -1224,7 +1291,6 @@ a {
     margin: auto;
   }
   .all-testimonials {
-    padding: 3em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1233,6 +1299,11 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 2em;
+    text-align: center;
+    margin-top: 25px;
+  }
+  .all-testimonials > * {
+    padding: 1em;
   }
   #login-container {
     padding: 3em;
@@ -1259,21 +1330,23 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    background-color: #12232E;
-    font-family: 'Muli';
+    -webkit-box-pack: space-netweem;
+        -ms-flex-pack: space-netweem;
+            justify-content: space-netweem;
+    background-color: #0B0C10;
+    font-family: 'Lato';
     color: #EEFBFB;
+    width: 100%;
+    z-index: 1000;
   }
   #header-container h4 {
     font-size: 2em;
   }
   #header-container a {
-    color: #EEFBFB;
+    color: white;
   }
   #header-container a:hover {
-    color: #4DA8DA;
+    color: #66FCF1;
   }
   #header-container nav ul {
     list-style: none;
@@ -1281,7 +1354,7 @@ a {
     display: -ms-flexbox;
     display: flex;
     gap: 3em;
-    margin-top: 50px;
+    margin-top: 20px;
   }
   #header-container nav svg {
     display: none;
@@ -1289,143 +1362,264 @@ a {
   #header-container nav Button {
     background: none;
     border: none;
-    padding: none;
+  }
+  #home-page {
+    background: #0B0C10;
   }
   #landing-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'title text' 'btn btn';
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    font-family: 'Muli';
+    font-family: 'Lato';
+    font-weight: bolder;
     padding: 3rem;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(32, 54, 71, 0.5)), to(rgba(32, 54, 71, 0.5))), url("./images/jrbg.jpg");
-    background-image: linear-gradient(rgba(32, 54, 71, 0.5), rgba(32, 54, 71, 0.5)), url("./images/jrbg.jpg");
+    background-color: #0B0C10;
+    margin: auto;
   }
   #landing-content h1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: title;
     font-size: 8rem;
-    text-align: center;
+    text-align: left;
+        justify-self: end;
+    color: #66FCF1;
+    font-family: 'Lato';
+    margin-right: 25px;
   }
   #landing-content p {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: text;
     font-size: 2rem;
-    text-align: center;
+    text-align: left;
+    margin-left: 50px;
+    font-family: 'Open Sans';
+    font-weight: 300;
   }
-  .main-button {
-    text-align: center;
+  #landing-content #landing-btns {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: btn;
+    margin: auto;
+    margin-top: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 3em;
   }
-  .main-button Button {
+  #landing-content #landing-btns button {
+    background-color: #0B0C10;
+    border: solid #66FCF1;
+    color: #c5c6c7;
+    font-family: 'Lato';
+    font-size: 1.5em;
+    padding: 15px;
+  }
+  #landing-content .main-button Button {
     font-size: 1.5rem;
-    color: #3C403D;
+    background-color: #12232E;
   }
   #services-container {
-    font-family: 'Cormorant';
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    background: #0B0C10;
+    padding: 3em;
+    margin-top: 100px;
+  }
+  #services-container button {
+    background: #0B0C10;
+    border: solid #66FCF1;
+    color: white;
+    font-size: 1.5em;
   }
   #services-container h1 {
+    font-family: 'Lato';
     font-size: 5em;
-    font-family: 'Cormorant';
+    color: #66FCF1;
+    font-weight: 300;
   }
-  #services-container h3 {
-    font-style: italic;
-    font-weight: bolder;
+  #services-container #description-carousel {
+    margin-top: 50px;
+    position: relative;
   }
-  #services-container .services-title {
-    font-family: 'Cormorant';
-    color: #12232E;
+  #services-container #description-carousel .MuiPaper-root {
+    background-color: #1f2833;
+    color: white;
+    font-family: 'Open Sans';
+    font-size: 1.5em;
   }
-  #services-container #service-cards-container {
-    padding: 3em;
+  #services-container #description-carousel #service-carousel-btns {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    gap: 2em;
-  }
-  #services-container #service-cards-container h1 {
-    font-size: 2.5em;
-    font-family: 'Muli' !important;
-  }
-  #services-container #service-cards-container #service-coaching-card img {
-    margin-right: 50px;
-  }
-  #services-container #service-cards-container .service-card .MuiPaper-root {
-    overflow: auto;
-    width: 25vw;
-    height: 15vh;
-    background-color: #12232E;
-    text-align: center;
-    font-size: 1.2em;
-  }
-  #services-container Button {
-    color: #EEFBFB;
-    background-color: #12232E;
-  }
-  #about-main {
-    padding: 3em;
-    text-align: center;
-  }
-  #about-container {
-    width: 75%;
-    margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    gap: 5em;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  #services-container #description-carousel #service-carousel-btns .fas:hover {
+    cursor: pointer;
+  }
+  #services-container #description-carousel #service-carousel-btns .fas {
+    color: white;
+    font-size: 25px;
+  }
+  #services-container button {
+    margin-top: 25px;
+  }
+  #services-container .service-descriptions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 50px;
+    position: relative;
+  }
+  #services-container .service-descriptions .description {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2em;
+  }
+  #services-container .service-descriptions .description img {
+    margin-right: 25px;
+  }
+  #services-container .service-descriptions .description #service-img-overlay {
+    background: white;
+    z-index: 1000;
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    top: 50;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(11, 12, 16, 0.5)));
+    background: linear-gradient(rgba(11, 12, 16, 0.5));
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgba(11, 12, 16, 0.5));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  #services-container .service-descriptions .description h1 {
+    font-family: 'Lato';
+    font-size: 4em;
+    font-weight: 900;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+  #services-container .service-descriptions .description h3, #services-container .service-descriptions .description p {
+    font-family: 'Open Sans';
+    color: white;
+  }
+  #services-container .service-descriptions .description h3 {
+    top: 40%;
+    position: absolute;
+    z-index: 1000;
+    font-size: 1.2em;
+    font-style: normal;
+    font-family: 'Lato';
+  }
+  #services-container .service-descriptions .description .MuiPaper-root {
+    width: 25vw;
+  }
+  #services-container .service-descriptions .description .MuiCardContent-root {
+    background-color: #1f2833;
+    margin: auto;
+  }
+  #services-container .service-descriptions .description .MuiCardContent-root p {
+    width: 75%;
+    text-align: center;
+    margin: auto;
+  }
+  #about-main {
+    text-align: center;
+  }
+  #about-main p {
+    padding: 3em;
+  }
+  #about-container {
+    margin: auto;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'title title' 'pic para' 'button button';
+    -ms-grid-columns: 0.5fr 0.5fr;
+        grid-template-columns: 0.5fr 0.5fr;
     padding: 3em;
     gap: 2em;
     text-align: center;
     margin-top: 5em;
-    background-color: rgba(77, 168, 218, 0.5);
+    background-color: white;
   }
   #about-container h1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: title;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     font-size: 4em;
-    font-family: 'Cormorant';
+    font-family: 'Lato';
+    color: #203647;
   }
-  #about-container .MuiPaper-root {
-    width: 100%;
-    max-width: 1000px;
-    height: 100%;
+  #about-container img {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: pic;
+    margin: auto;
   }
   #about-container p {
-    font-family: 'Muli';
-    font-size: 1.5em;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: para;
+    font-family: 'Open Sans';
+    font-size: 1.3em;
+    font-weight: 300;
+    text-align: left;
+    color: #203647;
+    margin: auto;
   }
-  #about-container Button {
-    background-color: #12232E;
-    height: 2em;
-    font-family: 'Muli';
+  #about-container a {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: button;
   }
   #about-container .MuiButton-label {
-    background-color: #12232E;
+    background-color: #0B0C10;
+    font-family: 'Lato';
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 5px;
   }
   #testimonials-page {
     padding: 3em;
@@ -1444,11 +1638,42 @@ a {
             justify-content: center;
   }
   #testimonials-page h1 {
-    font-size: 2.5em;
-    font-family: 'Cormorant';
-    color: #12232E;
+    font-size: 4em;
+    font-family: 'Lato';
+    font-weight: 400;
+  }
+  #testimonials-page .fas {
+    color: white;
+    font-size: 48px;
+    text-decoration: none;
+  }
+  #testimonials-page .carousel-indicators {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #testimonials-page .carousel-indicators li {
+    background-color: #c5c6c7;
+    margin-left: 5px;
+    height: 5px;
+    width: 5px;
+  }
+  #testimonials-page .carousel-indicators li.active {
+    background-color: #66FCF1;
+  }
+  #testimonials-page .carousel-control-next, #testimonials-page .carousel-control-prev {
+    width: 4%;
+    height: 4%;
+    margin-top: 250px;
+  }
+  #testimonials-page .carousel-control-next {
+    right: -5px;
+  }
+  #testimonials-page .carousel-control-prev {
+    left: -5px;
   }
   #testimonials-page .carousel-item.active {
+    padding: 3em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1463,33 +1688,43 @@ a {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
+    font-family: 'Open Sans';
   }
   #testimonials-page .carousel-item.active h3 {
-    color: #007CC7;
+    color: #66FCF1;
     width: 75vw;
   }
   #testimonials-page .carousel-item.active p {
-    color: #12232E;
+    color: #c5c6c7;
     font-size: 1.5em;
     width: 75vw;
   }
   #testimonials-page .carousel-item.active span {
-    color: #007CC7;
+    color: #45A29E;
+    font-family: 'Open Sans';
   }
   #testimonials-page a {
-    color: #12232E;
+    color: #66FCF1;
+    font-family: 'Lato';
+    font-weight: 300;
   }
   #testimonials-page a:hover {
-    color: #4DA8DA;
+    color: #45A29E;
   }
   #blog-container {
     text-align: center;
-    font-family: 'Cormorant';
-    background-color: rgba(77, 168, 218, 0.5);
-    width: 75%;
     margin: auto;
   }
+  #blog-container h1 {
+    font-family: 'Lato';
+    color: #203647;
+    font-size: 4em;
+  }
   #blog-container #blog-post-preview {
+    background-color: #EEFBFB;
+    width: 75%;
+    margin: auto;
+    padding: 3em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1497,7 +1732,11 @@ a {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     text-align: center;
-    font-family: 'Muli';
+    font-family: 'Open Sans';
+    margin-top: 50px;
+  }
+  #blog-container #blog-post-preview #post-preview h1 {
+    font-size: 2em;
   }
   #blog-container a {
     color: #12232E;
@@ -1579,6 +1818,9 @@ a {
   }
   #footer #contact-title {
     font-size: 5em;
+  }
+  #footer #footer-form-container {
+    font-family: 'Lato';
   }
   #footer #footer-form-container #contact-form {
     display: -ms-grid;

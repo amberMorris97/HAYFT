@@ -7,8 +7,8 @@ const Gathering = () => {
   // const [hovering, setHovering] = useState(false);
   return (
     <div className="service-card">
-      <img src={gatheringPic} height="400" width="400" alt="gathering-pic" />
-      <h1 className="services-card-title">GATHERING</h1>
+      <img src={gatheringPic} height="350" width="350" alt="gathering-pic" />
+      <h1 className="services-card-title">Gathering</h1>
       <Card variant="elevation" elevation={15}>
         <CardContent>
           <h3>Dialogue drives everything.</h3>

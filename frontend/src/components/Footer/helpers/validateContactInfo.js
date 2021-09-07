@@ -13,8 +13,6 @@ const validateContactInfo = (contactInfo) => {
 
   if (!contactInfo.name.length) errors.nameError = errorMessage;
 
-  if (!contactInfo.company.length) errors.companyError = errorMessage;
-
   if (!contactInfo.subject.length) errors.subjectError = errorMessage;
 
   if (!contactInfo.message.length) errors.messageError = errorMessage;

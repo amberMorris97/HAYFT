@@ -8,8 +8,8 @@ const Coaching = () => {
 
   return (
     <div className="service-card" id="service-coaching-card">
-      <img src={coachingPic} width="400" height="400" alt="coaching-graphic" />
-      <h1 className="services-card-title">COACHING</h1>
+      <img src={coachingPic} width="350" height="350" alt="coaching-graphic" />
+      <h1 className="services-card-title">Coaching</h1>
       <Card variant="elevation" elevation={15}>
         <CardContent>
           <h3>Adaptive change is different.</h3>

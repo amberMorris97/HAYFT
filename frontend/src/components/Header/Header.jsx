@@ -56,36 +56,48 @@ const Header = ({ setView }) => {
     dispatch(loadedUser.logout());
   };
 
+  const navIdx = {
+    '0': 'about',
+    '1': 'services',
+    '2': 'testimonials',
+    '3': 'blog',
+    '4': 'resources',
+    '5': 'contact',
+  }
+
   if (!isAuth) {
     return (
       <div id="header-container">
       <h4>
-        <Link style={{ textDecoration: 'none' }} to="/"><img src={logo} height="150" width="150" /></Link>
+        <Link style={{ textDecoration: 'none', fontFamily: 'Lato' }} to="/"><h1>Jane Rosenzweig</h1></Link>
       </h4>
         <nav id="nav">
           <ul id="nav-links">
             <li>
-              <Link style={{ textDecoration: 'none' }} to="/about">ABOUT</Link>
+              <Link style={{ textDecoration: 'none' }} to="/about">About Jane</Link>
             </li>
             <li>
-              <Link style={{ textDecoration: 'none' }} to="/services">SERVICES</Link>
+              <Link style={{ textDecoration: 'none' }} to="/services">How I Can Help</Link>
             </li>
             <li>
-              <Link style={{ textDecoration: 'none' }} to="/testimonials">TESTIMONIALS</Link>
+              <Link style={{ textDecoration: 'none' }} to="/testimonials">Working With Jane</Link>
             </li>
             <li>
-              <Link style={{ textDecoration: 'none' }} to="/blog">BLOG</Link>
+              <Link style={{ textDecoration: 'none' }} to="/blog">Jane Says</Link>
             </li>
             <li>
-              <Link style={{ textDecoration: 'none' }} to="/contact">CONTACT</Link>
+              <Link style={{ textDecoration: 'none' }} to="/contact">Let&apos;s Connect</Link>
+            </li>
+            <li>
+              <Link style={{ textDecoration: 'none' }} to="/resources">Read and Think More</Link>
             </li>
           </ul>
 
           <MenuIcon onClick={toggleDrawer(anchor)}></MenuIcon>
             <Drawer open={anchor} onClose={toggleDrawer(anchor)}>
               <List style={listStyle}>
-                {['ABOUT', 'SERVICES', 'TESTIMONIALS', 'BLOG', 'CONTACT'].map((text, index) => (
-                 <Link style={{ textDecoration: 'none', color: '#EEFBFB' }} to={`/${text}`} key={text}>
+                {['About', 'How I Can Help', 'Working With Jane', 'Jane Says', 'Read and Think More', `Let's Connect`].map((text, index) => (
+                 <Link style={{ textDecoration: 'none', color: '#EEFBFB' }} to={`/${navIdx[index]}`} key={text}>
                     <ListItem button key={text}>
                       <ListItemText primary={text} />
                     </ListItem>
@@ -106,19 +118,22 @@ const Header = ({ setView }) => {
         <nav id="nav">
           <ul id="nav-links">
           <li>
-              <Link style={{ textDecoration: 'none' }} to="/about">ABOUT</Link>
+              <Link style={{ textDecoration: 'none' }} to="/about">About Jane</Link>
             </li>
             <li>
-              <Link style={{ textDecoration: 'none' }} to="/services">SERVICES</Link>
+              <Link style={{ textDecoration: 'none' }} to="/services">How I Can Help</Link>
             </li>
             <li>
-              <Link style={{ textDecoration: 'none' }} to="/testimonials">TESTIMONIALS</Link>
+              <Link style={{ textDecoration: 'none' }} to="/testimonials">Working With Jane</Link>
             </li>
             <li>
-              <Link style={{ textDecoration: 'none' }} to="/blog">BLOG</Link>
+              <Link style={{ textDecoration: 'none' }} to="/blog">Jane Says</Link>
             </li>
             <li>
-              <Link style={{ textDecoration: 'none' }} to="/contact">CONTACT</Link>
+              <Link style={{ textDecoration: 'none' }} to="/contact">Let&apos;s Connect</Link>
+            </li>
+            <li>
+              <Link style={{ textDecoration: 'none' }} to="/resources">Read and Think More</Link>
             </li>
             <li><ProtectedRoute /></li>
             <li><Logout setView={setView} /></li>
@@ -127,7 +142,7 @@ const Header = ({ setView }) => {
           <MenuIcon onClick={toggleDrawer(anchor)}></MenuIcon>
             <Drawer open={anchor} onClose={toggleDrawer(anchor)}>
               <List style={listStyle}>
-                {['ABOUT', 'SERVICES', 'TESTIMONIALS', 'BLOG', 'CONTACT'].map((text, index) => (
+                {['About', 'How I Can Help', 'Working With Jane', 'Jane Says', `Let's Connect`, 'Read and Think More'].map((text, index) => (
                  <Link style={{ textDecoration: 'none', color: '#EEFBFB' }} to={`/${text.toLowerCase()}`} key={text}>
                     <ListItem button key={text}>
                       <ListItemText primary={text} />

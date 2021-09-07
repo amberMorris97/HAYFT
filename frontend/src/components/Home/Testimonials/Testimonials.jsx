@@ -14,15 +14,16 @@ const Testimonials = () => {
     position: 'absolute',
   }
 
-  const rightArrow = <ArrowForwardIcon id="arrow-right" style={rightArrowStyle} />;
+  const rightArrow = <i className="fas fa-chevron-right"></i>
+  const leftArrow = <i className="fas fa-chevron-left"></i>
 
   return (
     <div id="testimonials-page" className="halfscreen">
       <h1 id="testimonials-title" className="header-text muli">
-        <Link style={{ textDecoration: 'none' }} to="/testimonials">T E S T I M O N I A L S</Link>
+        <Link style={{ textDecoration: 'none' }} to="/testimonials">Working With Jane</Link>
       </h1>
 
-      <Carousel nextLabel={null} prevLabel={null} interval={null} indicators={true} keyboard slide wrap touch nextIcon={null} prevIcon={null}>
+      <Carousel nextLabel={null} prevLabel={null} interval={null} indicators indicatorLabels={[1, 2, 3]} keyboard wrap touch nextIcon={rightArrow} prevIcon={leftArrow}>
         <Carousel.Item className="carousel-item">
           <h3>{TK.head}</h3>
           <p>{TK.para}</p>
@@ -34,7 +35,7 @@ const Testimonials = () => {
         <Carousel.Item className="carousel-item">
           <h3>{CL.head}</h3>
           <p>{CL.para}</p>
-          <img src={CL.img} alt="teri-kelly-photo" width="100" height="100" />
+          <img src={CL.img} alt="christian-langer-photo" width="100" height="100" />
           <span>{CL.spn}</span>
        </Carousel.Item>
 

@@ -63,30 +63,11 @@ const App = () => {
 
 export default App;
 
-// Header
-  // use Canva or something to design a logo
-
-
-// Services
-  // Perhaps make images for each service
-  // fill out the main services page
-  // STYLING
-    // needs padding
-
-// About
-  // add image of jane
-  // adjust main text
-  // STYLING
-    // On seperate about page, footer is padded and it shouldn't be (#footer: padding 0 !important)
 
 // Testimonials
   // figure out why CL photo is not showing
   // STYLING
     // this could probably look better
-
-// Blog
-  // probably adjust the preview title size
-  // uh 1024 min width footer el is not flushed to the bottom, fix that.
 
 // Performance
   // Figure out why it takes so long to load *look into caching*

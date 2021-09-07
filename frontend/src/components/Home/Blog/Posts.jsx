@@ -7,7 +7,7 @@ const Posts = ({ blogPosts }) => {
   return (
     <div id="blog-post-preview">
       {blogPosts.map((post) => (
-        <div key={post._id}>
+        <div id="post-preview" key={post._id}>
           <Link style={{ textDecoration: 'none' }} to={`/blog/${post._id}`}>
             <h1>{post.title}</h1>
           </Link>

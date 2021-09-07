@@ -8,8 +8,8 @@ const Advising = () => {
 
   return (
     <div className="service-card">
-       <img src={advisingPic} height="400" width="400" alt="advising-graphic" />
-      <h1 className="services-card-title">ADVISORY</h1>
+       <img src={advisingPic} height="350" width="350" alt="advising-graphic" />
+      <h1 className="services-card-title">Advisory</h1>
       <Card variant="elevation" elevation={15}>
         <CardContent>
           <h3>We start where you are.</h3>

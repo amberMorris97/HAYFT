@@ -1,5 +1,6 @@
 import React from 'react';
 import Footer from './Footer/Footer.jsx';
+import Resources from './Footer/Resources.jsx';
 
 const ServicesMain = () => {
 
@@ -31,6 +32,7 @@ const ServicesMain = () => {
       </ul>
       <p>Overview here...</p>
     <Footer />
+    <Resources />
     </div>
   );
 };

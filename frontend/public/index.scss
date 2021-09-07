@@ -1314,20 +1314,29 @@ a {
       Button {
         background: none;
         border: none;
-        padding: none;
+
       }
 
     }
   }
+
+  #home-page {
+    background: #0B0C10;
+  }
   #landing-content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-areas: 'title text'
+    'btn btn';
+    grid-template-columns: 1fr 1fr;
+    // display: flex;
+    // flex-direction: column;
     align-items: center;
     justify-content: center;
     font-family: 'Lato';
     font-weight: bolder;
     padding: 3rem;
     background-color: #0B0C10;
+    margin: auto;
 
     // background-image: linear-gradient(
     //   rgba(32, 54, 71, 0.5),
@@ -1336,31 +1345,39 @@ a {
     // url('./images/jrbg.jpg');
 
     h1 {
-      font-size: 6rem;
-      text-align: center;
+      grid-area: title;
+      font-size: 8rem;
+      text-align: left;
+      justify-self: end;
       color: #66FCF1;
+      font-family: 'Lato';
+      margin-right: 25px;
       // background: rgba(32, 54, 71, 0.5);
     }
     p {
+      grid-area: text;
       font-size: 2rem;
-      text-align: center;
-      width: 50%;
-    }
-    .main-button {
-      // width: 75vw;
-      text-align: center;
+      text-align: left;
+      margin-left: 50px;
+      font-family: 'Open Sans';
+      font-weight: 300;
     }
 
     #landing-btns {
+      grid-area: btn;
+      margin: auto;
+      margin-top: 25px;
       display: flex;
       gap: 3em;
       button {
         background-color: #0B0C10;
         border: solid #66FCF1;
-        color: white;
+        color: #c5c6c7;
         font-family: 'Lato';
         font-size: 1.5em;
+        padding: 15px;
       }
+
     }
 
     .main-button Button {
@@ -1372,54 +1389,124 @@ a {
 
 
   #services-container {
-    // background-color: rgba(77, 168, 218, 1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+    background: #0B0C10;
     padding: 3em;
-    // justify-content: center;
+    margin-top: 100px;
+    // position: relative;
 
+    button {
+      background: #0B0C10;
+      border: solid #66FCF1;
+      color: white;
+      font-size: 1.5em;
+
+    }
     h1 {
-      font-size: 4em;
       font-family: 'Lato';
-      color: #203647;
+      font-size: 5em;
+      color: #66FCF1;
+      font-weight: 300;
     }
 
-    h3 {
-      font-family: 'Open Sans';
-      font-style: italic;
-      font-weight: bolder;
-      font-size: 1em;
-    }
+    #description-carousel {
+      margin-top: 50px;
+      position: relative;
 
-    #service-cards-container {
-      padding: 3em;
-      display: flex;
-      flex-direction: row;
-      gap: 2em;
-
-      h1 {
-        font-size: 3em;
-        font-family: 'Lato', sans-serif !important;
-        margin-top: 25px;
+      .MuiPaper-root {
+        background-color: #1f2833;
+        color: white;
+        font-family: 'Open Sans';
+        font-size: 1.5em;
       }
 
-      .service-card .MuiPaper-root {
-        color: #203647;
-        width: 20vw;
-        height: 30vh !important;
-        background-color: #EEFBFB;
-        text-align: center;
-        font-size: 1.3em;
+      #service-carousel-btns {
+        display: flex;
+        gap: 5em;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        .fas:hover {
+          cursor: pointer;
+        }
+        .fas {
+          color: white;
+          font-size: 25px;
+        }
+      }
+
+    }
+
+    button {
+      margin-top: 25px;
+
+    }
+    .service-descriptions {
+      display: flex;
+      margin-top: 50px;
+      position: relative;
+      .description {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
-      }
-    }
+        align-items: center;
+        gap: 2em;
 
-    Button {
-      color: #EEFBFB;
-      background-color: #12232E;
+        img {
+          margin-right: 25px;
+        }
+
+        #service-img-overlay {
+          background: white;
+          z-index: 1000;
+          position: absolute;
+          height: 350px;
+          width: 350px;
+          top: 50;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          margin: auto;
+          background: linear-gradient(rgba(11, 12, 16, 0.5));  /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(rgba(11, 12, 16, 0.5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        h1 {
+          font-family: 'Lato';
+          font-size: 4em;
+          font-weight: 900;
+          position: absolute;
+          top: 30%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1000;
+        }
+        h3, p {
+          font-family: 'Open Sans';
+          color: white;
+        }
+        h3 {
+          top: 40%;
+          position: absolute;
+          z-index: 1000;
+          font-size: 1.2em;
+          font-style: normal;
+          font-family: 'Lato';
+        }
+        .MuiPaper-root {
+          width: 25vw;
+        }
+        .MuiCardContent-root {
+          background-color: #1f2833;
+          margin: auto;
+          p {
+            width: 75%;
+            text-align: center;
+            margin: auto;
+          }
+        }
+      }
     }
   }
 
@@ -1434,38 +1521,55 @@ a {
 
   #about-container {
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-areas: 'title title'
+    'pic para'
+    'button button';
+    grid-template-columns: 0.5fr 0.5fr;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
     padding: 3em;
     gap: 2em;
     text-align: center;
     margin-top: 5em;
+    background-color: white;
 
 
     h1 {
+      grid-area: title;
+      align-self: center;
       font-size: 4em;
       font-family: 'Lato';
       color: #203647;
     }
 
-    .MuiPaper-root {
-      width: 50vw;
-      height: 50vh;
+    img {
+      grid-area: pic;
+      margin: auto;
     }
+
     p {
+      grid-area: para;
       font-family: 'Open Sans';
-      font-size: 1.5em;
+      font-size: 1.3em;
+      font-weight: 300;
+      text-align: left;
       color: #203647;
+      margin: auto;
     }
-    Button {
-      background-color: #12232E;
-      height: 2em;
-      font-family: 'Muli';
+    a {
+      grid-area: button;
+
     }
     .MuiButton-label {
-      background-color: #12232E;
+      background-color: #0B0C10;
+      font-family: 'Lato';
+      font-size: 24px;
+      padding: 10px;
+      border-radius: 5px;
+      // padding: 25px;
     }
 
   }
@@ -1480,10 +1584,41 @@ a {
     h1 {
       font-size: 4em;
       font-family: 'Lato';
-      color: #203647
+      font-weight: 400;
+    }
+
+    .fas {
+      color: white;
+      font-size: 48px;
+      text-decoration: none;
+    }
+
+    .carousel-indicators {
+      display: flex;
+
+      li {
+        background-color: #c5c6c7;
+        margin-left: 5px;
+        height: 5px;
+        width: 5px;
+      }
+      li.active {
+        background-color: #66FCF1;
+      }
+    }
+    .carousel-control-next, .carousel-control-prev {
+      width: 4%;
+      height: 4%;
+      margin-top: 250px;
+    }
+    .carousel-control-next {
+      right: -5px;
+    }
+    .carousel-control-prev {
+      left: -5px;
     }
    .carousel-item.active {
-     background-color: #EEFBFB;
+
      padding: 3em;
      display: flex;
      flex-direction: column;
@@ -1492,11 +1627,11 @@ a {
      text-align: center;
      font-family: 'Open Sans';
      h3 {
-       color: #007CC7;
+       color: #66FCF1;
        width: 75vw;
      }
      p {
-       color: #12232E;
+      color: #c5c6c7;
        font-size: 1.5em;
        width: 75vw;
      }
@@ -1505,15 +1640,17 @@ a {
       //  height: 30vh;
      }
      span {
-       color: #007CC7;
+       color: #45A29E;
        font-family: 'Open Sans';
      }
    }
    a {
-    color: #12232E;
+    color: #66FCF1;
+    font-family: 'Lato';
+    font-weight: 300;
   }
   a:hover {
-    color: #4DA8DA;
+    color: #45A29E;
   }
   }
   #blog-container {

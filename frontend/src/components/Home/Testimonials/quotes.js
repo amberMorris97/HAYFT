@@ -10,7 +10,7 @@ export const TK = {
 };
 
 export const CL = {
-  head: '"Jane Rosenzweig is your insightful, experienced and fun-to-work-with guide. Enjoy the ride."',
+  head: '"Jane Rosenzweig is your insightful, experienced and fun-to-work-with guide."',
   para: '"A workplace can be virtuous and fun or it can be treacherous and a grind. Jane helps you realize that leading through diversity, equity, inclusion and belonging can translate into both engaged employees & higher profits."',
   img: christianLanger,
   spn: 'Christian Langer, Founder & MD KORE'

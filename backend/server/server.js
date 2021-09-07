@@ -89,7 +89,7 @@ const output = `
   <p>Message from jrwebsite.com</p>
   <ul>
     <li>Name: ${name}</li>
-    <li>Company: ${company}</>
+    <li>Organization: ${company || 'N/A'}</>
     <li>Email: ${email}</li>
     <li>Phone: ${phone || 'N/A'}</li>
   </ul>
@@ -106,7 +106,7 @@ let mailOptions = {
 };
 
 // Step 3
-transporter.sendMail(mailOptions, (err, data) => {
+transporter.sendMail(mailOptions, (err) => {
     if (err) {
       throw err;
     }
