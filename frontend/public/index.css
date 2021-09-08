@@ -2098,17 +2098,17 @@ a {
   }
 }
 
-@media (min-width: 1143px) {
+@media (min-width: 1143px) and (max-height: 800px) {
   #header-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-betweem;
-        -ms-flex-pack: space-betweem;
-            justify-content: space-betweem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     background-color: #0B0C10;
     font-family: 'Lato';
-    color: #EEFBFB;
+    color: #000;
     width: 100%;
     z-index: 10000;
     position: fixed;
@@ -2170,7 +2170,7 @@ a {
         justify-self: end;
     color: #66FCF1;
     font-family: 'Lato';
-    margin-right: 25px;
+    margin-left: 50px;
   }
   #landing-content p {
     -ms-grid-row: 1;
@@ -2181,6 +2181,7 @@ a {
     margin-left: 50px;
     font-family: 'Open Sans';
     font-weight: 300;
+    color: white;
   }
   #landing-content #landing-btns {
     -ms-grid-row: 2;
@@ -2200,7 +2201,7 @@ a {
     color: #c5c6c7;
     font-family: 'Lato';
     font-size: 1.5em;
-    padding: 10px;
+    padding: 15px;
   }
   #landing-content .main-button Button {
     font-size: 1.5rem;
@@ -2208,7 +2209,20 @@ a {
   }
   #services-container {
     background: #0B0C10;
-    padding: 10em;
+    padding: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #services-container .s-d-mobile {
     display: none;
@@ -2225,6 +2239,7 @@ a {
     color: #66FCF1;
     font-weight: 400;
     margin-top: 50px;
+    text-align: center;
   }
   #services-container #description-carousel {
     position: relative;
@@ -2261,7 +2276,7 @@ a {
   }
   #services-container button {
     margin-top: 25px;
-    padding: 10px;
+    padding: 15px;
   }
   #services-container .service-descriptions {
     display: -webkit-box;
@@ -2331,7 +2346,7 @@ a {
     font-family: 'Lato';
   }
   #services-container .service-descriptions .description .MuiPaper-root {
-    width: 25vw;
+    width: 50vw;
   }
   #services-container .service-descriptions .description .MuiCardContent-root {
     background-color: #1f2833;
@@ -2371,7 +2386,7 @@ a {
         align-self: center;
     font-size: 4em;
     font-family: 'Lato';
-    color: #203647;
+    color: #0B0C10;
   }
   #about-container img {
     -ms-grid-row: 2;
@@ -2387,7 +2402,7 @@ a {
     font-size: 1.3em;
     font-weight: 300;
     text-align: left;
-    color: #203647;
+    color: #0B0C10;
     margin: auto;
   }
   #about-container a {
@@ -2400,8 +2415,9 @@ a {
     background-color: #0B0C10;
     font-family: 'Lato';
     font-size: 24px;
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
+    color: white;
   }
   #testimonials-page {
     padding: 3em;
@@ -2605,13 +2621,18 @@ a {
         justify-content: space-around;
     margin-top: 50px;
     background-color: #66FCF1;
+    height: 60vh;
+    padding: 3em;
   }
   #footer #contact-title {
-    font-size: 5em;
+    font-size: 3em;
     color: #0B0C10;
   }
   #footer #footer-form-container {
     font-family: 'Lato';
+  }
+  #footer #footer-form-container h1 {
+    text-align: center;
   }
   #footer #footer-form-container #contact-form {
     display: -ms-grid;
@@ -2619,8 +2640,10 @@ a {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     margin-top: 25px;
+    grid-gap: 2em;
   }
   #footer #footer-form-container #contact-form input, #footer #footer-form-container #contact-form .MuiInputBase-root {
+    width: 15vw;
     background-color: #1f2833;
   }
   #footer #footer-form-container #contact-form .inputLabel {
@@ -2632,11 +2655,644 @@ a {
     grid-column: 1 / 3;
     background-color: #0B0C10;
     color: #66FCF1;
+    -ms-grid-row: 4;
+    grid-row: 4;
+    padding: 10px;
+    margin: auto;
   }
   #footer p {
     color: #0B0C10 !important;
     font-family: 'Lato' !important;
+    font-weight: 900;
+    font-size: 3em;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    text-align: center;
+    width: 50%;
+  }
+  #footer p span {
+    font-weight: 300;
+  }
+  #create-post-container {
+    padding: 3em;
+  }
+  #create-post-container #blog-post-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 3em;
+  }
+  #create-post-container #blog-post-form .MuiTextField-root {
+    width: 25vw;
+    margin: auto;
+  }
+  #create-post-container #blog-post-form Button {
+    background-color: #007CC7;
+    margin: auto;
+  }
+  #login-container {
+    padding: 3em;
+  }
+  #login-container form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2em;
+  }
+  #login-container form input {
+    width: 25vw;
+  }
+  #login-container form button {
+    background-color: #12232E;
+    color: #EEFBFB;
+    width: 5vw;
+    margin-top: 15px;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 1143px) and (min-height: 801px) {
+  #header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #0B0C10;
+    font-family: 'Lato';
+    color: #000;
+    width: 100%;
+    z-index: 10000;
+    position: fixed;
+  }
+  #header-container h4 {
     font-size: 2em;
+  }
+  #header-container a {
+    color: white;
+  }
+  #header-container a:hover {
+    color: #66FCF1;
+  }
+  #header-container nav ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 3em;
+    margin-top: 20px;
+  }
+  #header-container nav svg {
+    display: none;
+  }
+  #header-container nav Button {
+    background: none;
+    border: none;
+  }
+  #home-page {
+    background: #0B0C10;
+  }
+  #landing-content {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'title text' 'btn btn';
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-family: 'Lato';
+    font-weight: bolder;
+    padding: 3rem;
+    background-color: #0B0C10;
+    margin: auto;
+    margin-top: 50px;
+    height: 200%;
+  }
+  #landing-content h1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: title;
+    font-size: 8rem;
+    text-align: left;
+        justify-self: end;
+    color: #66FCF1;
+    font-family: 'Lato';
+    margin-left: 50px;
+  }
+  #landing-content p {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: text;
+    font-size: 2rem;
+    text-align: left;
+    margin-left: 50px;
+    font-family: 'Open Sans';
+    font-weight: 300;
+    color: white;
+  }
+  #landing-content #landing-btns {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: btn;
+    margin: auto;
+    margin-top: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 3em;
+  }
+  #landing-content #landing-btns button {
+    background-color: #0B0C10;
+    border: solid #66FCF1;
+    color: #c5c6c7;
+    font-family: 'Lato';
+    font-size: 1.5em;
+    padding: 15px;
+  }
+  #landing-content .main-button Button {
+    font-size: 1.5rem;
+    background-color: #12232E;
+  }
+  #services-container {
+    background: #0B0C10;
+    padding: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #services-container .s-d-mobile {
+    display: none;
+  }
+  #services-container button {
+    background: #0B0C10;
+    border: solid #66FCF1;
+    color: white;
+    font-size: 1.5em;
+  }
+  #services-container h1 {
+    font-family: 'Lato';
+    font-size: 5em;
+    color: #66FCF1;
+    font-weight: 400;
+    margin-top: 50px;
+    text-align: center;
+  }
+  #services-container #description-carousel {
+    position: relative;
+    width: 50vw;
+  }
+  #services-container #description-carousel .MuiPaper-root {
+    margin-top: 25px;
+    background-color: #0B0C10;
+    color: white;
+    font-family: 'Open Sans';
+    font-size: 1.5em;
+    padding: 15px;
+    border: 10px solid #0B0C10;
+  }
+  #services-container #description-carousel #service-carousel-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5em;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 25px;
+  }
+  #services-container #description-carousel #service-carousel-btns .fas:hover {
+    cursor: pointer;
+  }
+  #services-container #description-carousel #service-carousel-btns .fas {
+    color: white;
+    font-size: 25px;
+  }
+  #services-container button {
+    margin-top: 25px;
+    padding: 15px;
+  }
+  #services-container .service-descriptions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 50px;
+    position: relative;
+  }
+  #services-container .service-descriptions .description {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2em;
+  }
+  #services-container .service-descriptions .description img {
+    margin-right: 25px;
+  }
+  #services-container .service-descriptions .description #service-img-overlay {
+    background: white;
+    z-index: 1000;
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    top: 50;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(11, 12, 16, 0.5)));
+    background: linear-gradient(rgba(11, 12, 16, 0.5));
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgba(11, 12, 16, 0.5));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  #services-container .service-descriptions .description h1 {
+    font-family: 'Lato';
+    font-size: 2.5em;
+    font-weight: 900;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+  #services-container .service-descriptions .description h3, #services-container .service-descriptions .description p {
+    font-family: 'Open Sans';
+    color: white;
+  }
+  #services-container .service-descriptions .description h3 {
+    top: 50%;
+    position: absolute;
+    z-index: 1000;
+    font-size: 1em;
+    font-style: normal;
+    font-family: 'Lato';
+  }
+  #services-container .service-descriptions .description .MuiPaper-root {
+    width: 50vw;
+  }
+  #services-container .service-descriptions .description .MuiCardContent-root {
+    background-color: #1f2833;
+    margin: auto;
+  }
+  #services-container .service-descriptions .description .MuiCardContent-root p {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+  }
+  #about-main {
+    text-align: center;
+  }
+  #about-main p {
+    padding: 3em;
+  }
+  #about-container {
+    margin: auto;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'title title' 'pic para' 'button button';
+    -ms-grid-columns: 0.5fr 0.5fr;
+        grid-template-columns: 0.5fr 0.5fr;
+    padding: 3em;
+    gap: 2em;
+    text-align: center;
+    margin-top: 5em;
+    background-color: white;
+  }
+  #about-container h1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: title;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-size: 4em;
+    font-family: 'Lato';
+    color: #0B0C10;
+  }
+  #about-container img {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: pic;
+    margin: auto;
+  }
+  #about-container p {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: para;
+    font-family: 'Open Sans';
+    font-size: 1.3em;
+    font-weight: 300;
+    text-align: left;
+    color: #0B0C10;
+    margin: auto;
+  }
+  #about-container a {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: button;
+  }
+  #about-container .MuiButton-label {
+    background-color: #0B0C10;
+    font-family: 'Lato';
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+  }
+  #testimonials-page {
+    padding: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #1f2833;
+  }
+  #testimonials-page h1 {
+    font-size: 4em;
+    font-family: 'Lato';
+    font-weight: 400;
+  }
+  #testimonials-page .fas {
+    color: white;
+    font-size: 48px;
+    text-decoration: none;
+  }
+  #testimonials-page .carousel-indicators {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #testimonials-page .carousel-indicators li {
+    background-color: #c5c6c7;
+    margin-left: 5px;
+    height: 5px;
+    width: 5px;
+  }
+  #testimonials-page .carousel-indicators li.active {
+    background-color: #66FCF1;
+  }
+  #testimonials-page .carousel-control-next, #testimonials-page .carousel-control-prev {
+    width: 4%;
+    height: 4%;
+    margin-top: 250px;
+  }
+  #testimonials-page .carousel-control-next {
+    right: -5px;
+  }
+  #testimonials-page .carousel-control-prev {
+    left: -5px;
+  }
+  #testimonials-page .carousel-item.active {
+    padding: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    font-family: 'Open Sans';
+  }
+  #testimonials-page .carousel-item.active h3 {
+    color: #66FCF1;
+    width: 75vw;
+  }
+  #testimonials-page .carousel-item.active p {
+    color: #c5c6c7;
+    font-size: 1.5em;
+    width: 75vw;
+  }
+  #testimonials-page .carousel-item.active span {
+    color: #45A29E;
+    font-family: 'Open Sans';
+  }
+  #testimonials-page a {
+    color: #66FCF1;
+    font-family: 'Lato';
+    font-weight: 300;
+  }
+  #testimonials-page a:hover {
+    color: #45A29E;
+  }
+  #blog-container {
+    background: #0B0C10;
+    text-align: center;
+    margin: auto;
+  }
+  #blog-container h1 a {
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 2em;
+    color: #66FCF1;
+  }
+  #blog-container #blog-post-preview {
+    width: 75%;
+    margin: auto;
+    padding: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    text-align: center;
+    font-family: 'Open Sans';
+    margin-top: 50px;
+  }
+  #blog-container #blog-post-preview #post-preview {
+    color: white;
+  }
+  #blog-container #blog-post-preview #post-preview h1 {
+    font-size: 2em;
+  }
+  #blog-container a {
+    color: #66FCF1;
+  }
+  #blog-container a:hover {
+    color: #1f2833;
+  }
+  #single-post-view {
+    padding: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #single-post-view #disqus_thread {
+    width: 1000px;
+  }
+  #blog-posts-container {
+    text-align: center;
+  }
+  #blog-posts-container #blog-post-preview {
+    text-align: center;
+    font-family: 'Muli';
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+  #resources {
+    background-color: #0B0C10;
+    height: 100% !important;
+    color: #EEFBFB;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5em;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    font-family: 'Muli';
+  }
+  #resources a:hover {
+    color: #4DA8DA;
+  }
+  #resources h3 {
+    margin-top: 50px;
+    text-align: center;
+  }
+  #resources ul {
+    list-style: none;
+    font-size: 1.1em;
+  }
+  #resources ul a {
+    color: #EEFBFB;
+  }
+  #resources ul a:hover {
+    color: #66FCF1;
+  }
+  #resources #icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 3em;
+    margin-top: 100px;
+  }
+  #footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 50px;
+    background-color: #66FCF1;
+    height: 40vh;
+    padding: 3em;
+  }
+  #footer #contact-title {
+    font-size: 5em;
+    color: #0B0C10;
+  }
+  #footer #footer-form-container {
+    font-family: 'Lato';
+  }
+  #footer #footer-form-container h1 {
+    text-align: center;
+  }
+  #footer #footer-form-container #contact-form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    margin-top: 25px;
+    grid-gap: 2em;
+  }
+  #footer #footer-form-container #contact-form input, #footer #footer-form-container #contact-form .MuiInputBase-root {
+    background-color: #1f2833;
+    width: 15vw;
+  }
+  #footer #footer-form-container #contact-form .inputLabel {
+    color: #66FCF1;
+  }
+  #footer #footer-form-container #contact-form Button {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    background-color: #0B0C10;
+    color: #66FCF1;
+    -ms-grid-row: 4;
+    grid-row: 4;
+    padding: 10px;
+    margin: auto;
+  }
+  #footer p {
+    color: #0B0C10 !important;
+    font-family: 'Lato' !important;
+    font-weight: 900;
+    font-size: 3em;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    text-align: center;
+    width: 50%;
+  }
+  #footer p span {
+    font-weight: 300;
   }
   #create-post-container {
     padding: 3em;

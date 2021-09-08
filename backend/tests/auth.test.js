@@ -39,7 +39,7 @@ describe('auth endpoints', () => {
               .end((err, res) => {
                 if (err) throw err;
                 res.should.have.status(200);
-                console.log(res)
+                (res)
                 res.text.should.equal('User has been deleted');
                 done();
               });

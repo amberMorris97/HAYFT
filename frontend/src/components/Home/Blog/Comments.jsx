@@ -4,7 +4,7 @@ import findThreads from './helpers/findThreads';
 const Comments = ({ comments }) => {
   const thread = [];
   findThreads(comments, thread);
-  console.log(thread)
+  (thread)
   return (
     <div>
       <h3>Comments</h3>
