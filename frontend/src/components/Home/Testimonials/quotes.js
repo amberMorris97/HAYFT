@@ -1,5 +1,5 @@
 const teriKelly = './images/terikelly.png';
-const christianLanger = './images/christianLanger.png';
+const christianLanger = './images/christianlanger.png';
 const shailaKapur = './images/shailakapur.png';
 
 export const TK = {
