@@ -29,7 +29,6 @@ const Testimonials = () => {
           <p>{TK.para}</p>
           <img src={TK.img} alt="teri-kelly-photo" width="100" height="100" />
           <span>{TK.spn}</span>
-          <span className="span2" style={{ fontSize: '0.5em' }}>(swipe for more)</span>
         </Carousel.Item>
 
         <Carousel.Item className="carousel-item">

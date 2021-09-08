@@ -41,7 +41,7 @@ const Main = () => {
     </div>
     </Animator>
       </ScrollPage>
-      <div style={{ height: '50vh', backgroundColor: '#0b0c10'}}></div>
+      <div id="separator" style={{ height: '50vh', backgroundColor: '#0b0c10'}}></div>
     <Services/>
     <About />
     <Testimonials />

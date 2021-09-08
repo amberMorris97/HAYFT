@@ -71,26 +71,26 @@ const EmailForm = () => {
       <h1 id="contact-title">GET IN TOUCH</h1>
         <form id="contact-form" onSubmit={handleSubmit}>
           <div id="form-field">
-            <TextField InputProps={{ className: classes['MuiTextField-root'] }} color="secondary" variant="filled" type="text" name="name" id="name" label="Full Name" value={contactInfo.name} placeholder="Jane Rosenzweig" onChange={handleChange}></TextField> <br />
+            <TextField InputLabelProps={{ className: 'inputLabel' }} InputProps={{ className: classes['MuiTextField-root'] }} color="secondary" variant="filled" type="text" name="name" id="name" label="Full Name" value={contactInfo.name} placeholder="Jane Rosenzweig" onChange={handleChange}></TextField> <br />
             <span style={{color: "red"}} id="nameErr" className="error">{contactInfo.nameError}</span>
           </div>
           <div>
-            <TextField InputProps={{ className: classes['MuiTextField-root'] }} color="secondary" variant="filled" type="text" name="company" id="company" label="Organization" value={contactInfo.company} placeholder="(Optional) Jane Rosenzweig DEI" onChange={handleChange} ></TextField> <br />
+            <TextField InputLabelProps={{ className: 'inputLabel' }} InputProps={{ className: classes['MuiTextField-root'] }} color="secondary" variant="filled" type="text" name="company" id="company" label="Organization" value={contactInfo.company} placeholder="(Optional) Jane Rosenzweig DEI" onChange={handleChange} ></TextField> <br />
           </div>
           <div>
-            <TextField InputProps={{ className: classes['MuiTextField-root'] }} color="secondary" variant="filled" type="text" name="email" id="email" label="Email" value={contactInfo.email} placeholder="janerosenzweig1@gmail.com" onChange={handleChange}></TextField> <br />
+            <TextField InputLabelProps={{ className: 'inputLabel' }} InputProps={{ className: classes['MuiTextField-root'] }} color="secondary" variant="filled" type="text" name="email" id="email" label="Email" value={contactInfo.email} placeholder="janerosenzweig1@gmail.com" onChange={handleChange}></TextField> <br />
             <span style={{color: "red"}} id="emailErr" className="error">{contactInfo.emailError}</span>
           </div>
           <div>
-            <TextField InputProps={{ className: classes['MuiTextField-root'] }} color="secondary" variant="filled" type="text" name="phone" id="phone" label="Phone" value={contactInfo.phone} placeholder="(Optional) (555) 555-5555" onChange={handleChange}></TextField> <br />
+            <TextField InputLabelProps={{ className: 'inputLabel' }} InputProps={{ className: classes['MuiTextField-root'] }} color="secondary" variant="filled" type="text" name="phone" id="phone" label="Phone" value={contactInfo.phone} placeholder="(Optional) (555) 555-5555" onChange={handleChange}></TextField> <br />
             <span style={{color: "red"}} id="phoneErr" className="error">{contactInfo.phoneError}</span>
           </div>
           <div>
-            <TextField InputProps={{ className: classes['MuiTextField-root'] }} color="secondary" variant="filled" type="text" name="subject" id="subject" label="Subject" value={contactInfo.subject} placeholder="Need Experienced DEI Specialist" onChange={handleChange}></TextField> <br />
+            <TextField InputLabelProps={{ className: 'inputLabel' }} InputProps={{ className: classes['MuiTextField-root'] }} color="secondary" variant="filled" type="text" name="subject" id="subject" label="Subject" value={contactInfo.subject} placeholder="Need Experienced DEI Specialist" onChange={handleChange}></TextField> <br />
             <span style={{color: "red"}} id="subjectErr" className="error">{contactInfo.subjectError}</span>
           </div>
           <div>
-            <TextField InputProps={{ className: classes['MuiTextField-root'] }} color="secondary" variant="filled" type="text" name="message" id="message" label="Message" value={contactInfo.message} placeholder="Your message goes here..." onChange={handleChange} multiline maxRows={50}></TextField> <br />
+            <TextField InputLabelProps={{ className: 'inputLabel' }} InputProps={{ className: classes['MuiTextField-root'] }} color="secondary" variant="filled" type="text" name="message" id="message" label="Message" value={contactInfo.message} placeholder="Your message goes here..." onChange={handleChange} multiline maxRows={50}></TextField> <br />
             <span style={{color: "red"}} id="messageErr" className="error">{contactInfo.messageError}</span>
           </div>
           <br />

@@ -8,7 +8,8 @@ const Footer = () => {
   return (
     <div id="footer" className="halfscreen">
       <EmailForm />
-      <p style={{ color: '#EEFBFB', textAlign: 'center', fontFamily: 'Open Sans' }}>&quot;Be brave enough to start a conversation that matters.&quot; <br /> -Margaret Wheatley</p>
+      <p>&quot;Be brave enough to start a conversation that matters.&quot;<br /><span>
+        -Margaret Wheatley</span></p>
     </div>
   );
 };

@@ -20,15 +20,15 @@ const DescriptionCarousel = ({ tab, descriptionList, setTab }) => {
 
   return (
     <div id="description-carousel">
-      <Card variant="elevation" elevation={15}>
-        <CardContent>
-          <p className="service-text">{tab === 'advising' ? descriptionList[0].text : tab === 'coaching' ? descriptionList[1].text : descriptionList[2].text}</p>
-        </CardContent>
-      </Card>
       <div id="service-carousel-btns">
        <i onClick={(e) => handleClick(e)} className="fas fa-chevron-left"></i>
         <i onClick={(e) => handleClick(e)} className="fas fa-chevron-right"></i>
       </div>
+      <Card variant="elevation" elevation={24}>
+        <CardContent>
+          <p className="service-text">{tab === 'advising' ? descriptionList[0].text : tab === 'coaching' ? descriptionList[1].text : descriptionList[2].text}</p>
+        </CardContent>
+      </Card>
     </div>
   )
 }

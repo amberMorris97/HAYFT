@@ -17,7 +17,7 @@ const Blog = ({ fullscreen }) => {
   return (
     <div id="blog-container" className="halfscreen">
       <h1>
-        <Link style={{ textDecoration: 'none' }} to="/blog">Blog</Link>
+        <Link style={{ textDecoration: 'none' }} to="/blog">Jane Says</Link>
       </h1>
         {fetchedPosts[0] && <Posts blogPosts={posts} />}
     </div>

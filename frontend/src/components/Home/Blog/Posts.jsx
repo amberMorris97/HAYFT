@@ -16,7 +16,7 @@ const Posts = ({ blogPosts }) => {
           <span>By: {post.author}</span>
           <br />
           <span>{moment(post.createdAt).format('MMMM Do YYYY')}</span>
-          <p><em>{post.post.split('.')[0]}</em></p>
+          <p><em>{post.post.split('.')[0]}</em>...<Link style={{ textDecoration: 'none', fontSize: 'inherit', fontStyle: 'italic' }} to={`/blog/${post._id}`}>Read More</Link></p>
         </div>
       ))}
     </div>

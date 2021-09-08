@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 const advisingPic = './images/advising-pic.png';
 
 const Descriptions = ({ descriptionList, tab }) => {
-console.log(tab)
 
   return (
     <div className="service-descriptions">
