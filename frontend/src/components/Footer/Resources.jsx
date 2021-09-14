@@ -14,13 +14,6 @@ const Resources = () => {
   return (
     <div style={{ backgroundColor: '#000', color: '#EEFBFB', height: "25vh" }} id="resources">
       <div className="fn-list" id="fn1-resources">
-        <h3>Resources</h3>
-        <ul>
-          <li>COMING</li>
-          <li>SOON</li>
-        </ul>
-      </div>
-      <div className="fn-list" id="fn1-resources">
         <h3>Quick Links</h3>
         <ul>
         <li>
@@ -39,7 +32,7 @@ const Resources = () => {
               <Link style={{ textDecoration: 'none' }} to="/contact">Let&apos;s Connect</Link>
             </li>
             <li>
-              <Link style={{ textDecoration: 'none' }} to="/resources">Read/Think More</Link>
+              <Link style={{ textDecoration: 'none' }} to="/resources">{`Read & Think More`}</Link>
             </li>
         </ul>
       </div>

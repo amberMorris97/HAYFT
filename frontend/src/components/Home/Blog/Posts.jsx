@@ -9,9 +9,9 @@ const Posts = ({ blogPosts }) => {
       {blogPosts.map((post) => (
         <div id="post-preview" key={post._id}>
           <Link style={{ textDecoration: 'none' }} to={`/blog/${post._id}`}>
-            <h1>{post.title}</h1>
+            <h2>{post.title}</h2>
           </Link>
-          <img src={post.img} alt="blog-thumbnail" height="150" width="200" />
+          {post.img && <img src={post.img} alt="blog-thumbnail" height="150" width="200" /> }
           <br />
           <span>By: {post.author}</span>
           <br />

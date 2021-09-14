@@ -69,7 +69,7 @@ const Header = ({ setView }) => {
     return (
       <div id="header-container">
       <h4>
-        <Link style={{ textDecoration: 'none', fontFamily: 'Lato' }} to="/"><h1>Jane Rosenzweig</h1></Link>
+        <Link style={{ textDecoration: 'none', fontFamily: 'Lato' }} to="/"><h1>Jane Rosenzweig, MSOD</h1></Link>
       </h4>
         <nav id="nav">
           <ul id="nav-links">
@@ -89,14 +89,14 @@ const Header = ({ setView }) => {
               <Link style={{ textDecoration: 'none' }} to="/contact">Let&apos;s Connect</Link>
             </li>
             <li>
-              <Link style={{ textDecoration: 'none' }} to="/resources">Read and Think More</Link>
+              <Link style={{ textDecoration: 'none' }} to="/resources">{`Read & Think More`}</Link>
             </li>
           </ul>
 
           <MenuIcon onClick={toggleDrawer(anchor)}></MenuIcon>
             <Drawer open={anchor} onClose={toggleDrawer(anchor)}>
               <List style={listStyle}>
-                {['About', 'How I Can Help', 'Working With Jane', 'Jane Says', 'Read and Think More', `Let's Connect`].map((text, index) => (
+                {['About', 'How I Can Help', 'Working With Jane', 'Jane Says', 'Read & Think More', `Let's Connect`].map((text, index) => (
                  <Link style={{ textDecoration: 'none', color: '#EEFBFB' }} to={`/${navIdx[index]}`} key={text}>
                     <ListItem button key={text}>
                       <ListItemText primary={text} />

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import Disqus from "disqus-react"
 import moment from 'moment';
 import { fetchBlogPosts } from '../../redux/actions/blogActions';
@@ -30,7 +30,7 @@ const SinglePost = () => {
   return (
     <div id="single-post-view">
       <h1>{singlePost.title}</h1>
-      <img src={singlePost.img} alt="singlePost-photo" width="500px" height="350px"/>
+      {singlePost.img && <img src={singlePost.img} alt="singlePost-photo" width="500px" height="350px"/> }
       <span>By: {singlePost.author}</span>
       <br />
       <p>{singlePost.post}</p>
@@ -39,6 +39,10 @@ const SinglePost = () => {
           shortname={disqusShortname}
           config={disqusConfig}
         />
+
+      <Link to="/blog">
+        <button>Back To Blog</button>
+      </Link>
     </div>
   )
 }

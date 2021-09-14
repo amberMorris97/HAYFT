@@ -49,6 +49,7 @@ const Login = ({ setView }) => {
 
   return (
     <div id="login-container">
+      <div id="fuck"></div>
       <form onSubmit={handleSubmit}>
         <TextField variant="standard" id="email" label="email" name="email" onChange={handleChange}>Email</TextField>
         <TextField variant="standard" id="password" label="password" name="password" type="password" onChange={handleChange}>Email</TextField>
@@ -61,3 +62,7 @@ const Login = ({ setView }) => {
 };
 
 export default Login;
+
+// services when people click, want to give illustrations for the services
+// lineage --> new section
+// change email to janerosenzweig1
