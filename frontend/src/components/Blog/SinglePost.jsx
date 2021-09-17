@@ -13,6 +13,7 @@ const SinglePost = () => {
 
   useEffect(() => {
     dispatch(fetchBlogPosts());
+    window.scrollTo(0, 0);
   }, []);
 
   if (!posts.length) return (<h1>Loading...</h1>);

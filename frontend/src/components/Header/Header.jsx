@@ -11,6 +11,7 @@ import {
   useHistory,
   useLocation
 } from 'react-router-dom';
+import { Link as scrollTo } from 'react-scroll';
 import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
 import ListItem from '@material-ui/core/ListItem';
@@ -21,10 +22,6 @@ import Login from '../Admin/Login.jsx';
 import User from '../../redux/actions/authActions';
 import Logout from '../Admin/Logout.jsx';
 import ProtectedRoute from '../ProtectedRoute.jsx';
-import Modal from '../Modal';
-
-const logo = './images/jrlogo1.png';
-
 
 const Header = ({ setView }) => {
   const dispatch = useDispatch();

@@ -11,7 +11,7 @@ const Resources = () => {
   }
 
   return (
-    <div style={{ backgroundColor: '#000', color: '#EEFBFB', height: "25vh" }} id="resources">
+    <div style={{ backgroundColor: '#000', color: '#EEFBFB', height: "25vh", width: '100vw' }} id="resources">
       <div className="fn-list" id="fn1-resources">
         <h3>Quick Links</h3>
         <ul>

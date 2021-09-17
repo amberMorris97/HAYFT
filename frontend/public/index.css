@@ -3342,7 +3342,7 @@ a {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    margin-top: 25px;
+    margin-top: 50px;
     grid-gap: 2em;
   }
   #footer #footer-form-container #contact-form input, #footer #footer-form-container #contact-form .MuiInputBase-root {

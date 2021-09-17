@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import PropTypes from 'prop-types';
 
 const DescriptionCarousel = ({ tab, descriptionList, setTab }) => {
 
@@ -30,7 +31,13 @@ const DescriptionCarousel = ({ tab, descriptionList, setTab }) => {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }
+
+DescriptionCarousel.propTypes = {
+  tab: PropTypes.string,
+  descriptionList: PropTypes.array,
+  setTab: PropTypes.func,
+};
 
 export default DescriptionCarousel;

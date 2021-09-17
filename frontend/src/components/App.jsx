@@ -19,6 +19,7 @@ import ServicesMain from './Services.jsx';
 import AboutMain from './About.jsx';
 import Contact from './Contact.jsx';
 import Testimonials from './Testimonials.jsx';
+import ResourcesMain from './ResourcesMain.jsx';
 import ProtectedRoute from './ProtectedRoute.jsx';
 import { fetchBlogPosts } from '../redux/actions/blogActions';
 
@@ -54,6 +55,7 @@ const App = () => {
      <Route exact path="/about" component={AboutMain} />
      <Route exact path="/testimonials" component={Testimonials} />
      <Route path="/contact" component={Contact} />
+     <Route path="/resources" component={ResourcesMain} />
      <Route path="/login" render={ () => <Login setView={setView} />} />
    </Switch>
     </div>

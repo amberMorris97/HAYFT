@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Footer from './Footer/Footer.jsx';
 import Resources from './Footer/Resources.jsx';
 
 const janePic = './images/jrselfie.jpeg'
 
 const AboutMain = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div id="about-main">

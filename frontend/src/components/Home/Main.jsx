@@ -46,8 +46,6 @@ const Main = () => {
         <Button className="lets-connect-btn">Let&apos;s Connect</Button>
         </Link>
       </div>
-      {/* <Link style={{ textDecoration: 'none' }} to="/about"><PurpleButton text={"LEARN MORE"} /></Link>
-      <Link style={{ textDecoration: 'none' }} to="/contact"><PurpleButton text={"Let's Connect"} /></Link> */}
     </div>
     </Animator>
       </ScrollPage>
