@@ -31,7 +31,7 @@ const Main = () => {
         <br />
         Inclusion
       </h1>
-      <p> Together, we can create a cycle of <strong>inquiry</strong>, <strong>reflection</strong> and <strong>being</strong> that will help you grow and your teams thrive.</p>
+      <p> Together, we can create a cycle of <strong>inquiry</strong>, <strong>reflection</strong>, and <strong>being</strong> that will help you grow and your teams thrive.</p>
       <br />
       <div id="landing-btns">
         <Link activeClass="active"

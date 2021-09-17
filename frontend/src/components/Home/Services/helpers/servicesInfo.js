@@ -18,7 +18,7 @@ const servicesText = [{
   img: 'images/gathering-pic.png',
   title: 'Gathering',
   subtitle: 'Dialogue drives everything.',
-  text: 'I can help you and your teams gather, with purpose, to activate new insights and build community.',
+  text: 'I can help you and your teams create conversations that deepen your collective understanding and help you activate your new insights.',
   alt: 'gathering-graphic',
   id: 'gathering-container'
 }];
