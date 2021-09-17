@@ -86,6 +86,7 @@ a {
     margin: auto;
     background: #45A29E;
     color: white;
+
 #about-main {
 
     h1 {
@@ -133,6 +134,7 @@ a {
     #disqus_thread {
       width: 250px;
     }
+
     button {
       margin-bottom: 25px;
       background: #0B0C10;
@@ -348,7 +350,6 @@ a {
           font-family: 'Open Sans';
           color: white;
           text-align: center;
-          margin-top: 20px;
         }
       }
     }
@@ -895,7 +896,7 @@ a {
           font-family: 'Open Sans';
           color: white;
           text-align: center;
-          margin-top: 20px;
+          margin-top: 10px;
         }
       }
     }
@@ -2658,9 +2659,18 @@ a {
 
   #about-main {
     text-align: center;
+    margin-top: 50px;
 
     p {
       padding: 3em;
+    }
+
+    #resources {
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+      }
     }
   }
 
@@ -2715,7 +2725,7 @@ a {
       background-color: #0B0C10;
       font-family: 'Lato';
       font-size: 24px;
-      padding: 15px;
+      padding: 10px;
       border-radius: 5px;
       color: white;
     }

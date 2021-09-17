@@ -4,7 +4,7 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import User from '../../redux/actions/authActions';
 
-const Login = ({ setView }) => {
+const Login = () => {
   const auth = useSelector(state => state.authReducer.isAuthenticated);
 
   const dispatch = useDispatch();
@@ -37,12 +37,10 @@ const Login = ({ setView }) => {
     const loggedIn = await dispatch(user.login());
 
     if (!loggedIn) {
-      setLoginInfo({
+      return setLoginInfo({
         ...loginInfo,
         error: 'Invalid credentials',
       });
-    } else {
-      setView('home');
     }
   };
 
@@ -62,7 +60,3 @@ const Login = ({ setView }) => {
 };
 
 export default Login;
-
-// services when people click, want to give illustrations for the services
-// lineage --> new section
-// change email to janerosenzweig1

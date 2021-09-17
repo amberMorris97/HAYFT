@@ -1,3 +1,5 @@
-const axios = require('axios');
+import axios from 'axios';
 
-export const sendEmail = async body => await axios.post('/email', body);
+const sendEmail = async body => await axios.post('/email', body);
+
+export default sendEmail;

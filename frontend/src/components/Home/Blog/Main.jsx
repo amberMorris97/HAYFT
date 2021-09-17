@@ -1,16 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchBlogPosts } from '../../../redux/actions/blogActions';
 import Posts from './Posts.jsx';
 
-const Blog = ({ fullscreen }) => {
-  const dispatch = useDispatch();
+const Blog = () => {
   const fetchedPosts = useSelector(state => state.blogReducer.posts);
-
-  // useEffect(() => {
-  //   dispatch(fetchBlogPosts());
-  // }, []);
 
   const posts = fetchedPosts.slice(0, 3);
 

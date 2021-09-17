@@ -1,19 +1,10 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import { Link } from 'react-router-dom';
 import { TK, CL, SK } from './quotes';
 
 
 const Testimonials = () => {
-  const rightArrowStyle = {
-    fontSize: '5em',
-    color: '#000',
-    marginRight: '5em',
-    marginTop: '3em',
-    position: 'absolute',
-  }
-
   const rightArrow = <i className="fas fa-chevron-right"></i>
   const leftArrow = <i className="fas fa-chevron-left"></i>
 

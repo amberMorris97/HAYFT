@@ -2,7 +2,6 @@ import React from 'react';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
 import PhoneIcon from '@material-ui/icons/Phone';
-import IconButton from '@material-ui/core/IconButton';
 import Link from 'react-router-dom/Link';
 
 const Resources = () => {
@@ -38,7 +37,7 @@ const Resources = () => {
       </div>
       <div id="icons">
         <div id="linkedIn-icon">
-          <a style={{ color: '#fff' }} href="https://www.linkedin.com/in/jane-rosenzweig-19749b/">
+          <a style={{ color: 'white' }} href="https://www.linkedin.com/in/jane-rosenzweig-19749b/">
             <LinkedInIcon fontSize="large" />
           </a>
         </div>
@@ -46,8 +45,9 @@ const Resources = () => {
           <EmailIcon fontSize="large" />
         </div>
         <div id="phone-icon">
+          <a style={{ color: 'white' }} href="tel:3029857065">
           <PhoneIcon fontSize="large" />
-          <h6 style={{ fontSize: '15px' }}>302.985.7065</h6>
+          </a>
         </div>
       </div>
     </div>

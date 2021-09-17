@@ -1,12 +1,12 @@
 import React from 'react';
-import Parse from 'html-react-parser';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const Posts = ({ blogPosts }) => {
 
   return (
     <div id="blog-post-preview">
-      {blogPosts.map((post, idx) => (
+      {blogPosts.map((post) => (
         <div id="post-preview" key={post._id}>
           <Link style={{ textDecoration: 'none' }} to={`/blog/${post._id}`}>
             <h2>{post.title}</h2>
@@ -16,6 +16,10 @@ const Posts = ({ blogPosts }) => {
       ))}
     </div>
   )
+}
+
+Posts.propTypes = {
+  blogPosts: PropTypes.array,
 }
 
 export default Posts;

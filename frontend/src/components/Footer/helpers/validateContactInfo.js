@@ -1,5 +1,5 @@
 const validateContactInfo = (contactInfo) => {
-  const emailValidator = /^\w+([\.-]?\w+)+@\w+([\.:]?\w+)+(\.[a-zA-Z0-9]{2,3})+$/;
+  const emailValidator = /^\w+([.-]?\w+)+@\w+([.:]?\w+)+(\.[a-zA-Z0-9]{2,3})+$/;
   const numValidator = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
   const errorMessage = 'Field cannot be blank';
 
@@ -20,4 +20,4 @@ const validateContactInfo = (contactInfo) => {
   return errors;
 };
 
-module.exports = validateContactInfo;
+export default validateContactInfo;

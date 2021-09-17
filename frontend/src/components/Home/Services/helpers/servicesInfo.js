@@ -2,7 +2,7 @@ const servicesText = [{
   img: './images/advising-pic.png',
   title: 'Advising',
   subtitle: 'We start where you are.',
-  text: 'I can help you build your refresh your DE&I strategy to create deeper meaning and greater impact.',
+  text: 'I can help you build your refresh your DEI strategy to create deeper meaning and greater impact.',
   alt: 'advising-graphic',
   id: 'advising-container'
 },
@@ -18,7 +18,7 @@ const servicesText = [{
   img: 'images/gathering-pic.png',
   title: 'Gathering',
   subtitle: 'Dialogue drives everything.',
-  text: 'I can help you and your teams create conversations that deepen your collective understanding and help you activate your new insights.',
+  text: 'I can help you and your teams create conversations that deepen your collective understanding.',
   alt: 'gathering-graphic',
   id: 'gathering-container'
 }];

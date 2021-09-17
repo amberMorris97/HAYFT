@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Card, CardContent } from '@material-ui/core';
-import Button from '@material-ui/core/Button';
 import DescriptionCarousel from './DescriptionCarousel.jsx';
 // import AboutServices from './AboutServices.jsx';
 // import ServiceBar from './ServiceBar.jsx';
@@ -18,10 +15,6 @@ const Services = () => {
         <Descriptions descriptionList={servicesText} tab={tab} />
         <MobileDescriptions descriptionList={servicesText} tab={tab} />
         <DescriptionCarousel setTab={(service) => setTab(service)} descriptionList={servicesText} tab={tab}/>
-
-
-        <Link style={{ textDecoration: 'none' }} to="/services"><Button>Learn More</Button></Link>
-
       </div>
   );
 }

@@ -390,7 +390,6 @@ a {
     font-family: 'Open Sans';
     color: white;
     text-align: center;
-    margin-top: 20px;
   }
   #services-container a {
     color: white;
@@ -1029,7 +1028,7 @@ a {
     font-family: 'Open Sans';
     color: white;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   #services-container a {
     color: white;
@@ -3040,9 +3039,22 @@ a {
   }
   #about-main {
     text-align: center;
+    margin-top: 50px;
   }
   #about-main p {
     padding: 3em;
+  }
+  #about-main #resources ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
   #about-container {
     margin: auto;
@@ -3098,7 +3110,7 @@ a {
     background-color: #0B0C10;
     font-family: 'Lato';
     font-size: 24px;
-    padding: 15px;
+    padding: 10px;
     border-radius: 5px;
     color: white;
   }

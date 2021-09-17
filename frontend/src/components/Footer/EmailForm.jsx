@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
-
-const sendEmail = require('./helpers/sendEmail');
-const validateContactInfo = require('./helpers/validateContactInfo');
+import sendEmail from './helpers/sendEmail';
+import validateContactInfo from'./helpers/validateContactInfo';
 
 
 const useStyles = makeStyles({
@@ -16,7 +15,6 @@ const useStyles = makeStyles({
 
 const EmailForm = () => {
   const classes = useStyles();
-  const [success, setSuccess] = useState('');
   const [contactInfo, setContactInfo] = useState({
     name: '',
     nameError: '',
