@@ -16,14 +16,16 @@ const elStyle = {
   padding: '2em',
   textAlign: 'center'
 }
+
 const ServicesMain = () => {
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div style={mainStyle} id="services-main">
-      <h1 style={{ textAlign: 'center' }}>Services</h1>
+      <h1>How I Can Help</h1>
       {servicesText.map((service) => (
       <div style={elStyle} key={service.title.toLowerCase()} id="service-main-el">
         <h3>{service.title}</h3>

@@ -66,7 +66,7 @@ const Header = ({ setView }) => {
     return (
       <div id="header-container">
       <h4>
-        <Link style={{ textDecoration: 'none', fontFamily: 'Lato' }} to="/"><h1>Jane Rosenzweig, MSOD</h1></Link>
+        <Link style={{ textDecoration: 'none', fontFamily: 'Lato' }} to="/"><h1>Jane Rosenzweig</h1></Link>
       </h4>
         <nav id="nav">
           <ul id="nav-links">

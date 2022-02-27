@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-
-const advisingPic = './images/advising-pic.png';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Descriptions = ({ descriptionList, tab }) => {
 
@@ -16,6 +15,11 @@ const Descriptions = ({ descriptionList, tab }) => {
       ))}
     </div>
   );
+};
+
+Descriptions.propTypes = {
+  descriptionList: PropTypes.array,
+  tab: PropTypes.string,
 };
 
 export default Descriptions;
