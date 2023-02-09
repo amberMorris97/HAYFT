@@ -1,6 +1,10 @@
 # Jane Rosenzweig DE&I
 
 React application built for a client that serves as a hub for their portfolio, service offerings, method of contact, and blog posts.
+
+#### Site in production
+> [janerosenzweig.com](http://janerosenzweig.com)
+
 ##### Technologies/Stack
 > JavaScript, React, Redux, Node, Express, MongoDB
 
