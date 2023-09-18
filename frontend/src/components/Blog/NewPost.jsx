@@ -8,6 +8,14 @@ import draftToHtml from 'draftjs-to-html';
 import { addNewBlogPost } from '../../redux/actions/blogActions'
 
 const newPost = () => {
+  const editorStyle = {
+    display: 'flex',
+    flexDirection : 'column',
+    alignItems: 'center',
+    padding: '16px',
+    gap: '24px',
+  };
+
   const auth = useSelector(state => state.authReducer.isAuthenticated);
 
   const dispatch = useDispatch();
@@ -48,10 +56,9 @@ const newPost = () => {
   };
 
   return (
-    <div id="make-post-container">
+    <div id="make-post-container" style={editorStyle}>
       <h1>What&apos;s On Your Mind?</h1>
       <TextField InputLabelProps={{ className: 'titleLabel' }} InputProps={{ className: 'titleInput' }} color="secondary" variant="outlined" id="title" label="Title" name="title" onChange={handleChange}></TextField>
-      <TextField InputLabelProps={{ className: 'authorLabel' }} InputProps={{ className: 'authorInput' }} color="secondary" variant="outlined" id="author" label="Author" name="author" onChange={handleChange}></TextField>
       <Editor
         onEditorStateChange={onEditorStateChange}
         wrapperClassName="wrapper-class"

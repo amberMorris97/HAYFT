@@ -1,0 +1,3155 @@
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 413px) {
+  .all-testimonials {
+    margin-top: 50px;
+  }
+  .all-testimonials h1 {
+    text-align: center;
+  }
+  .all-testimonials .testimonial-text {
+    padding: 2em;
+  }
+  #about-main {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+  #about-main h1 {
+    text-align: center;
+  }
+  #about-main p {
+    padding: 2em;
+  }
+  #about-main img {
+    width: 250px;
+    height: 300px;
+    align-self: center;
+  }
+  #about-main #footer h1 {
+    margin-top: 100px;
+  }
+  #about-main #footer p {
+    margin-bottom: 100px;
+    font-size: 2em;
+    padding: 0 !important;
+  }
+  #contact-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  #contact-main form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 25px;
+  }
+  #contact-main form button {
+    color: white;
+    background: #0B0C10;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+  #contact-main #resources {
+    width: 100vw;
+  }
+  #single-post-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    background: #45A29E;
+    color: white;
+  }
+  #single-post-view #about-main {
+    display: flex;
+    flex-direction: column;
+  }
+  #single-post-view #about-main h1 {
+    text-align: center;
+    margin-top: 25px;
+  }
+  #single-post-view #about-main p {
+    padding: 2em;
+  }
+  #single-post-view #about-main img {
+    width: 250px;
+    height: 300px;
+    align-self: center;
+  }
+  #single-post-view #about-main #footer {
+    width: 100vw;
+  }
+  #single-post-view #about-main #resources {
+    width: 100vw;
+  }
+  #single-post-view p, #single-post-view ul {
+    padding: 3em;
+    font-family: "Open Sans";
+  }
+  #single-post-view h1 {
+    margin-top: 50px;
+    font-size: 2.5em;
+    text-align: center;
+    font-family: "Lato";
+  }
+  #single-post-view span {
+    font-family: "Open Sans";
+  }
+  #single-post-view #disqus_thread {
+    width: 250px;
+  }
+  #single-post-view button {
+    margin-bottom: 25px;
+    background: #0B0C10;
+    border: none;
+    color: white;
+    font-family: "Lato";
+    font-size: 1.2em;
+  }
+  #blog-posts-container h1 {
+    text-align: center;
+  }
+  #blog-posts-container #blog-post-preview {
+    padding: 2em;
+  }
+  div.MuiDrawer-paper {
+    height: auto;
+    background: none;
+    color: white;
+  }
+  div.MuiDrawer-paper .MuiList-root {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+  div.MuiDrawer-paper .MuiList-root a span {
+    font-family: "Lato";
+  }
+  div.MuiDrawer-paper .MuiList-root a:hover {
+    color: #66FCF1 !important;
+  }
+  #header-container {
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    background-color: #0B0C10;
+    font-family: "Lato";
+    color: white;
+    width: 100%;
+    z-index: 1001;
+    position: sticky;
+  }
+  #header-container a {
+    color: white;
+  }
+  #header-container a:hover {
+    color: #66FCF1;
+  }
+  #header-container nav ul {
+    display: none;
+  }
+  #header-container nav svg {
+    display: revert;
+    color: white;
+    font-size: 48px;
+    font-family: "Lato";
+  }
+  #header-container nav svg :hover {
+    cursor: pointer;
+    color: #66FCF1;
+  }
+  #home-page {
+    background-color: #0B0C10;
+    overflow-x: hidden;
+  }
+  #landing-content {
+    display: grid;
+    grid-template-areas: "title text" "btn btn";
+    padding: 3em;
+    align-items: center;
+    justify-content: center;
+  }
+  #landing-content h1 {
+    grid-area: title;
+    font-family: "Lato";
+    color: #66FCF1;
+    font-size: 3em;
+    margin: 50px 0 0 0;
+  }
+  #landing-content p {
+    grid-area: text;
+    font-family: "Open Sans";
+    font-weight: 300;
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-size: 0.9em;
+    margin: 200px 0 0 10px;
+  }
+  #landing-content #landing-btns {
+    grid-area: btn;
+    align-self: start;
+    justify-self: center;
+    display: flex;
+    gap: 2em;
+  }
+  #landing-content #landing-btns button {
+    padding: 10px;
+    border: 1px solid #66FCF1;
+    color: white;
+    font-family: "Lato";
+  }
+  #separator {
+    height: 50vh !important;
+  }
+  #services-container {
+    background: #0B0C10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  #services-container h1 {
+    font-family: "Lato";
+    color: #66FCF1;
+    font-size: 2em;
+  }
+  #services-container .service-descriptions {
+    display: none;
+  }
+  #services-container .s-d-mobile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+  #services-container .s-d-mobile #service-img-overlay {
+    z-index: 1000;
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    top: 0%;
+    left: 50;
+    background: linear-gradient(rgba(11, 12, 16, 0.6));
+    margin-bottom: 58px;
+  }
+  #services-container .s-d-mobile img {
+    height: 250px;
+    width: 250px;
+  }
+  #services-container .s-d-mobile h1 {
+    font-family: "Lato";
+    font-size: 2.5em;
+    font-weight: 900;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+  #services-container .s-d-mobile h3 {
+    color: white !important;
+    font-style: normal;
+    font-family: "Lato";
+    font-weight: 900;
+    font-size: 1em;
+    position: absolute;
+    top: 85%;
+    z-index: 1000;
+  }
+  #services-container #description-carousel {
+    margin-top: 25px;
+  }
+  #services-container #description-carousel #service-carousel-btns {
+    display: flex;
+    gap: 5em;
+    justify-content: center;
+    align-items: center;
+  }
+  #services-container #description-carousel #service-carousel-btns i {
+    color: white;
+    font-size: 24px;
+  }
+  #services-container #description-carousel #service-carousel-btns i .fas:hover {
+    cursor: pointer;
+  }
+  #services-container #description-carousel .MuiPaper-root {
+    margin-top: 25px;
+    background-color: #18191d;
+    width: 75vw;
+    height: 20vh;
+    display: flex;
+  }
+  #services-container #description-carousel .MuiPaper-root .MuiCardContent-root {
+    font-family: "Open Sans";
+    color: white;
+    text-align: center;
+  }
+  #services-container a {
+    color: white;
+  }
+  #services-container a button {
+    margin-top: 25px;
+    border: solid #66FCF1;
+    color: white;
+    padding: 10px;
+    font-family: "Lato";
+  }
+  #about-container {
+    padding: 2em;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #about-container h1, #about-container p {
+    font-family: "Lato";
+    color: #0B0C10;
+  }
+  #about-container p {
+    font-family: "Open Sans";
+    font-size: 20px;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+  }
+  #about-container button {
+    background-color: #0B0C10;
+    padding: 15px;
+    margin-top: 25px;
+    font-family: "Lato";
+  }
+  #about-container button .MuiButton-label {
+    background-color: #0B0C10;
+    color: white;
+  }
+  #about-container img {
+    height: 250px;
+    width: 200px;
+    margin-top: 25px;
+  }
+  #testimonials-page {
+    padding: 3em;
+    background-color: #1f2833;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #testimonials-page a {
+    color: #66FCF1;
+  }
+  #testimonials-page a :hover {
+    color: #c5c6c7;
+  }
+  #testimonials-page .carousel-indicators {
+    display: flex;
+    width: 5%;
+    height: 5%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 2px;
+  }
+  #testimonials-page .carousel-indicators li {
+    margin-top: 25px;
+    background: #c5c6c7;
+    height: 5px;
+    width: 50px !important;
+  }
+  #testimonials-page .carousel-indicators li.active {
+    background-color: #66FCF1;
+  }
+  #testimonials-page .carousel-inner .carousel-item.active {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #testimonials-page .carousel-inner .carousel-item.active h3 {
+    color: #66FCF1;
+  }
+  #testimonials-page .carousel-inner .carousel-item.active p {
+    color: white;
+  }
+  #testimonials-page .carousel-inner .carousel-item.active h3, #testimonials-page .carousel-inner .carousel-item.active p {
+    text-align: center;
+  }
+  #testimonials-page .carousel-inner .carousel-item.active span {
+    color: #66FCF1;
+    font-size: 1em;
+    margin-top: 5px;
+  }
+  #testimonials-page .fas {
+    color: white;
+    font-size: 24px;
+    margin-top: 600px;
+  }
+  #testimonials-page .carousel-control-next, #testimonials-page .carousel-control-prev {
+    width: 5%;
+    height: 5%;
+  }
+  #testimonials-page .carousel-control-next {
+    right: -5px;
+  }
+  #testimonials-page .carousel-control-prev {
+    left: -5px;
+  }
+  #blog-container {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #blog-container a {
+    color: #66FCF1;
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 1.5em;
+  }
+  #blog-container a :hover {
+    color: #c5c6c7;
+  }
+  #blog-container #blog-post-preview {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 25px;
+  }
+  #blog-container #blog-post-preview #post-preview {
+    color: white;
+  }
+  #blog-container #blog-post-preview #post-preview p {
+    margin-top: 5px;
+  }
+  #footer {
+    background: #66FCF1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+  }
+  #footer h1 {
+    text-align: center;
+    color: #0B0C10;
+    margin-top: 25px;
+  }
+  #footer form {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+  }
+  #footer form input, #footer form .MuiInputBase-root {
+    background-color: #1f2833;
+  }
+  #footer form .inputLabel {
+    color: white;
+  }
+  #footer form Button {
+    grid-column: 1/3;
+    grid-row: 4;
+    align-self: start;
+    background-color: #0B0C10;
+    color: white;
+    margin: auto;
+    padding: 10px;
+  }
+  #footer p {
+    font-family: "Lato";
+    font-weight: 900;
+    color: #0B0C10 !important;
+    text-align: center;
+    font-size: 2em;
+  }
+  #footer p span {
+    font-size: 0.8em;
+    font-family: "Open Sans";
+    font-weight: 300;
+  }
+  #resources {
+    padding: 3em;
+    background-color: #0B0C10 !important;
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #resources h3 {
+    font-size: 1.4em;
+  }
+  #resources ul {
+    list-style: none;
+    font-size: 1em;
+    padding: 0;
+  }
+  #resources ul a {
+    text-decoration: none;
+    color: white;
+  }
+  #resources ul a:hover {
+    color: #66FCF1;
+  }
+  #resources #icons {
+    display: flex;
+    gap: 2em;
+    align-self: center;
+    justify-content: center;
+    margin-top: 25px;
+    grid-column: 1/3;
+  }
+  #resources #icons svg {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media (min-width: 414px) and (max-width: 600px) {
+  #contact-main {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #contact-main form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  #contact-main form button {
+    background: #0B0C10;
+    color: white;
+    margin: auto;
+  }
+  #contact-main #resources {
+    margin-top: 50px;
+  }
+  #contact-main #resources ul {
+    display: flex;
+    flex-direction: column;
+  }
+  #contact-main #resources ul li {
+    text-align: left;
+    margin-left: 25px;
+  }
+  #single-post-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    background: #45A29E;
+    color: white;
+  }
+  #single-post-view p {
+    padding: 2em;
+  }
+  #single-post-view h1 {
+    font-size: 2.5em;
+    margin-top: 50px;
+  }
+  #single-post-view #disqus_thread {
+    width: 250px;
+  }
+  #single-post-view button {
+    margin-bottom: 25px;
+    background: #0B0C10;
+    border: none;
+    color: white;
+    font-family: "Lato";
+    font-size: 1.2em;
+  }
+  #blog-posts-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #blog-posts-container h1 {
+    margin: auto;
+  }
+  #blog-posts-container #blog-post-preview {
+    padding: 2em;
+  }
+  #blog-posts-container #resources {
+    width: 100vw;
+  }
+  div.MuiDrawer-paper {
+    height: auto;
+    background: none;
+    color: white;
+  }
+  div.MuiDrawer-paper .MuiList-root {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+  div.MuiDrawer-paper .MuiList-root a span {
+    font-family: "Lato";
+  }
+  div.MuiDrawer-paper .MuiList-root a:hover {
+    color: #66FCF1 !important;
+  }
+  #header-container {
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    background-color: #0B0C10;
+    font-family: "Lato";
+    color: white;
+    width: 100%;
+    z-index: 1001;
+    position: sticky;
+  }
+  #header-container a {
+    color: white;
+  }
+  #header-container a:hover {
+    color: #66FCF1;
+  }
+  #header-container nav ul {
+    display: none;
+  }
+  #header-container nav svg {
+    display: revert;
+    color: white;
+    font-size: 48px;
+    font-family: "Lato";
+  }
+  #header-container nav svg :hover {
+    cursor: pointer;
+    color: #66FCF1;
+  }
+  #home-page {
+    background-color: #0B0C10;
+    overflow-x: hidden;
+  }
+  #landing-content {
+    display: grid;
+    grid-template-areas: "title text" "btn btn";
+    padding: 3em;
+    align-items: center;
+    justify-content: center;
+  }
+  #landing-content h1 {
+    grid-area: title;
+    font-family: "Lato";
+    color: #66FCF1;
+    font-size: 3em;
+    margin: 50px 0 0 0;
+  }
+  #landing-content p {
+    grid-area: text;
+    font-family: "Open Sans";
+    font-weight: 300;
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin: 200px 0 0 10px;
+  }
+  #landing-content #landing-btns {
+    grid-area: btn;
+    align-self: start;
+    justify-self: center;
+    display: flex;
+    gap: 2em;
+  }
+  #landing-content #landing-btns button {
+    padding: 10px;
+    border: 1px solid #66FCF1;
+    color: white;
+    font-family: "Lato";
+  }
+  #separator {
+    height: 50vh !important;
+  }
+  #services-container {
+    background: #0B0C10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  #services-container h1 {
+    font-family: "Lato";
+    color: #66FCF1;
+    font-size: 2em;
+  }
+  #services-container .service-descriptions {
+    display: none;
+  }
+  #services-container .s-d-mobile {
+    margin-top: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+  #services-container .s-d-mobile #service-img-overlay {
+    z-index: 1000;
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    top: 0%;
+    left: 50;
+    background: linear-gradient(rgba(11, 12, 16, 0.6));
+    margin-bottom: 58px;
+  }
+  #services-container .s-d-mobile img {
+    height: 250px;
+    width: 250px;
+  }
+  #services-container .s-d-mobile h1 {
+    font-family: "Lato";
+    font-size: 2.5em;
+    font-weight: 900;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+  #services-container .s-d-mobile h3 {
+    color: white !important;
+    font-style: normal;
+    font-family: "Lato";
+    font-weight: 900;
+    font-size: 1em;
+    position: absolute;
+    top: 85%;
+    z-index: 1000;
+  }
+  #services-container #description-carousel {
+    margin-top: 25px;
+  }
+  #services-container #description-carousel #service-carousel-btns {
+    display: flex;
+    gap: 5em;
+    justify-content: center;
+    align-items: center;
+  }
+  #services-container #description-carousel #service-carousel-btns i {
+    color: white;
+    font-size: 24px;
+  }
+  #services-container #description-carousel #service-carousel-btns i .fas:hover {
+    cursor: pointer;
+  }
+  #services-container #description-carousel .MuiPaper-root {
+    margin-top: 25px;
+    background-color: #18191d;
+    width: 75vw;
+    height: 20vh;
+    display: flex;
+  }
+  #services-container #description-carousel .MuiPaper-root .MuiCardContent-root {
+    font-family: "Open Sans";
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+  }
+  #services-container a {
+    color: white;
+  }
+  #services-container a button {
+    margin-top: 25px;
+    border: solid #66FCF1;
+    color: white;
+    padding: 10px;
+    font-family: "Lato";
+  }
+  #about-container {
+    padding: 1em;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #about-container h1, #about-container p {
+    font-family: "Lato";
+    color: #0B0C10;
+  }
+  #about-container p {
+    font-family: "Open Sans";
+    font-size: 20px;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+  }
+  #about-container button {
+    background-color: #0B0C10;
+    padding: 15px;
+    margin-top: 25px;
+    font-family: "Lato";
+  }
+  #about-container button .MuiButton-label {
+    background-color: #0B0C10;
+    color: white;
+  }
+  #about-container img {
+    height: 250px;
+    width: 200px;
+    margin-top: 25px;
+  }
+  #about-main {
+    display: flex;
+    flex-direction: column;
+  }
+  #about-main h1 {
+    text-align: center;
+    margin-top: 25px;
+  }
+  #about-main p {
+    padding: 2em;
+  }
+  #about-main img {
+    width: 250px;
+    height: 300px;
+    align-self: center;
+  }
+  #about-main #footer p {
+    padding: 0 !important;
+  }
+  .all-testimonials {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  .all-testimonials h1 {
+    text-align: center;
+  }
+  .all-testimonials .testimonial-text {
+    padding: 2em;
+  }
+  #testimonials-page {
+    padding: 3em;
+    background-color: #1f2833;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  #testimonials-page a {
+    color: #66FCF1;
+  }
+  #testimonials-page a :hover {
+    color: #c5c6c7;
+  }
+  #testimonials-page .carousel-indicators {
+    display: flex;
+    width: 5%;
+    height: 5%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 2px;
+  }
+  #testimonials-page .carousel-indicators li {
+    margin-top: 25px;
+    background: #c5c6c7;
+    height: 5px;
+    width: 50px !important;
+  }
+  #testimonials-page .carousel-indicators li.active {
+    background-color: #66FCF1;
+  }
+  #testimonials-page .carousel-inner .carousel-item.active {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #testimonials-page .carousel-inner .carousel-item.active h3 {
+    color: #66FCF1;
+  }
+  #testimonials-page .carousel-inner .carousel-item.active p {
+    color: white;
+  }
+  #testimonials-page .carousel-inner .carousel-item.active h3, #testimonials-page .carousel-inner .carousel-item.active p {
+    text-align: center;
+  }
+  #testimonials-page .carousel-inner .carousel-item.active span {
+    color: #66FCF1;
+    font-size: 1em;
+    margin-top: 5px;
+  }
+  #testimonials-page .fas {
+    color: white;
+    font-size: 24px;
+    margin-top: 500px;
+  }
+  #testimonials-page .carousel-control-next, #testimonials-page .carousel-control-prev {
+    width: 5%;
+    height: 5%;
+  }
+  #testimonials-page .carousel-control-next {
+    right: -5px;
+  }
+  #testimonials-page .carousel-control-prev {
+    left: -5px;
+  }
+  #blog-container {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #blog-container a {
+    color: #66FCF1;
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 1.5em;
+  }
+  #blog-container a :hover {
+    color: #c5c6c7;
+  }
+  #blog-container #blog-post-preview {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 25px;
+  }
+  #blog-container #blog-post-preview #post-preview {
+    color: white;
+  }
+  #blog-container #blog-post-preview #post-preview p {
+    margin-top: 5px;
+  }
+  #footer {
+    background: #66FCF1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+  }
+  #footer h1 {
+    text-align: center;
+    color: #0B0C10;
+    margin-top: 25px;
+  }
+  #footer form {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+  }
+  #footer form input, #footer form .MuiInputBase-root {
+    background-color: #1f2833;
+  }
+  #footer form .inputLabel {
+    color: white;
+  }
+  #footer form Button {
+    grid-column: 1/3;
+    grid-row: 4;
+    align-self: start;
+    background-color: #0B0C10;
+    color: white;
+    margin: auto;
+    padding: 10px;
+  }
+  #footer p {
+    font-family: "Lato";
+    font-weight: 900;
+    color: #0B0C10 !important;
+    text-align: center;
+    font-size: 2em;
+  }
+  #footer p span {
+    font-size: 0.8em;
+    font-family: "Open Sans";
+    font-weight: 300;
+  }
+  #resources {
+    padding: 3em;
+    background-color: #0B0C10 !important;
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #resources h3 {
+    font-size: 1.4em;
+  }
+  #resources ul {
+    list-style: none;
+    font-size: 1em;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #resources ul a {
+    text-decoration: none;
+    color: white;
+  }
+  #resources ul a:hover {
+    color: #66FCF1;
+  }
+  #resources #icons {
+    display: flex;
+    gap: 2em;
+    align-self: center;
+    justify-content: center;
+    margin-top: 25px;
+    grid-column: 1/3;
+  }
+  #resources #icons svg {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media (min-width: 601px) and (max-width: 767px) {
+  #contact-main {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #contact-main form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  #contact-main form button {
+    background: #0B0C10;
+    color: white;
+    margin: auto;
+  }
+  #contact-main #resources {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+  }
+  #contact-main #resources ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  div.MuiDrawer-paper {
+    height: auto;
+    background: none;
+    color: white;
+  }
+  div.MuiDrawer-paper .MuiList-root {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+  div.MuiDrawer-paper .MuiList-root a span {
+    font-family: "Lato";
+  }
+  div.MuiDrawer-paper .MuiList-root a:hover {
+    color: #66FCF1 !important;
+  }
+  #header-container {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #0B0C10;
+    font-family: "Lato";
+    color: white;
+    width: 100%;
+    z-index: 1001;
+    position: sticky;
+  }
+  #header-container a {
+    color: white;
+  }
+  #header-container a:hover {
+    color: #66FCF1;
+  }
+  #header-container nav ul {
+    display: none;
+  }
+  #header-container nav svg {
+    display: revert;
+    color: white;
+    font-size: 48px;
+    font-family: "Lato";
+  }
+  #header-container nav svg :hover {
+    cursor: pointer;
+    color: #66FCF1;
+  }
+  #home-page {
+    background-color: #0B0C10;
+    overflow-x: hidden;
+  }
+  #landing-content {
+    display: grid;
+    grid-template-areas: "title text" "btn btn";
+    padding: 3em;
+    align-items: center;
+    justify-content: center;
+  }
+  #landing-content h1 {
+    grid-area: title;
+    font-family: "Lato";
+    color: #66FCF1;
+    font-size: 4em;
+    margin: 50px 0 0 50px;
+  }
+  #landing-content p {
+    grid-area: text;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 1.5em;
+    color: white;
+    margin: 200px 0 0 50px;
+  }
+  #landing-content #landing-btns {
+    grid-area: btn;
+    align-self: start;
+    justify-self: center;
+    display: flex;
+    gap: 2em;
+  }
+  #landing-content #landing-btns button {
+    padding: 10px;
+    border: 1px solid #66FCF1;
+    color: white;
+    font-family: "Lato";
+    font-size: 1.5em;
+  }
+  #separator {
+    height: 20vh !important;
+  }
+  #services-container {
+    background: #0B0C10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  #services-container h1 {
+    font-family: "Lato";
+    color: #66FCF1;
+    font-size: 3em;
+  }
+  #services-container .service-descriptions {
+    display: none;
+  }
+  #services-container .s-d-mobile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+  #services-container .s-d-mobile #service-img-overlay {
+    z-index: 1000;
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    top: 0%;
+    left: 50;
+    background: linear-gradient(rgba(11, 12, 16, 0.6));
+    margin-bottom: 58px;
+  }
+  #services-container .s-d-mobile h1 {
+    font-family: "Lato";
+    font-size: 2.5em;
+    font-weight: 900;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+  #services-container .s-d-mobile h3 {
+    color: white !important;
+    font-style: normal;
+    font-family: "Lato";
+    font-size: 1.5em;
+    font-weight: 900;
+    position: absolute;
+    top: 85%;
+    z-index: 1000;
+  }
+  #services-container #description-carousel {
+    margin-top: 25px;
+  }
+  #services-container #description-carousel #service-carousel-btns {
+    display: flex;
+    gap: 5em;
+    justify-content: center;
+    align-items: center;
+  }
+  #services-container #description-carousel #service-carousel-btns i {
+    color: white;
+    font-size: 24px;
+  }
+  #services-container #description-carousel #service-carousel-btns i .fas:hover {
+    cursor: pointer;
+  }
+  #services-container #description-carousel .MuiPaper-root {
+    margin-top: 25px;
+    background-color: #18191d;
+    width: 50vw;
+    display: flex;
+  }
+  #services-container #description-carousel .MuiPaper-root .MuiCardContent-root {
+    font-family: "Open Sans";
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+  }
+  #services-container a {
+    color: white;
+  }
+  #services-container a button {
+    margin-top: 25px;
+    border: solid #66FCF1;
+    color: white;
+    padding: 10px;
+    font-size: 1.5em;
+  }
+  #about-container {
+    padding: 3em;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #about-container h1, #about-container p {
+    font-family: "Lato";
+    color: #0B0C10;
+  }
+  #about-container p {
+    font-family: "Open Sans";
+    font-size: 20px;
+    margin-top: 25px;
+    text-align: center;
+  }
+  #about-container button {
+    background-color: #0B0C10;
+    padding: 15px;
+    margin-top: 25px;
+  }
+  #about-container button .MuiButton-label {
+    background-color: #0B0C10;
+    color: white;
+  }
+  #about-container img {
+    height: 450px;
+    width: 400px;
+    margin-top: 25px;
+  }
+  #about-main {
+    display: flex;
+    flex-direction: column;
+  }
+  #about-main h1 {
+    margin-top: 50px;
+    text-align: center;
+  }
+  #about-main img {
+    height: 300px;
+    width: 250px;
+    margin: auto;
+  }
+  #about-main p {
+    padding: 2em;
+  }
+  #about-main #footer p {
+    padding: 0 2em !important;
+  }
+  #blog-posts-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  #blog-posts-container #footer {
+    margin-top: 25px;
+  }
+  #blog-posts-container #footer p {
+    padding: 0 2em !important;
+  }
+  #blog-posts-container #resources {
+    width: 100vw;
+  }
+  .all-testimonials {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .all-testimonials h1 {
+    text-align: center;
+  }
+  .all-testimonials .testimonial-text {
+    padding: 2em;
+  }
+  .all-testimonials #footer p {
+    padding: 0 2em !important;
+  }
+  #testimonials-page {
+    padding: 3em;
+    background-color: #1f2833;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+  }
+  #testimonials-page a {
+    color: #66FCF1;
+  }
+  #testimonials-page a :hover {
+    color: #c5c6c7;
+  }
+  #testimonials-page .carousel-indicators {
+    display: flex;
+    width: 5%;
+    height: 5%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  #testimonials-page .carousel-indicators li {
+    margin-top: 25px;
+    background: #c5c6c7;
+    margin-left: 5px;
+    height: 5px;
+    width: 5px;
+  }
+  #testimonials-page .carousel-indicators li.active {
+    background-color: #66FCF1;
+  }
+  #testimonials-page .carousel-inner .carousel-item.active {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #testimonials-page .carousel-inner .carousel-item.active h3 {
+    color: #66FCF1;
+  }
+  #testimonials-page .carousel-inner .carousel-item.active p {
+    color: white;
+  }
+  #testimonials-page .carousel-inner .carousel-item.active h3, #testimonials-page .carousel-inner .carousel-item.active p {
+    text-align: center;
+  }
+  #testimonials-page .carousel-inner .carousel-item.active span {
+    color: #66FCF1;
+  }
+  #testimonials-page .fas {
+    color: white;
+    font-size: 24px;
+    margin-top: 500px;
+  }
+  #testimonials-page .carousel-control-next, #testimonials-page .carousel-control-prev {
+    width: 5%;
+    height: 5%;
+  }
+  #testimonials-page .carousel-control-next {
+    right: -5px;
+  }
+  #testimonials-page .carousel-control-prev {
+    left: -5px;
+  }
+  #blog-container {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #blog-container a {
+    color: #66FCF1;
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 1.5em;
+  }
+  #blog-container a :hover {
+    color: #c5c6c7;
+  }
+  #blog-container #blog-post-preview {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 25px;
+  }
+  #blog-container #blog-post-preview #post-preview {
+    color: white;
+  }
+  #footer {
+    background: #66FCF1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #footer h1 {
+    text-align: center;
+    color: #0B0C10;
+    margin-top: 25px;
+  }
+  #footer form {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+  }
+  #footer form input, #footer form .MuiInputBase-root {
+    background-color: #1f2833;
+  }
+  #footer form .inputLabel {
+    color: white;
+  }
+  #footer form Button {
+    grid-column: 1/3;
+    grid-row: 4;
+    align-self: start;
+    background-color: #0B0C10;
+    color: white;
+    margin: auto;
+    padding: 10px;
+  }
+  #footer p {
+    font-family: "Lato";
+    font-weight: 400;
+    color: #0B0C10 !important;
+    text-align: center;
+    font-size: 2em;
+  }
+  #footer p span {
+    font-size: 0.8em;
+    font-weight: 300;
+  }
+  #resources {
+    padding: 3em;
+    background-color: #0B0C10 !important;
+    height: 100% !important;
+    display: flex;
+    gap: 5em;
+    font-family: "Lato";
+  }
+  #resources ul {
+    list-style: none;
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+  }
+  #resources ul a {
+    text-decoration: none;
+    color: white;
+  }
+  #resources ul a:hover {
+    color: #66FCF1;
+  }
+  #resources #icons {
+    display: flex;
+    gap: 3em;
+    align-self: end;
+  }
+}
+@media (min-width: 768px) and (max-width: 1142px) {
+  #contact-main {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #contact-main form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  #contact-main form button {
+    background: #0B0C10;
+    color: white;
+    margin: auto;
+  }
+  #contact-main #resources {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+    margin-bottom: 0;
+  }
+  #contact-main #resources ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  div.MuiDrawer-paper {
+    height: auto;
+    background: none;
+    color: white;
+  }
+  div.MuiDrawer-paper .MuiList-root {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+  div.MuiDrawer-paper .MuiList-root a span {
+    font-family: "Lato";
+  }
+  div.MuiDrawer-paper .MuiList-root a:hover {
+    color: #66FCF1 !important;
+  }
+  #header-container {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #0B0C10;
+    font-family: "Lato";
+    color: white;
+    width: 100%;
+    z-index: 1001;
+    position: sticky;
+  }
+  #header-container a {
+    color: white;
+  }
+  #header-container a:hover {
+    color: #66FCF1;
+  }
+  #header-container nav ul {
+    display: none;
+  }
+  #header-container nav svg {
+    display: revert;
+    color: white;
+    font-size: 48px;
+    font-family: "Lato";
+  }
+  #header-container nav svg :hover {
+    cursor: pointer;
+    color: #66FCF1;
+  }
+  #home-page {
+    background-color: #0B0C10;
+    overflow-x: hidden;
+  }
+  #landing-content {
+    display: grid;
+    grid-template-areas: "title text" "btn btn";
+    padding: 3em;
+    align-items: center;
+    justify-content: center;
+  }
+  #landing-content h1 {
+    grid-area: title;
+    font-family: "Lato";
+    color: #66FCF1;
+    font-size: 6em;
+    margin: 50px 0 0 50px;
+  }
+  #landing-content p {
+    grid-area: text;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 1.5em;
+    color: white;
+    margin: 200px 0 0 50px;
+  }
+  #landing-content #landing-btns {
+    grid-area: btn;
+    align-self: start;
+    justify-self: center;
+    display: flex;
+    gap: 2em;
+  }
+  #landing-content #landing-btns button {
+    padding: 10px;
+    border: 1px solid #66FCF1;
+    color: white;
+    font-family: "Lato";
+    font-size: 1.5em;
+  }
+  #separator {
+    height: 20vh !important;
+  }
+  #services-container {
+    background: #0B0C10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  #services-container h1 {
+    font-family: "Lato";
+    color: #66FCF1;
+  }
+  #services-container .service-descriptions {
+    display: none;
+  }
+  #services-container .s-d-mobile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+  #services-container .s-d-mobile #service-img-overlay {
+    z-index: 1000;
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    top: 0%;
+    left: 50;
+    background: linear-gradient(rgba(11, 12, 16, 0.6));
+    margin-bottom: 58px;
+  }
+  #services-container .s-d-mobile h1 {
+    font-family: "Lato";
+    font-size: 2.5em;
+    font-weight: 900;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+  #services-container .s-d-mobile h3 {
+    color: white !important;
+    font-style: normal;
+    font-family: "Lato";
+    font-size: 1.5em;
+    font-weight: 900;
+    position: absolute;
+    top: 20%;
+    z-index: 1000;
+  }
+  #services-container #description-carousel {
+    margin-top: 25px;
+  }
+  #services-container #description-carousel #service-carousel-btns {
+    display: flex;
+    gap: 5em;
+    justify-content: center;
+    align-items: center;
+  }
+  #services-container #description-carousel #service-carousel-btns i {
+    color: white;
+    font-size: 24px;
+  }
+  #services-container #description-carousel #service-carousel-btns i .fas:hover {
+    cursor: pointer;
+  }
+  #services-container #description-carousel .MuiPaper-root {
+    margin-top: 25px;
+    background-color: #18191d;
+    width: 50vw;
+    display: flex;
+  }
+  #services-container #description-carousel .MuiPaper-root .MuiCardContent-root {
+    font-family: "Open Sans";
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+  }
+  #services-container a {
+    color: white;
+  }
+  #services-container a button {
+    margin-top: 25px;
+    border: solid #66FCF1;
+    color: white;
+    padding: 10px;
+    font-size: 1.5em;
+  }
+  #about-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  #about-main h1 {
+    font-size: 3em;
+  }
+  #about-main img {
+    height: 350px;
+    width: 300px;
+  }
+  #about-main p {
+    padding: 0 3em;
+    font-size: 1.5em;
+    margin-top: 25px;
+    text-align: center;
+  }
+  #about-main #footer p {
+    margin-top: 0 !important;
+  }
+  #about-main #resources {
+    width: 100vw;
+    margin: 0 !important;
+  }
+  .all-testimonials {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .all-testimonials h1 {
+    text-align: center;
+  }
+  .all-testimonials .testimonial-text {
+    padding: 2em;
+  }
+  .all-testimonials #footer p {
+    margin: 0 !important;
+  }
+  .all-testimonials #resources {
+    margin: 0 !important;
+  }
+  #about-container {
+    padding: 3em;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #about-container h1, #about-container p {
+    font-family: "Lato";
+    color: #0B0C10;
+  }
+  #about-container p {
+    font-family: "Open Sans";
+    font-size: 20px;
+    margin-top: 25px;
+    text-align: center;
+  }
+  #about-container button {
+    background-color: #0B0C10;
+    padding: 15px;
+    margin-top: 25px;
+  }
+  #about-container button .MuiButton-label {
+    background-color: #0B0C10;
+    color: white;
+  }
+  #about-container img {
+    height: 450px;
+    width: 400px;
+    margin-top: 25px;
+  }
+  #testimonials-page {
+    padding: 3em;
+    background-color: #1f2833;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #testimonials-page a {
+    color: #66FCF1;
+  }
+  #testimonials-page a :hover {
+    color: #c5c6c7;
+  }
+  #testimonials-page .carousel-indicators {
+    display: flex;
+    width: 5%;
+    height: 5%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  #testimonials-page .carousel-indicators li {
+    margin-top: 25px;
+    background: #c5c6c7;
+    margin-left: 5px;
+    height: 5px;
+    width: 5px;
+  }
+  #testimonials-page .carousel-indicators li.active {
+    background-color: #66FCF1;
+  }
+  #testimonials-page .carousel-inner .carousel-item.active {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #testimonials-page .carousel-inner .carousel-item.active h3 {
+    color: #66FCF1;
+  }
+  #testimonials-page .carousel-inner .carousel-item.active p {
+    color: white;
+  }
+  #testimonials-page .carousel-inner .carousel-item.active h3, #testimonials-page .carousel-inner .carousel-item.active p {
+    text-align: center;
+  }
+  #testimonials-page .carousel-inner .carousel-item.active span {
+    color: #66FCF1;
+  }
+  #testimonials-page .fas {
+    color: white;
+    font-size: 24px;
+    margin-top: 500px;
+  }
+  #testimonials-page .carousel-control-next, #testimonials-page .carousel-control-prev {
+    width: 5%;
+    height: 5%;
+  }
+  #testimonials-page .carousel-control-next {
+    right: -5px;
+  }
+  #testimonials-page .carousel-control-prev {
+    left: -5px;
+  }
+  #blog-posts-container {
+    margin-top: 50px;
+  }
+  #blog-posts-container #resources {
+    margin: 0 !important;
+  }
+  #blog-container {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #blog-container a {
+    color: #66FCF1;
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 1.5em;
+  }
+  #blog-container a :hover {
+    color: #c5c6c7;
+  }
+  #blog-container #blog-post-preview {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+  }
+  #blog-container #blog-post-preview #post-preview {
+    color: white;
+  }
+  #footer {
+    background: #66FCF1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #footer h1 {
+    text-align: center;
+    color: #0B0C10;
+    margin-top: 50px;
+  }
+  #footer form {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+  }
+  #footer form input, #footer form .MuiInputBase-root {
+    background-color: #1f2833;
+  }
+  #footer form .inputLabel {
+    color: white;
+  }
+  #footer form Button {
+    grid-column: 1/3;
+    grid-row: 4;
+    align-self: start;
+    background-color: #0B0C10;
+    color: white;
+    margin: auto;
+    padding: 10px;
+  }
+  #footer p {
+    font-family: "Lato";
+    font-weight: 400;
+    color: #0B0C10 !important;
+    text-align: center;
+    font-size: 2em;
+    padding: 1em;
+  }
+  #footer p span {
+    font-size: 0.8em;
+    font-weight: 300;
+  }
+  #resources {
+    padding: 5em;
+    background-color: #0B0C10 !important;
+    display: flex;
+    gap: 2em;
+    margin-bottom: 25px;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+  #resources ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-size: 1.1em;
+  }
+  #resources ul a {
+    text-decoration: none;
+    color: white;
+  }
+  #resources ul a:hover {
+    color: #66FCF1;
+  }
+  #resources #icons {
+    display: flex;
+    gap: 3em;
+    align-self: end;
+  }
+  #blog-posts-container h1:nth-child(1) {
+    text-align: center;
+  }
+  #blog-posts-container #blog-post-preview {
+    padding: 2em;
+  }
+  #single-post-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    background: #45A29E;
+    color: white;
+  }
+  #single-post-view #disqus_thread {
+    width: 500px;
+  }
+  #single-post-view h1 {
+    font-size: 3em;
+    margin-top: 50px;
+  }
+  #single-post-view p {
+    padding: 2em;
+  }
+  #single-post-view button {
+    background: #0B0C10;
+    border: none;
+    color: white;
+    font-family: "Lato";
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 1143px) and (max-height: 800px) {
+  .all-testimonials {
+    display: flex;
+    flex-direction: column;
+  }
+  .all-testimonials h1 {
+    margin-top: 50px;
+    text-align: center;
+  }
+  .all-testimonials .testimonial-text {
+    padding: 2em;
+  }
+  #contact-main {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #contact-main form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  #contact-main form button {
+    background: #0B0C10;
+    color: white;
+    margin: auto;
+  }
+  #contact-main #resources {
+    margin-top: 50px;
+  }
+  #contact-main #resources ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #make-post-container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #make-post-container button {
+    margin-top: 25px;
+    padding: 12px;
+    background: #0B0C10;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  #make-post-container .titleInput,
+  #make-post-container .titleLabel {
+    margin-top: 25px;
+  }
+  #make-post-container .authorInput,
+  #make-post-container .authorLabel {
+    margin-top: 25px;
+  }
+  #make-post-container .rdw-editor-toolbar {
+    margin-top: 25px;
+  }
+  #make-post-container .editor-class {
+    border: 1px solid black;
+    height: 50vh;
+  }
+  #header-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0B0C10;
+    font-family: "Lato";
+    color: #000;
+    width: 100%;
+    z-index: 10000;
+    position: sticky;
+    padding: 2em;
+  }
+  #header-container h4 {
+    font-size: 2em;
+  }
+  #header-container a {
+    color: white;
+  }
+  #header-container a:hover {
+    color: #66FCF1;
+  }
+  #header-container nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3em;
+    margin-top: 20px;
+  }
+  #header-container nav svg {
+    display: none;
+  }
+  #header-container nav Button {
+    background: none;
+    border: none;
+  }
+  #home-page {
+    background: #0B0C10;
+  }
+  #landing-content {
+    display: grid;
+    grid-template-areas: "title text" "btn btn";
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    font-family: "Lato";
+    font-weight: bolder;
+    padding: 3rem;
+    background-color: #0B0C10;
+    margin: auto;
+    margin-top: 50px;
+    height: 200%;
+  }
+  #landing-content h1 {
+    grid-area: title;
+    font-size: 8rem;
+    text-align: left;
+    justify-self: end;
+    color: #66FCF1;
+    font-family: "Lato";
+    margin-left: 50px;
+  }
+  #landing-content p {
+    grid-area: text;
+    font-size: 2rem;
+    text-align: left;
+    margin-left: 50px;
+    font-family: "Open Sans";
+    font-weight: 300;
+    color: white;
+  }
+  #landing-content #landing-btns {
+    grid-area: btn;
+    margin: auto;
+    margin-top: 25px;
+    display: flex;
+    gap: 3em;
+  }
+  #landing-content #landing-btns button {
+    background-color: #0B0C10;
+    border: solid #66FCF1;
+    color: #c5c6c7;
+    font-family: "Lato";
+    font-size: 1.5em;
+    padding: 15px;
+  }
+  #landing-content .main-button Button {
+    font-size: 1.5rem;
+    background-color: #12232E;
+  }
+  #services-container {
+    background: #0B0C10;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #services-container .s-d-mobile {
+    display: none;
+  }
+  #services-container button {
+    background: #0B0C10;
+    border: solid #66FCF1;
+    color: white;
+    font-size: 1.5em;
+  }
+  #services-container h1 {
+    font-family: "Lato";
+    font-size: 4em;
+    color: #66FCF1;
+    font-weight: 400;
+    margin-top: 50px;
+    text-align: center;
+  }
+  #services-container #description-carousel {
+    position: relative;
+    width: 50vw;
+  }
+  #services-container #description-carousel .MuiPaper-root {
+    margin-top: 25px;
+    background-color: #0B0C10;
+    color: white;
+    font-family: "Open Sans";
+    font-size: 1.5em;
+    padding: 15px;
+    border: 10px solid #0B0C10;
+  }
+  #services-container #description-carousel #service-carousel-btns {
+    display: flex;
+    gap: 5em;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+  }
+  #services-container #description-carousel #service-carousel-btns .fas:hover {
+    cursor: pointer;
+  }
+  #services-container #description-carousel #service-carousel-btns .fas {
+    color: white;
+    font-size: 25px;
+  }
+  #services-container button {
+    margin-top: 25px;
+    margin-bottom: 100px;
+    padding: 15px;
+  }
+  #services-container .service-descriptions {
+    display: flex;
+    margin-top: 50px;
+    position: relative;
+  }
+  #services-container .service-descriptions .description {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+  #services-container .service-descriptions .description img {
+    margin-right: 25px;
+  }
+  #services-container .service-descriptions .description #service-img-overlay {
+    background: white;
+    z-index: 1000;
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    top: 50;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: linear-gradient(rgba(11, 12, 16, 0.5)); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgba(11, 12, 16, 0.5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  #services-container .service-descriptions .description h1 {
+    font-family: "Lato";
+    font-size: 2.5em;
+    font-weight: 900;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+  #services-container .service-descriptions .description h3, #services-container .service-descriptions .description p {
+    font-family: "Open Sans";
+    color: white;
+  }
+  #services-container .service-descriptions .description h3 {
+    top: 30%;
+    position: absolute;
+    z-index: 1000;
+    font-size: 1em;
+    font-style: normal;
+    font-family: "Lato";
+  }
+  #services-container .service-descriptions .description .MuiPaper-root {
+    width: 50vw;
+  }
+  #services-container .service-descriptions .description .MuiCardContent-root {
+    background-color: #1f2833;
+    margin: auto;
+  }
+  #services-container .service-descriptions .description .MuiCardContent-root p {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+  }
+  #about-main {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #about-main p {
+    padding: 3em;
+  }
+  #about-main #resources ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  #about-container {
+    margin: auto;
+    display: grid;
+    grid-template-areas: "title title" "pic para" "button button";
+    grid-template-columns: 0.5fr 0.5fr;
+    padding: 3em;
+    gap: 2em;
+    text-align: center;
+    margin-top: 5em;
+    background-color: white;
+  }
+  #about-container h1 {
+    grid-area: title;
+    align-self: center;
+    font-size: 4em;
+    font-family: "Lato";
+    color: #0B0C10;
+  }
+  #about-container img {
+    grid-area: pic;
+    margin: auto;
+    width: 500px;
+    height: 600px;
+  }
+  #about-container p {
+    grid-area: para;
+    font-family: "Open Sans";
+    font-size: 1.4em;
+    font-weight: 400;
+    text-align: center;
+    color: #0B0C10;
+    margin: auto;
+  }
+  #about-container a {
+    grid-area: button;
+  }
+  #about-container .MuiButton-label {
+    background-color: #0B0C10;
+    font-family: "Lato";
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+  }
+  #testimonials-page {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f2833;
+    height: 100vh;
+  }
+  #testimonials-page h1 {
+    font-size: 4em;
+    font-family: "Lato";
+    font-weight: 400;
+  }
+  #testimonials-page .fas {
+    color: white;
+    font-size: 48px;
+    text-decoration: none;
+  }
+  #testimonials-page .carousel-indicators {
+    display: flex;
+  }
+  #testimonials-page .carousel-indicators li {
+    background-color: #c5c6c7;
+    margin-left: 5px;
+    height: 5px;
+    width: 5px;
+  }
+  #testimonials-page .carousel-indicators li.active {
+    background-color: #66FCF1;
+  }
+  #testimonials-page .carousel-control-next, #testimonials-page .carousel-control-prev {
+    width: 4%;
+    height: 4%;
+    margin-top: 250px;
+  }
+  #testimonials-page .carousel-control-next {
+    right: -5px;
+  }
+  #testimonials-page .carousel-control-prev {
+    left: -5px;
+  }
+  #testimonials-page .carousel-item.active {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Open Sans";
+  }
+  #testimonials-page .carousel-item.active h3 {
+    color: #66FCF1;
+    width: 75vw;
+  }
+  #testimonials-page .carousel-item.active p {
+    color: #c5c6c7;
+    font-size: 1.5em;
+    width: 75vw;
+  }
+  #testimonials-page .carousel-item.active span {
+    color: #45A29E;
+    font-family: "Open Sans";
+    font-size: 1.1em;
+  }
+  #testimonials-page a {
+    color: #66FCF1;
+    font-family: "Lato";
+    font-weight: 300;
+  }
+  #testimonials-page a:hover {
+    color: #45A29E;
+  }
+  #blog-container {
+    background: #0B0C10;
+    text-align: center;
+    margin: auto;
+  }
+  #blog-container h1 a {
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 2em;
+    color: #66FCF1;
+  }
+  #blog-container #blog-post-preview {
+    width: 75%;
+    margin: auto;
+    padding: 3em;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    font-family: "Open Sans";
+    margin-top: 50px;
+  }
+  #blog-container #blog-post-preview #post-preview {
+    color: white;
+  }
+  #blog-container #blog-post-preview #post-preview h1 {
+    font-size: 2em;
+  }
+  #blog-container a {
+    color: #66FCF1;
+  }
+  #blog-container a:hover {
+    color: #1f2833;
+  }
+  #single-post-view {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #single-post-view #disqus_thread {
+    width: 1000px;
+  }
+  #blog-posts-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  #blog-posts-container #resources {
+    width: 100vw;
+  }
+  #resources {
+    background-color: #0B0C10;
+    height: 100% !important;
+    color: #EEFBFB;
+    display: flex;
+    gap: 5em;
+    justify-content: space-evenly;
+    font-family: "Muli";
+  }
+  #resources a:hover {
+    color: #4DA8DA;
+  }
+  #resources h3 {
+    margin-top: 50px;
+    text-align: center;
+  }
+  #resources ul {
+    list-style: none;
+    font-size: 1.1em;
+  }
+  #resources ul a {
+    color: #EEFBFB;
+  }
+  #resources ul a:hover {
+    color: #66FCF1;
+  }
+  #resources #icons {
+    display: flex;
+    gap: 3em;
+    margin-top: 100px;
+  }
+  #footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    background-color: #66FCF1;
+    height: 75vh;
+    padding: 3em;
+  }
+  #footer #contact-title {
+    font-size: 3em;
+    color: #0B0C10;
+  }
+  #footer #footer-form-container {
+    font-family: "Lato";
+  }
+  #footer #footer-form-container h1 {
+    text-align: center;
+  }
+  #footer #footer-form-container #contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 50px;
+    grid-gap: 2em;
+  }
+  #footer #footer-form-container #contact-form input, #footer #footer-form-container #contact-form .MuiInputBase-root {
+    width: 15vw;
+    background-color: #1f2833;
+  }
+  #footer #footer-form-container #contact-form .inputLabel {
+    color: #66FCF1;
+  }
+  #footer #footer-form-container #contact-form Button {
+    grid-column: 1/3;
+    background-color: #0B0C10;
+    color: #66FCF1;
+    grid-row: 4;
+    padding: 10px;
+    margin: auto;
+  }
+  #footer p {
+    color: #0B0C10 !important;
+    font-family: "Lato" !important;
+    font-weight: 900;
+    font-size: 3em;
+    align-self: center;
+    text-align: center;
+    width: 50%;
+  }
+  #footer p span {
+    font-weight: 300;
+  }
+  #create-post-container {
+    padding: 3em;
+  }
+  #create-post-container #blog-post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+  #create-post-container #blog-post-form .MuiTextField-root {
+    width: 25vw;
+    margin: auto;
+  }
+  #create-post-container #blog-post-form Button {
+    background-color: #007CC7;
+    margin: auto;
+  }
+  #login-container {
+    padding: 3em;
+  }
+  #login-container form {
+    display: flex;
+    gap: 2em;
+  }
+  #login-container form input {
+    width: 25vw;
+  }
+  #login-container form button {
+    background-color: #12232E;
+    color: #EEFBFB;
+    width: 5vw;
+    margin-top: 15px;
+  }
+  a {
+    text-decoration: none;
+  }
+  #single-post-view {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    background: #45A29E;
+    color: white;
+    margin-top: 25px;
+  }
+  #single-post-view h1 {
+    font-size: 3em;
+  }
+  #single-post-view p {
+    font-size: 1.5em;
+  }
+  #single-post-view button {
+    background: #0B0C10;
+    border: none;
+    color: white;
+    font-family: "Lato";
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 1143px) and (min-height: 801px) {
+  #header-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0B0C10;
+    font-family: "Lato";
+    color: #000;
+    width: 100%;
+    z-index: 10000;
+    position: sticky;
+    padding: 3em;
+  }
+  #header-container h4 {
+    font-size: 2em;
+  }
+  #header-container a {
+    color: white;
+  }
+  #header-container a:hover {
+    color: #66FCF1;
+  }
+  #header-container nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3em;
+    margin-top: 20px;
+  }
+  #header-container nav svg {
+    display: none;
+  }
+  #header-container nav Button {
+    background: none;
+    border: none;
+  }
+  #home-page {
+    background: #0B0C10;
+  }
+  #landing-content {
+    display: grid;
+    grid-template-areas: "title text" "btn btn";
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    font-family: "Lato";
+    font-weight: bolder;
+    padding: 3rem;
+    background-color: #0B0C10;
+    margin: auto;
+    margin-top: 50px;
+    height: 200%;
+  }
+  #landing-content h1 {
+    grid-area: title;
+    font-size: 8rem;
+    text-align: left;
+    justify-self: end;
+    color: #66FCF1;
+    font-family: "Lato";
+    margin-left: 50px;
+  }
+  #landing-content p {
+    grid-area: text;
+    font-size: 2rem;
+    text-align: left;
+    margin-left: 50px;
+    font-family: "Open Sans";
+    font-weight: 300;
+    color: white;
+  }
+  #landing-content #landing-btns {
+    grid-area: btn;
+    margin: auto;
+    margin-top: 25px;
+    display: flex;
+    gap: 3em;
+  }
+  #landing-content #landing-btns button {
+    background-color: #0B0C10;
+    border: solid #66FCF1;
+    color: #c5c6c7;
+    font-family: "Lato";
+    font-size: 1.5em;
+    padding: 15px;
+  }
+  #landing-content .main-button Button {
+    font-size: 1.5rem;
+    background-color: #12232E;
+  }
+  #services-container {
+    background: #0B0C10;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #services-container .s-d-mobile {
+    display: none;
+  }
+  #services-container button {
+    background: #0B0C10;
+    border: solid #66FCF1;
+    color: white;
+    font-size: 1.5em;
+  }
+  #services-container h1 {
+    font-family: "Lato";
+    font-size: 5em;
+    color: #66FCF1;
+    font-weight: 400;
+    margin-top: 50px;
+    text-align: center;
+  }
+  #services-container #description-carousel {
+    position: relative;
+    width: 50vw;
+  }
+  #services-container #description-carousel .MuiPaper-root {
+    margin-top: 25px;
+    background-color: #0B0C10;
+    color: white;
+    font-family: "Open Sans";
+    font-size: 1.5em;
+    padding: 15px;
+    border: 10px solid #0B0C10;
+  }
+  #services-container #description-carousel #service-carousel-btns {
+    display: flex;
+    gap: 5em;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+  }
+  #services-container #description-carousel #service-carousel-btns .fas:hover {
+    cursor: pointer;
+  }
+  #services-container #description-carousel #service-carousel-btns .fas {
+    color: white;
+    font-size: 25px;
+  }
+  #services-container button {
+    margin-top: 25px;
+    padding: 15px;
+  }
+  #services-container .service-descriptions {
+    display: flex;
+    margin-top: 50px;
+    position: relative;
+  }
+  #services-container .service-descriptions .description {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+  #services-container .service-descriptions .description img {
+    margin-right: 25px;
+  }
+  #services-container .service-descriptions .description #service-img-overlay {
+    background: white;
+    z-index: 1000;
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    top: 50;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: linear-gradient(rgba(11, 12, 16, 0.5)); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgba(11, 12, 16, 0.5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  #services-container .service-descriptions .description h1 {
+    font-family: "Lato";
+    font-size: 2.5em;
+    font-weight: 900;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+  #services-container .service-descriptions .description h3, #services-container .service-descriptions .description p {
+    font-family: "Open Sans";
+    color: white;
+  }
+  #services-container .service-descriptions .description h3 {
+    top: 30%;
+    position: absolute;
+    z-index: 1000;
+    font-size: 1em;
+    font-style: normal;
+    font-family: "Lato";
+  }
+  #services-container .service-descriptions .description .MuiPaper-root {
+    width: 50vw;
+  }
+  #services-container .service-descriptions .description .MuiCardContent-root {
+    background-color: #1f2833;
+    margin: auto;
+  }
+  #services-container .service-descriptions .description .MuiCardContent-root p {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+  }
+  #about-main {
+    text-align: center;
+  }
+  #about-main p {
+    padding: 3em;
+  }
+  #about-container {
+    margin: auto;
+    display: grid;
+    grid-template-areas: "title title" "pic para" "button button";
+    grid-template-columns: 0.5fr 0.5fr;
+    padding: 3em;
+    gap: 2em;
+    text-align: center;
+    margin-top: 5em;
+    background-color: white;
+  }
+  #about-container h1 {
+    grid-area: title;
+    align-self: center;
+    font-size: 4em;
+    font-family: "Lato";
+    color: #0B0C10;
+  }
+  #about-container img {
+    grid-area: pic;
+    margin: auto;
+    height: 600px;
+  }
+  #about-container p {
+    grid-area: para;
+    font-family: "Open Sans";
+    font-size: 1.5em;
+    font-weight: 400;
+    text-align: left;
+    color: #0B0C10;
+    margin: auto;
+  }
+  #about-container a {
+    grid-area: button;
+  }
+  #about-container .MuiButton-label {
+    background-color: #0B0C10;
+    font-family: "Lato";
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+  }
+  #testimonials-page {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f2833;
+    height: 50vh;
+  }
+  #testimonials-page h1 {
+    font-size: 4em;
+    font-family: "Lato";
+    font-weight: 400;
+  }
+  #testimonials-page .fas {
+    color: white;
+    font-size: 48px;
+    text-decoration: none;
+  }
+  #testimonials-page .carousel-indicators {
+    display: flex;
+  }
+  #testimonials-page .carousel-indicators li {
+    background-color: #c5c6c7;
+    margin-left: 5px;
+    height: 5px;
+    width: 5px;
+  }
+  #testimonials-page .carousel-indicators li.active {
+    background-color: #66FCF1;
+  }
+  #testimonials-page .carousel-control-next, #testimonials-page .carousel-control-prev {
+    width: 4%;
+    height: 4%;
+    margin-top: 250px;
+  }
+  #testimonials-page .carousel-control-next {
+    right: -5px;
+  }
+  #testimonials-page .carousel-control-prev {
+    left: -5px;
+  }
+  #testimonials-page .carousel-item.active {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Open Sans";
+  }
+  #testimonials-page .carousel-item.active h3 {
+    color: #66FCF1;
+    width: 75vw;
+  }
+  #testimonials-page .carousel-item.active p {
+    color: #c5c6c7;
+    font-size: 1.5em;
+    width: 75vw;
+  }
+  #testimonials-page .carousel-item.active span {
+    color: #45A29E;
+    font-family: "Open Sans";
+    font-size: 1.1em;
+  }
+  #testimonials-page a {
+    color: #66FCF1;
+    font-family: "Lato";
+    font-weight: 300;
+  }
+  #testimonials-page a:hover {
+    color: #45A29E;
+  }
+  #blog-container {
+    background: #0B0C10;
+    text-align: center;
+    margin: auto;
+  }
+  #blog-container h1 a {
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 2em;
+    color: #66FCF1;
+  }
+  #blog-container #blog-post-preview {
+    width: 75%;
+    margin: auto;
+    padding: 3em;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    font-family: "Open Sans";
+    margin-top: 50px;
+  }
+  #blog-container #blog-post-preview #post-preview {
+    color: white;
+  }
+  #blog-container #blog-post-preview #post-preview h1 {
+    font-size: 2em;
+  }
+  #blog-container a {
+    color: #66FCF1;
+  }
+  #blog-container a:hover {
+    color: #1f2833;
+  }
+  #single-post-view {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #single-post-view #disqus_thread {
+    width: 1000px;
+  }
+  #blog-posts-container {
+    text-align: center;
+  }
+  #blog-posts-container #blog-post-preview {
+    text-align: center;
+    font-family: "Muli";
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  #blog-posts-container #resources {
+    height: 30vh !important;
+  }
+  #resources {
+    background-color: #0B0C10;
+    height: 25vh !important;
+    color: #EEFBFB;
+    display: flex;
+    gap: 5em;
+    justify-content: center;
+    font-family: "Lato";
+  }
+  #resources a:hover {
+    color: #4DA8DA;
+  }
+  #resources h3 {
+    margin-top: 50px;
+    text-align: center;
+  }
+  #resources ul {
+    margin-top: 25px;
+    list-style: none;
+    font-size: 1.1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+  }
+  #resources ul a {
+    color: #EEFBFB;
+  }
+  #resources ul a:hover {
+    color: #66FCF1;
+  }
+  #resources #icons {
+    display: flex;
+    gap: 3em;
+    margin-top: 100px;
+  }
+  #footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    background-color: #66FCF1;
+    height: 40vh;
+    padding: 3em;
+  }
+  #footer #contact-title {
+    font-size: 5em;
+    color: #0B0C10;
+  }
+  #footer #footer-form-container {
+    font-family: "Lato";
+  }
+  #footer #footer-form-container h1 {
+    text-align: center;
+  }
+  #footer #footer-form-container #contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 25px;
+    grid-gap: 2em;
+  }
+  #footer #footer-form-container #contact-form input, #footer #footer-form-container #contact-form .MuiInputBase-root {
+    background-color: #1f2833;
+    width: 15vw;
+  }
+  #footer #footer-form-container #contact-form .inputLabel {
+    color: #66FCF1;
+  }
+  #footer #footer-form-container #contact-form Button {
+    grid-column: 1/3;
+    background-color: #0B0C10;
+    color: #66FCF1;
+    grid-row: 4;
+    padding: 10px;
+    margin: auto;
+  }
+  #footer p {
+    color: #0B0C10 !important;
+    font-family: "Lato" !important;
+    font-weight: 900;
+    font-size: 3em;
+    align-self: center;
+    text-align: center;
+    width: 50%;
+  }
+  #footer p span {
+    font-weight: 300;
+  }
+  #create-post-container {
+    padding: 3em;
+  }
+  #create-post-container #blog-post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+  #create-post-container #blog-post-form .MuiTextField-root {
+    width: 25vw;
+    margin: auto;
+  }
+  #create-post-container #blog-post-form Button {
+    background-color: #007CC7;
+    margin: auto;
+  }
+  #login-container {
+    padding: 3em;
+  }
+  #login-container form {
+    display: flex;
+    gap: 2em;
+  }
+  #login-container form input {
+    width: 25vw;
+  }
+  #login-container form button {
+    background-color: #12232E;
+    color: #EEFBFB;
+    width: 5vw;
+    margin-top: 15px;
+  }
+  a {
+    text-decoration: none;
+  }
+  #contact-main {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #contact-main form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  #contact-main form button {
+    background: #0B0C10;
+    color: white;
+    margin: auto;
+  }
+  #contact-main #resources {
+    margin-top: 205px;
+  }
+  #single-post-view {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    background: #45A29E;
+    color: white;
+    margin-top: 25px;
+  }
+  #single-post-view h1 {
+    font-size: 3em;
+  }
+  #single-post-view p {
+    font-size: 1.5em;
+  }
+  #single-post-view button {
+    background: #0B0C10;
+    color: white;
+    padding: none;
+    border: solid black;
+  }
+}
+#make-post-container .rdw-editor-wrapper {
+  border: 2px solid;
+  min-height: 25vh;
+  max-width: 75vw;
+  padding: 24px;
+}
+#make-post-container button {
+  margin-top: 25px;
+  padding: 12px;
+  background: #0B0C10;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+#single-post-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  background: #45A29E;
+  color: white;
+}/*# sourceMappingURL=index.css.map */

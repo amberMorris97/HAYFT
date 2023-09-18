@@ -33,7 +33,6 @@ const SinglePost = () => {
     <div id="single-post-view">
       <h1>{singlePost.title}</h1>
       {singlePost.img && <img src={singlePost.img} alt="singlePost-photo" width="500px" height="350px"/> }
-      <span>By: {singlePost.author}</span>
       <br />
       {Parse(singlePost.post)}
       Posted on: <span>{moment(singlePost.createdAt).format('MMMM Do YYYY')}</span>
